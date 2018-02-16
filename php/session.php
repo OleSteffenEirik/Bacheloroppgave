@@ -1,13 +1,9 @@
 
 <?php
 /* 
-
-Tittel: Sessjon
-    Beskrivelse: Oppretter sessjon for og utfører sjekk om brukeren har en sessjon
-        Sist oppdatert:
-            Utviklet av: Steffen
-                Kontrollert av:
-
+Beskrivelse: Oppretter sessjon for og utfører sjekk om brukeren har en sessjon
+    Utviklet av: Steffen
+        Kontrollert av: 
 */
 require_once "connect.php";
 $con = new tronrudDB();

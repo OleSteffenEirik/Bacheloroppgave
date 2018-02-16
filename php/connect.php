@@ -1,13 +1,11 @@
 <?php 
 /* 
-
-Tittel: Connect
-    Beskrivelse: Lister opp databaseinformasjon og kobler til databasen
-        Sist oppdatert:
-            Utviklet av: Steffen
-                Kontrollert av:
+Beskrivelse: Lister opp databaseinformasjon og kobler til databasen
+    Sist oppdatert:
+        Utviklet av: Steffen
 */
 
+//Lister opp databaseinformasjon
 class tronrudDB extends mysqli {
 function __construct(
 $host = 'sql129.main-hosting.eu',
@@ -18,10 +16,10 @@ $base = "u412596952_tren") {
     }
 }
 
-// Create connection
+// Lager databasekobling
 $con = new tronrudDB();
 
-// Check connection
+// Sjekker databasekobling
     if ($con->connect_error) {
        die("Connection failed: " . $con->connect_error);
    }

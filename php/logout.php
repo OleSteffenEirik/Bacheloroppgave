@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(session_destroy()) // Destroying All Sessions
+if(session_destroy()) // Fjerner sesjonen
 {
-header("Location: ../index.php"); // Redirecting To Home Page
+header("Location: ../index.php"); // Sender brukeren tilbake til innlogging
 }
 ?>
