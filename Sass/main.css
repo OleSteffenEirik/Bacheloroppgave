@@ -1,2 +1,76 @@
 @import url(vendor/boostrap.css);
 @import url(vendor/fontawesome.css);
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+body::after {
+  content: "";
+  background-image: url("../img/TronrudBackground.jpg");
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
+
+.form-signin {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: rgba(87, 90, 86, 0.9);
+  border-radius: 20px;
+  font-weight: 500;
+  color: #000000; }
+  .form-signin .h3 {
+    color: #000000; }
+  .form-signin .p {
+    color: #000000;
+    text-align: left; }
+  .form-signin .checkbox {
+    font-weight: 400;
+    color: #000000; }
+  .form-signin .custom-control-input:checked {
+    background-color: #ee3224; }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px; }
+    .form-signin .form-control:focus {
+      z-index: 2; }
+  .form-signin button {
+    color: #000000;
+    background-color: #ee3224;
+    border-color: #ee3224;
+    font-weight: 600; }
+    .form-signin button:hover {
+      background-color: #d62d20;
+      border-color: #d62d20;
+      color: #000000; }
+  .form-signin input[type="name"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .form-signin input[type="password"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0; }
+  .form-signin .fa-lock {
+    color: #575a56; }
+  .form-signin .fa-user {
+    color: #575a56; }
