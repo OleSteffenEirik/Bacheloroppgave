@@ -1,0 +1,23 @@
+{
+  "name": "bacheloroppgave",
+  "version": "1.0.0",
+  "description": "Oppgave for Tronrud Engineering.",
+  "main": "dex.js)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OleSteffenEirik/Bacheloroppgave.git"
+  },
+  "author": "Ole Martin Helgesen, Steffen J Gundersen, Eirik Aanstad\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[ & Eirik Aanstad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OleSteffenEirik/Bacheloroppgave/issues"
+  },
+  "homepage": "https://github.com/OleSteffenEirik/Bacheloroppgave#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.3",
+    "bootstrap": "^4.0.0"
+  }
+}
