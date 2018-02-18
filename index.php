@@ -14,10 +14,18 @@ header("location: profile.php");}
     <title>Tronrud</title>
     <!-- Custom CSS -->
     <link href="Sass/main.css" rel="stylesheet">
+<<<<<<< HEAD
     <!-- Bootstrap 4 -->
+=======
+
+<<<<<<< HEAD:index.html
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+=======
+>>>>>>> 5afcd4b2016a158fcebf8632d6f923b30b280860
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Fontawesome 5 -->
     <script defer src="static/fontawesome/fontawesome-all.js"></script>
+>>>>>>> 05ad61f91370442a0b33883bb2371106e52576a1:index.php
   </head>
 
   <body class="text-center">
