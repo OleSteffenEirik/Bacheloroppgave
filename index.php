@@ -12,7 +12,6 @@ include('php/login.php'); // Inkluderer Login Script
     <!-- Custom CSS -->
     <link href="Sass/main.css" rel="stylesheet">
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Fontawesome 5 -->
     <script defer src="static/fontawesome/fontawesome-all.js"></script>
