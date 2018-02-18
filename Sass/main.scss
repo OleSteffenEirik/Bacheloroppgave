@@ -1,7 +1,7 @@
 //legger til alle sass-subfoldere (modules, partials & vendor)
-@import 'vendor/boostrap.css';
-@import 'vendor/fontawesome.css';
-@import 'customColors';
+//@import 'vendor/boostrap.css';
+//@import 'vendor/fontawesome.css';  @@@Importeres via static/fontawesome@@@ legger ved ekstra style link i <head>.
+@import 'partials/customColors';
 
 html {
     height: 100%;
@@ -24,7 +24,7 @@ html {
 
   body::after {
     content: "";
-    background-image: url("../img/TronrudBackground.jpg");
+   // background-image: url("../img/TronrudBackground.jpg"); flytt til html
     opacity: 0.8;
     top: 0;
     left: 0;
