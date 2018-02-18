@@ -1,3 +1,4 @@
+/* Custom styling for innlogging */
 html {
   height: 100%;
 }
@@ -15,38 +16,54 @@ body {
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  &::after {
-    content: "";
-    background-image: url("../img/TronrudBackground.jpg");
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-  }
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+
+#bg img {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+  opacity: 0.8;
 }
 
 .form-signin {
   width: 100%;
   max-width: 400px;
-  padding: 15px;
+  padding: 20px;
   margin: 0 auto;
+  background-color: $secondary-color-transparent;
+  border-radius: 20px;
+  font-weight: 500;
+  color: $black;
+  z-index: 1;
   .h3 {
-    color: #000000;
+    color: $black;
   }
   .p {
-    color: #000000;
+    color: $black;
     text-align: left;
   }
   .checkbox {
     font-weight: 400;
-    color: #000000;
+    color: $black;
   }
+
   .custom-control-input:checked {
-    background-color: red !important;
+    background-color: $primary-color;
   }
+
   .form-control {
     position: relative;
     box-sizing: border-box;
@@ -58,26 +75,30 @@ body {
     }
   }
   button {
-    color: #000000;
-    background-color: #ee3224;
-    border-color: #ee3224;
+    color:$black;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    font-weight: 600;
     &:hover {
-      background-color: #d62d20;
-      border-color: #d62d20;
-      color: #000000;
+      background-color: $primary-color-shade;
+      border-color: $primary-color-shade;
+      color:$black;
     }
   }
   input {
-    &[type="email"] {
-      margin-bottom: -1px;
+    &[type="name"] {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
     }
     &[type="password"] {
-      margin-bottom: 10px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
   }
+  .fa-lock {
+    color: $secondary-color;
+  }
+  .fa-user {
+    color: $secondary-color;
+  }
 }
-//yolo

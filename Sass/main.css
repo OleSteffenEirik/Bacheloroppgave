@@ -1,5 +1,4 @@
-@import url(vendor/boostrap.css);
-@import url(vendor/fontawesome.css);
+/* Custom styling for innlogging */
 html {
   height: 100%; }
 
@@ -17,16 +16,23 @@ body {
   padding-top: 40px;
   padding-bottom: 40px; }
 
-body::after {
-  content: "";
-  background-image: url("../img/TronrudBackground.jpg");
-  opacity: 0.8;
+#bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%; }
+
+#bg img {
+  position: absolute;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  position: absolute;
-  z-index: -1; }
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+  opacity: 0.8; }
 
 .form-signin {
   width: 100%;
@@ -36,7 +42,8 @@ body::after {
   background-color: rgba(87, 90, 86, 0.9);
   border-radius: 20px;
   font-weight: 500;
-  color: #000000; }
+  color: #000000;
+  z-index: 1; }
   .form-signin .h3 {
     color: #000000; }
   .form-signin .p {
