@@ -8,7 +8,9 @@ include('php/login.php'); // Inkluderer Login Script
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Tittel samt ikon -->
     <title>Tronrud</title>
+    <link rel="shortcut icon" href="img/tronrud-icon.png" />
     <!-- Custom CSS -->
     <link href="Sass/main.css" rel="stylesheet">
     <!-- Bootstrap 4 -->
