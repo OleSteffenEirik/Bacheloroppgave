@@ -1,4 +1,3 @@
-
 <?php
 /* 
 Beskrivelse: Oppretter sessjon for og utfører sjekk om brukeren har en sessjon
@@ -24,5 +23,4 @@ $con->close();
 
 header('Location: index.php');
 }
-
 ?>
