@@ -1,5 +1,4 @@
 /* Custom styling for innlogging */
-
 html {
   height: 100%;
 }
@@ -61,10 +60,6 @@ body {
     color: $black;
   }
 
-  .custom-control-input:checked {
-    background-color: $primary-color;
-  }
-
   .form-control {
     position: relative;
     box-sizing: border-box;
@@ -104,4 +99,3 @@ body {
     color: $secondary-color;
   }
 }
-
