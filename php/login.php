@@ -35,19 +35,15 @@ if (isset($_POST['submit'])) {
                 $db_feilTeller = $row['feilLogginnTeller'];
                 $db_feilSiste = $row['feilLogginnSiste'];
                 $db_feilIP = $row['feilIP'];
-                echo $db_feilTeller;
             }
             if ($username==$db_username && $password==$db_password) {
                 $_SESSION['login_user']=$username; // Oppretter sesjon
-                echo $db_feilTeller;
-                echo $_username;
                 $sqlUpdate1 = ("UPDATE brukere SET feilLogginnTeller=0 WHERE kundeNr = '$db_kundeNr'");
                 $res1 = $con->query($sqlUpdate1);
 
                 header("location: profile.php"); // Sender brukeren til hovedsiden
 
             }else {
-                echo $db_feilTeller;
                 $error = "Username or Password is invalid";
 
                 $ip = $_SERVER['REMOTE_ADDR'];  // Henter IP-addressen til brukeren
