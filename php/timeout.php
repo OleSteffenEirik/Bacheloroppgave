@@ -22,15 +22,15 @@
         <section class="jumbotron m-0 text-center rounded">
         <img class="mx-auto d-block" src="../img/tronrud-engineering-logo-svart.svg" alt="" width="240" height="120">
             <div class="container">
-            <h1 class="display-4">Oh no! You've failed to log in many times now and for that we have to punish you!</h1>
+            <h1 class="display-4">Oh no! You've failed to log in multiple times now, and for that we have to punish you!</h1>
             <img class="mx-auto d-block my-5" src="../img/GoToJail.png" alt="" width="350" height="400">
             <h3>
             Release in:
             <small class="text-muted"><span id="counter">02:00</span> minute(s).</small>
             </h3>
             <p>
-                <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+                <!--<a href="#" class="btn btn-primary my-2">Main call to action</a>
+                <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
             </p>
             </div>
         </section>
