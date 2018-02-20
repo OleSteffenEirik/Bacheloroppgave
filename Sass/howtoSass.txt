@@ -1,1 +1,27 @@
 http://thesassway.com/beginner/how-to-structure-a-sass-project
+
+stylesheets/
+|
+|-- admin/           # Admin sub-project
+|   |-- modules/
+|   |-- partials/
+|   `-- _base.scss
+|
+|-- login/         # Account sub-project
+|   |-- modules/
+|   |-- partials/
+|   `-- _base.scss
+|
+|-- site/            # Site sub-project
+|   |-- modules/
+|   |-- partials/
+|   `-- _base.scss
+|
+|-- vendor/          # CSS or Sass from other projects
+|   |-- _colorpicker-1.1.scss
+|   |-- _jquery.ui.core-1.9.1.scss
+|   ...
+|
+|-- admin.scss       # Primary stylesheets for each project
+|-- login.scss
+`-- main.scss

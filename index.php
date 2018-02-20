@@ -12,11 +12,13 @@ include('php/login.php'); // Inkluderer Login Script
     <title>Tronrud</title>
     <link rel="shortcut icon" href="img/tronrud-icon.png" />
     <!-- Custom CSS -->
-    <link href="Sass/main.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Sass/login.css">
+    <!--<link href="Sass/main.css" rel="stylesheet"> -->
     <!-- Bootstrap 4 -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <!-- Fontawesome 5 -->
-    <script defer src="static/fontawesome/fontawesome-all.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.css">
+    <script defer src="static/fontawesome/fontawesome-all.js"></script> <!--lurer på om vi kan fjerne JS linken over -->
   </head>
 
   <body class="text-center">
