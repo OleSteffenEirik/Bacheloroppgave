@@ -1,7 +1,7 @@
 /* Script for count ned/ teller ned tiden for time-out */
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    var end =setInterval(function () {
+    let timer = duration, minutes, seconds;
+    let end =setInterval(function () {
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -19,7 +19,8 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 120,
+    const fiveMinutes = 120,
         display = document.querySelector('#counter');
     startTimer(fiveMinutes, display);
 };
+
