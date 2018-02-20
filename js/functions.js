@@ -28,7 +28,7 @@ window.onload = function () {
 */
 
 
-/* Script for count ned/ teller ned tiden for time-out */
+/* Script for count down/ teller ned tiden for time-out */
 const startTimer =(duration, display) => {
     let timer = duration, minutes, seconds;
     let end =setInterval(()=> {

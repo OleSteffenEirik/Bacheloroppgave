@@ -1,3 +1,12 @@
+<?php 
+    session_start();
+    include("php/dbconn.php");
+    include("php/sessionExpire.php");
+    if(!$_SESSION['login_user']){
+         header("location:index.php");
+        die('Could not connect to database'. mysqli_connect_error());
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
