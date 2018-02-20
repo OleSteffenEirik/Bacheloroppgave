@@ -24,7 +24,7 @@ include('php/login.php'); // Inkluderer Login Script
     <img src="img/TronrudBackground.jpg">
   </div>
     <!-- Login form -->
-    <form class="form-signin" method="post" action="">
+    <form class="form-signin mx-auto d-block" method="post" action="">
       <img class="mb-4" src="img/tronrud-engineering-logo-svart.svg" alt="" width="320" height="160">
       <!-- Username input -->
       <div class="input-group mb-3">

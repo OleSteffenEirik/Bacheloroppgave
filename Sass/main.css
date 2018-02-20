@@ -35,7 +35,7 @@ body {
   opacity: 0.8; }
 
 .form-signin {
-  width: 100%;
+  width: 100% !important;
   max-width: 400px;
   padding: 20px;
   margin: 0 auto;
@@ -79,3 +79,6 @@ body {
     color: #575a56; }
   .form-signin .fa-user {
     color: #575a56; }
+
+body {
+  min-height: 100vh; }
