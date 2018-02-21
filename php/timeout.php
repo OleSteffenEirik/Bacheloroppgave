@@ -7,15 +7,13 @@
         <meta name="author" content="">
         <!-- Tittel samt ikon -->
         <title>Tronrud</title>
-        <link rel="shortcut icon" href="img/tronrud-icon.png" />
+        <link rel="shortcut icon" href="img/tronrud-icon.png"/>
         <!-- Custom CSS -->
-        <link href="../Sass/main.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
         <!-- Bootstrap 4 -->
-        <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
         <!-- Fontawesome 5 -->
-        <script defer src="../static/fontawesome/fontawesome-all.js"></script>
-        <!-- Her kaller vi en javascript funksjon for å telle klokka ned-->
-        <script type="text/javascript" src="../js/functions.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
     </head>
 
     <body class="text-center">
@@ -34,5 +32,9 @@
             </p>
             </div>
         </section>
+
+        <!-- Script -->
+        <script type="text/javascript" src="../js/functions.js"></script>
+        <!-- Script -->
     </body>
 </html>

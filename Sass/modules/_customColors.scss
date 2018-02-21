@@ -6,3 +6,13 @@
   $secondary-color-transparent: rgba(87,90,86,.9);
   $black: #000000; //black
   $white: #ffffff; //white
+
+  //Legger farger til i Bootstraps Theme
+  $theme-colors: (
+    "tronrud-primary": #ee3224,
+    "tronrud-secondary": #575a56,
+    "tronrud-primary-shade": #d62d20,
+    "tronrud-secondary.transparent": rgba(87,90,86,.9),
+    "black": #000000,
+    "white": #ffffff
+  );

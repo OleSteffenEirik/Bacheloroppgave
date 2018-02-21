@@ -10,11 +10,14 @@ session_start();
 require_once "connect.php";
 $con = new tronrudDB();
 
-$error='';
+$error1='';
+$error2='';
+$result='';
+$modalerror = '';
 
 if (isset($_POST['submit'])) {
     if (empty($_POST['username']) || empty($_POST['password'])) {
-        $error = "Username or Password is invalid";
+        $error = "Username or Password field are empty";
     }else {
         // Variabeler for inntastet data
         $username=$_POST['username'];
@@ -27,7 +30,7 @@ if (isset($_POST['submit'])) {
         // Tar spørringen og lager en verdi som lagrer antall rader
         $rows = $sql->num_rows;
 
-        if ($rows > 0) {
+        if ($rows >= 1) {
             while ($row = $sql->fetch_assoc()) {
                 $db_kundeNr = $row['kundeNr'];
                 $db_username = $row['kundeNavn'];
@@ -44,7 +47,7 @@ if (isset($_POST['submit'])) {
                 header("location: profile.php"); // Sender brukeren til hovedsiden
 
             }else {
-                $error = "Username or Password is invalid";
+                $error1 = "Username or Password is invalid";
 
                 $ip = $_SERVER['REMOTE_ADDR'];  // Henter IP-addressen til brukeren
                 $date = date("Y-m-d H:i:s");    // Henter dato
@@ -61,9 +64,23 @@ if (isset($_POST['submit'])) {
                     }   
             }
         }
-        $error = "Username or Password is invalid";
+        $error2 = "Username not found";
     }
-    $error = "Can't connect to database";
     $con->close(); // Closing Connection
 }
+if ($error1 == true) {
+    $result='
+    <div class="alert alert-warning alert-dismissible fade show text-left" role="alert"><strong> Username or Password is invalid</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>';
+    }elseif ($error2 == true) {
+        $result='
+        <div class="alert alert-warning alert-dismissible fade show text-left" role="alert"><strong> Username not found</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>';
+} 
 ?>
