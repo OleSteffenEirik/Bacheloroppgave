@@ -46,9 +46,10 @@ include('php/login.php'); // Inkluderer Login Script
       <div class="custom-control custom-checkbox mb-3 mt-3 text-left">
         <input type="checkbox" class="custom-control-input" id="customCheck1">
         <label class="custom-control-label" for="customCheck1"></label>Remember me</label>
-        <a href="#" class="float-right" data-toggle="modal" data-target="#exampleModal">
-          <i class="fas fa-question-circle fa-lg fa-spin text-tronrud-primary"></i>
-        </a>
+        <!--<a href="#" class="float-right" data-toggle="modal" data-target="#exampleModal">
+          Need help?
+          <i class="fas fa-envelope fa-lg text-tronrud-primary"></i>
+        </a>-->
       </div>
       <!-- Innloggingsknappen -->
       <button class="btn btn-lg btn-tronrud-primary text-black btn-block" type="submit" name="submit">Sign in</button>
@@ -56,7 +57,7 @@ include('php/login.php'); // Inkluderer Login Script
       <p class="mt-5 mb-0">&copy; 2018 Tronrud Engineering</p>
     </form>
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -78,7 +79,6 @@ include('php/login.php'); // Inkluderer Login Script
           <div class="form-group">
             <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message..." required></textarea>
           </div>
-          <span><?php echo $modalerror; ?></span>
       </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-tronrud-secondary" data-dismiss="modal">
@@ -90,7 +90,7 @@ include('php/login.php'); // Inkluderer Login Script
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
     <!-- Scripts -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
