@@ -56,9 +56,6 @@ html {
       color: $black;
       text-align: left;
     }
-    .close {
-      color: blue;
-    }
     .checkbox {
       font-weight: 400;
       color: $black;
@@ -81,6 +78,9 @@ html {
         background-color: $primary-color-shade;
         border-color: $primary-color-shade;
       }
+    }
+    button.close {
+      background-color: #fff3cd;
     }
     input {
       &[type="name"] {

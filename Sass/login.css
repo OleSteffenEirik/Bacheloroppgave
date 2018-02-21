@@ -49,8 +49,6 @@ body {
   .form-signin .p {
     color: #000000;
     text-align: left; }
-  .form-signin .close {
-    color: blue; }
   .form-signin .checkbox {
     font-weight: 400;
     color: #000000; }
@@ -68,6 +66,8 @@ body {
     .form-signin button:hover {
       background-color: #d62d20;
       border-color: #d62d20; }
+  .form-signin button.close {
+    background-color: #fff3cd; }
   .form-signin input[type="name"] {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }

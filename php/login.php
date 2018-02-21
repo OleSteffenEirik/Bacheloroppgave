@@ -70,16 +70,16 @@ if (isset($_POST['submit'])) {
 }
 if ($error1 == true) {
     $result='
-    <div class="alert alert-warning alert-dismissible fade show text-left" role="alert"><strong> Username or Password is invalid</strong>
+    <div class="alert alert-warning alert-dismissible fade show text-left " role="alert">Username or Password is invalid
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span  aria-hidden="true">&times;</span>
         </button>
     </div>';
     }elseif ($error2 == true) {
         $result='
-        <div class="alert alert-warning alert-dismissible fade show text-left" role="alert"><strong> Username not found</strong>
+        <div class="alert alert-warning alert-dismissible fade show text-left" role="alert">Username not found
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <i class="fas fa-times fa-sm"></i>
         </button>
         </div>';
 } 
