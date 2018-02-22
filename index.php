@@ -12,7 +12,7 @@ include('php/login.php'); // Inkluderer Login Script
     <title>Tronrud</title>
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="Sass/login.css"/>
+    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Fontawesome 5 -->
@@ -50,6 +50,9 @@ include('php/login.php'); // Inkluderer Login Script
           Need help?
           <i class="fas fa-envelope fa-lg text-tronrud-primary"></i>
         </a>-->
+        <a href="#" class="float-right text-black">
+          Forgot password?
+        </a>
       </div>
       <!-- Innloggingsknappen -->
       <button class="btn btn-lg btn-tronrud-primary text-black btn-block" type="submit" name="submit">Sign in</button>
@@ -57,7 +60,7 @@ include('php/login.php'); // Inkluderer Login Script
       <p class="mt-5 mb-0">&copy; 2018 Tronrud Engineering</p>
     </form>
 
-<!-- Modal
+<!-- Modal -->
 <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -90,7 +93,7 @@ include('php/login.php'); // Inkluderer Login Script
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>

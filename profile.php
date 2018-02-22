@@ -1,42 +1,44 @@
 <?php 
-    session_start();
     include("php/dbconn.php");
     include("php/sessionExpire.php");
-    if(!$_SESSION['login_user']){
-         header("location:index.php");
-        die('Could not connect to database'. mysqli_connect_error());
-  }
+    include("php/session.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="shortcut icon" href="img/tronrud-icon.png" />
-        <!-- Custom CSS -->
-        <!--<link href="Sass/main.css" rel="stylesheet"> -->
-        <!-- Bootstrap 4 -->
-        <link href="node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-        <!-- Fontawesome 5 -->
-        <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.css">
-        <title>Profil</title>
-    </head>
-    <body class="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Tittel samt ikon -->
+    <title>Tronrud</title>
+    <link rel="shortcut icon" href="img/tronrud-icon.png"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Fontawesome 5 -->
+    <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
+  </head>
+    <body class="d-flex align-items-baseline">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mx-auto">
                     <div class="card card-body m-10">
-                        <form id="searchForm">
-                            <img src="img/tronrud-engineering-logo-svart.svg" class="float-left" alt="logo" width="200px">
-                            <div class="row float-right mt-3 mr-1">
+                        <form id="searchForm" class="d-flex justify-content-between align-items-center">
+                            <img class="" src="img/tronrud-engineering-logo-svart.svg" alt="logo" width="200px">
+                            <div class="row ml-auto mr-3 mt-3">
                               <div class="form-group">
                                 <input type="text" name="Thing" class="form-control input-sm" id="searchBar" placeholder="Search">
                               </div>
                               <div class="form-group">
                                 <input type="submit" class="form-control btn btn-dark" value="Search" id="searchBtn">
-                              </div>                                
+                              </div>                       
                             </div>
+                            <!-- Logg ut -->
+                            <a class="" href="php/logout.php">
+                                <i class="fas fa-sign-out-alt fa-3x text-tronrud-secondary"></i>
+                            </a>       
                         </form>
                         <table class="table mt-5">
                             <thead class="thead-dark">
@@ -56,10 +58,12 @@
                 </div>
             </div>
           </div>  
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script defer src="static/fontawesome/fontawesome-all.js"></script> <!--lurer på om vi kan fjerne JS linken over -->
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <!-- Scripts -->
     </body>
 </html>
