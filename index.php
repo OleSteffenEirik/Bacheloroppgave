@@ -11,12 +11,12 @@ include('php/login.php'); // Inkluderer Login Script
     <!-- Tittel samt ikon -->
     <title>Tronrud</title>
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Fontawesome 5 -->
     <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
   </head>
 
   <body class="text-center">  
@@ -42,15 +42,15 @@ include('php/login.php'); // Inkluderer Login Script
           </div>
           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         </div>
-      <!-- "Remember me" -->
+      <!-- "Remember me"
       <div class="custom-control custom-checkbox mb-3 mt-3 text-left">
         <input type="checkbox" class="custom-control-input" id="customCheck1">
-        <label class="custom-control-label" for="customCheck1"></label>Remember me</label>
+        <label class="custom-control-label" for="customCheck1"></label>Remember me</label>-->
         <!--<a href="#" class="float-right" data-toggle="modal" data-target="#exampleModal">
           Need help?
           <i class="fas fa-envelope fa-lg text-tronrud-primary"></i>
         </a>-->
-        <a href="#" class="float-right text-black">
+        <a href="#" class="float-right text-black mb-3 mt-1">
           Forgot password?
         </a>
       </div>
@@ -60,7 +60,7 @@ include('php/login.php'); // Inkluderer Login Script
       <p class="mt-5 mb-0">&copy; 2018 Tronrud Engineering</p>
     </form>
 
-<!-- Modal -->
+<!-- Modal
 <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -93,14 +93,14 @@ include('php/login.php'); // Inkluderer Login Script
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
     <!-- Scripts -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <!--<script type="text/javascript" src="js/functions.js"></script>-->
     <!-- Scripts -->
   </body>
 </html>

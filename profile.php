@@ -13,12 +13,12 @@
     <!-- Tittel samt ikon -->
     <title>Tronrud</title>
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Fontawesome 5 -->
     <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
   </head>
     <body class="d-flex align-items-baseline">
         <div class="container">
@@ -63,7 +63,32 @@
     <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript">
+            /* Script for count down/ teller ned tiden for time-out */
+        const startTimer =(duration, display) => {
+            let timer = duration, minutes, seconds;
+            let end =setInterval(()=> {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+                //display.textContent = seconds;
+
+                if (--timer < 0) {
+                    window.location = "../index.php";
+                    clearInterval(end);
+                }
+            }, 1000);
+        }
+
+        // ES6 sin Arrow-funksjon.
+        window.onload = () => {
+            let fiveMinutes = 120, display = document.querySelector('#counter'); startTimer(fiveMinutes, display)
+        };
+    </script>
     <!-- Scripts -->
     </body>
 </html>

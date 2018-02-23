@@ -8,12 +8,12 @@
         <!-- Tittel samt ikon -->
         <title>Tronrud</title>
         <link rel="shortcut icon" href="img/tronrud-icon.png"/>
-        <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
         <!-- Bootstrap 4 -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
         <!-- Fontawesome 5 -->
         <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
     </head>
 
     <body class="text-center">
