@@ -26,7 +26,7 @@ window.onload = function () {
 };
 */
 
-/* Script for count down/ teller ned tiden for time-out */
+/* Script for count down/ teller ned tiden for time-out 
 const startTimer =(duration, display) => {
     let timer = duration, minutes, seconds;
     let end =setInterval(()=> {
@@ -49,4 +49,4 @@ const startTimer =(duration, display) => {
 // ES6 sin Arrow-funksjon.
  window.onload = () => {
     let fiveMinutes = 120, display = document.querySelector('#counter'); startTimer(fiveMinutes, display)
-};
+ };*/
