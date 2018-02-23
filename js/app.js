@@ -1,16 +1,23 @@
-const searchBar = document.getElementById('searchBar');
-const table = document.getElementById('itemTable');
-/* event listener */
-searchBar.addEventListener('input', getItems);
+const table = document.getElementById('item-table');
+const form = document.getElementById('search-form');
+const inputVal = document.getElementById('search-bar');
+
+form.addEventListener('submit', function(e){
+
+  console.log(inputVal.value);
+
+  getItems();
+  
+  e.preventDefault();
+})
+
+
 
 /* function */
 function getItems() {
-  if(searchBar.value = "") {
-    
-  } else {
-    let name = this.value;
+    let name = inputVal.value;
     console.log(name);
-
+    clearTable();
     $.ajax({
       type: "GET",
       url: "php/search.php",
@@ -21,7 +28,6 @@ function getItems() {
           clearTable();
         } else {
           for(let i = 0; i < data.length; i++) {
-            clearTable();
             createRow(i, data[i].name, data[i].Item_Id);
           }
         }
@@ -29,12 +35,10 @@ function getItems() {
       complete: function(data, status) {
         console.log(status);
       }
-    });
-  }
+    });  
 }
 
 function createRow(id, name, Item_Id){
-
   let row = table.insertRow(id);
 
   let cell1 = row.insertCell(0);
@@ -48,4 +52,6 @@ function createRow(id, name, Item_Id){
 
 
 function clearTable() {
+  $("#item-table tr").remove(); 
+
 }

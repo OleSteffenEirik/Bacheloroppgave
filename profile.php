@@ -25,11 +25,11 @@
             <div class="row">
                 <div class="col-md-12 mx-auto">
                     <div class="card card-body m-10">
-                        <form id="searchForm" class="d-flex justify-content-between align-items-center">
+                        <form id="search-form" class="d-flex justify-content-between align-items-center">
                             <img class="" src="img/tronrud-engineering-logo-svart.svg" alt="logo" width="200px">
                             <div class="row ml-auto mr-3 mt-3">
                               <div class="form-group">
-                                <input type="text" name="Thing" class="form-control input-sm" id="searchBar" placeholder="Search">
+                                <input type="text" class="form-control input-sm" id="search-bar" placeholder="Search">
                               </div>
                               <div class="form-group">
                                 <input type="submit" class="form-control btn btn-dark" value="Search" id="searchBtn">
@@ -49,7 +49,7 @@
                                 </tr>
                             </thead>
                             <div id="items">
-                              <tbody id="itemTable">
+                              <tbody id="item-table">
                          
                               </tbody>
                             </div>
@@ -63,7 +63,7 @@
     <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
-    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <!-- Scripts -->
     </body>
 </html>
