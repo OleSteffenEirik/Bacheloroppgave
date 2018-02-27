@@ -2,26 +2,28 @@ http://thesassway.com/beginner/how-to-structure-a-sass-project
 
 stylesheets/
 |
-|-- admin/           # Admin sub-project
-|   |-- modules/
-|   |-- partials/
-|   `-- _base.scss
-|
-|-- login/         # Account sub-project
-|   |-- modules/
-|   |-- partials/
-|   `-- _base.scss
-|
-|-- site/            # Site sub-project
-|   |-- modules/
-|   |-- partials/
-|   `-- _base.scss
-|
-|-- vendor/          # CSS or Sass from other projects
-|   |-- _colorpicker-1.1.scss
-|   |-- _jquery.ui.core-1.9.1.scss
+|-- modules/              # Common modules
+|   |-- _all.scss         # Include to get all modules
+|   |-- _utility.scss     # Module name
+|   |-- _colors.scss      # Etc...
 |   ...
 |
-|-- admin.scss       # Primary stylesheets for each project
-|-- login.scss
-`-- main.scss
+|-- partials/             # Partials
+|   |-- _base.sass        # imports for all mixins + global project variables
+|   |-- _buttons.scss     # buttons
+|   |-- _figures.scss     # figures
+|   |-- _grids.scss       # grids
+|   |-- _typography.scss  # typography
+|   |-- _reset.scss       # reset
+|   ...
+|
+|-- vendor/               # CSS or Sass from other projects
+|   |-- _colorpicker.scss
+|   |-- _jquery.ui.core.scss
+|   ...
+|
+`-- main.scss            # primary Sass file
+
+- The vendor folder holds 3rd party code. 
+- The partials folder is for code you want to include and compile. 
+- The modules folder is for code you want to include, but don’t want to compile.

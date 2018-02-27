@@ -36,10 +36,46 @@
                               </div>                       
                             </div>
                             <!-- Logg ut -->
-                            <a class="" href="php/logout.php">
+                            <a class="mr-3" href="php/logout.php">
                                 <i class="fas fa-sign-out-alt fa-3x text-tronrud-secondary"></i>
-                            </a>       
+                            </a>
+                            <a class="text-tronrud-primary" href="#" data-toggle="modal" data-target="#exampleModal">
+                                Change password?
+                            </a>   
                         </form>
+                        <!-- Modal -->
+                        <div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-tronrud-primary" id="exampleModalLabel">Change password</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="ajaxForm" method="post" action="php/changePassword.php">
+                                        <div class="form-group">
+                                            <input type="password" name="newPassword" id="inputPassword" class="form-control" placeholder="New password" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="repeatPassword" id="inputPassword" class="form-control" placeholder="Repeat password" required>
+                                        </div>
+                                    </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-tronrud-secondary" data-dismiss="modal">
+                                            <i class="fas fa-times fa-sm mr-2"></i>
+                                        Close
+                                        </button>
+                                        <button id="addSubmit" type="submit" name="submit" class="btn btn-tronrud-primary">
+                                        Confirm
+                                        </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="form-messages"></div>
                         <table class="table mt-5">
                             <thead class="thead-dark">
                                 <tr>
@@ -64,6 +100,7 @@
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/ajaxForm.js"></script>
     <!-- Scripts -->
     </body>
 </html>

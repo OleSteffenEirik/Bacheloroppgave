@@ -2,8 +2,9 @@
 @import 'modules/customColors';
 
 // Partials
-@import 'login';
-@import 'site';
+@import 'partials/login';
+@import 'partials/profile';
+@import 'partials/timeout';
 
-// Third-party
+// Vendor
 @import '../node_modules/bootstrap/scss/bootstrap';

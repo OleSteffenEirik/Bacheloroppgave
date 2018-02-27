@@ -13,9 +13,9 @@ session_start();
 $user_check=$_SESSION['login_user'];
 
 // SQL spørring som samler informasjon om bruker
-$ses_sql=$con->query("select kundeNavn from brukere where kundeNavn='$user_check'");
+$ses_sql=$con->query("select ePost from brukere where ePost='$user_check'");
 $row = mysqli_fetch_assoc($ses_sql);
-$login_session =$row['kundeNavn'];
+$login_session =$row['ePost'];
 
 // Sjekker om riktig bruker har en sessjon, hvis ikke blir man sendt til innlogging
 if(!isset($login_session)){
