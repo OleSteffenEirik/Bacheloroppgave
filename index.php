@@ -104,7 +104,7 @@ Beskrivelse:
 
     <script type="text/javascript" src="js/ajaxForm.js"></script>
     <!--recaptcha -->
-			<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 
     <!-- |Scripts| -->
   </body>

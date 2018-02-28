@@ -29,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $captcha_success=json_decode($verify);
 
         if ($captcha_success->success==false) {
+            http_response_code(500);
             echo "This user was not verified by recaptcha";
         }
         else if ($captcha_success->success==true) {
@@ -41,16 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($rows >= 1) {
                 while ($row = $sql->fetch_assoc()) {
-                    $db_kundeNr = $row['kundeNr'];
                     $db_email = $row['ePost'];
                     $db_password = $row['passord'];
-                    $db_feilTeller = $row['feilLogginnTeller'];
-                    $db_feilSiste = $row['feilLogginnSiste'];
-                    $db_feilIP = $row['feilIP'];
                 }
                 if ($email==$db_email && $password==$db_password) {
                     $_SESSION['login_user']=$email; // Oppretter sesjon
                     http_response_code(200);
+                    echo "Logged in successfully! Redirecting...";
                 }else {
                     http_response_code(500);
                     echo "E-mail and password doesn't match";

@@ -49,12 +49,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     http_response_code(200);
                     echo "Thank You! Your message has been sent.";
                 }else{
+                    http_response_code(500);
                     echo "There was a problem with your submission, please try again.";
                 }   
-            }else {         
+            }else {
+                http_response_code(500);         
                 echo "Oops! Something went wrong and we couldn't send your message.";
             }
         }else {
+            http_response_code(500);
             echo "There was a problem with your submission, please try again.";
         }
     }else {

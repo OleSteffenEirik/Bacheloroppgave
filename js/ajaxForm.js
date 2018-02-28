@@ -83,7 +83,6 @@
 			data: formData
         })
 		.done(function(response) {
-			console.log("Event DONE");
 			// Lager Bootstrap alerts
 			$(formMessages).removeClass('alert-danger');
 			$(formMessages).addClass('alert-success');
@@ -95,10 +94,10 @@
 			$(formMessages).text(response);
 
 			window.location.href='profile.php';
+
 			grecaptcha.reset();
 		})
 		.fail(function(data) {
-			console.log("Event FAIL");
             // Lager Bootstrap alerts
             $(formMessages).removeClass('alert-success');
             $(formMessages).addClass('alert-danger');
