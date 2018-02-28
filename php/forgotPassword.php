@@ -9,7 +9,6 @@ Beskrivelse: Tar imot e-post fra bruker, lager tidfeldig passord og sender det t
 
 require_once "connect.php";
 $con = new tronrudDB();
-include("functions.php");
 
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -62,12 +61,14 @@ include("functions.php");
         }
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers) && $sqlUpdate == true) {
+            http_response_code(200);
             echo "Thank You! Your message has been sent.";
         } else {
+            http_response_code(500);
             echo "Oops! Something went wrong and we couldn't send your message.";
         }
-
     } else {
+        http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     }
 $con->close();

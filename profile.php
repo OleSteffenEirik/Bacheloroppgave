@@ -96,9 +96,9 @@
           </div>  
     <!-- Scripts -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
+    <script type="text/javascript" src="static/fontawesome/fontawesome-all.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/ajaxForm.js"></script>
     <!-- Scripts -->

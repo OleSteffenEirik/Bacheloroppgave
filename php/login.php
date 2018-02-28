@@ -10,8 +10,9 @@ session_start();
 require_once "connect.php";
 $con = new tronrudDB();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     if (empty($_POST['email']) || empty($_POST['password'])) {
+        http_response_code(400);
         echo "E-mail or Password field are empty";
     }else {
         // Variabeler for inntastet data
@@ -34,14 +35,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //This user is verified by recaptcha
 
             // SQL spørring som henter data fra brukertabellen og sammenligner med inntastet data
-            $sql = $con->query("SELECT * FROM brukere WHERE ePost='$email' AND passord='$password'");
+            $sql = $con->query("SELECT * FROM brukere WHERE ePost='$email'");
+            // Tar spørringen og lager en verdi som lagrer antall rader
+            $rows = $sql->num_rows;
 
-            $_SESSION['login_user']=$email; // Oppretter sesjon
-            header("location: ../profile.php"); // Sender brukeren til hovedsiden
-
+            if ($rows >= 1) {
+                while ($row = $sql->fetch_assoc()) {
+                    $db_kundeNr = $row['kundeNr'];
+                    $db_email = $row['ePost'];
+                    $db_password = $row['passord'];
+                    $db_feilTeller = $row['feilLogginnTeller'];
+                    $db_feilSiste = $row['feilLogginnSiste'];
+                    $db_feilIP = $row['feilIP'];
+                }
+                if ($email==$db_email && $password==$db_password) {
+                    $_SESSION['login_user']=$email; // Oppretter sesjon
+                    http_response_code(200);
+                }else {
+                    http_response_code(500);
+                    echo "E-mail and password doesn't match";
+                }
             }else {
-                echo "E-mail or Password is invalid";
+                http_response_code(500);
+                echo "E-mail or password is invalid";
             }
+        }else {
+            http_response_code(500);
+            echo "E-mail or password is invalid";
         }
-    } $con->close(); // Closing Connection
+    }
+}else{
+    http_response_code(403);
+    echo "There was a problem with your submission, please try again.";
+}
+
+$con->close(); // Closing Connection
 ?>

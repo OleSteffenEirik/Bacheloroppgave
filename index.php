@@ -1,5 +1,9 @@
 <?php
-// include('php/login.php'); // Inkluderer Login Script
+/* 
+Beskrivelse: 
+    Utviklet av:
+        Kontrollert av:
+*/
 ?>
 <!doctype html>
 <html lang="en">
@@ -92,11 +96,11 @@
     <!-- jQuery -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
     <!-- Popper -->
-    <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script type="text/javascript" src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <!-- Bootstrap -->
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FontAwesome -->
-    <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
+    <script type="text/javascript" src="static/fontawesome/fontawesome-all.js"></script>
 
     <script type="text/javascript" src="js/ajaxForm.js"></script>
     <!--recaptcha -->

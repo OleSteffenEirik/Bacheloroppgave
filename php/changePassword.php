@@ -9,7 +9,6 @@
 
 require_once "connect.php";
 $con = new tronrudDB();
-include "functions.php";
 include "session.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,18 +46,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 //$sqlUpdate = $con->query("UPDATE bruker SET passord='$encrypted_password' where brukerNavn='$login_user'");
                 if ($resUpdate == true) { 
+                    http_response_code(200);
                     echo "Thank You! Your message has been sent.";
                 }else{
-                    echo "There was a problem with your submission, please try again. 1";
+                    echo "There was a problem with your submission, please try again.";
                 }   
             }else {         
                 echo "Oops! Something went wrong and we couldn't send your message.";
             }
         }else {
-            echo "There was a problem with your submission, please try again. 2";
+            echo "There was a problem with your submission, please try again.";
         }
     }else {
-        echo "There was a problem with your submission, please try again. 3";
+        http_response_code(403);
+        echo "There was a problem with your submission, please try again.";
 }
     
 // Avslutte kontakt med databse.

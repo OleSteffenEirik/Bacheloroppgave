@@ -83,22 +83,22 @@
 			data: formData
         })
 		.done(function(response) {
-            // Lager Bootstrap alerts
-            $(formMessages).removeClass('alert-danger');
-            $(formMessages).addClass('alert-success');
-            
-            $(formMessages).addClass('alert alert-dismissible fade show text-left');
-            $(formMessages).attr('role', 'alert');
+			console.log("Event DONE");
+			// Lager Bootstrap alerts
+			$(formMessages).removeClass('alert-danger');
+			$(formMessages).addClass('alert-success');
+			
+			$(formMessages).addClass('alert alert-dismissible fade show text-left');
+			$(formMessages).attr('role', 'alert');
 
 			// Lager melding
 			$(formMessages).text(response);
 
-			// Nullstiller formen
-			$('#inputEmail').val('');
-			$('#inputPassword').val('');
+			window.location.href='profile.php';
 			grecaptcha.reset();
 		})
 		.fail(function(data) {
+			console.log("Event FAIL");
             // Lager Bootstrap alerts
             $(formMessages).removeClass('alert-success');
             $(formMessages).addClass('alert-danger');
