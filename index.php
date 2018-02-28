@@ -1,5 +1,5 @@
 <?php
-include('php/login.php'); // Inkluderer Login Script
+// include('php/login.php'); // Inkluderer Login Script
 ?>
 <!doctype html>
 <html lang="en">
@@ -8,8 +8,9 @@ include('php/login.php'); // Inkluderer Login Script
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Tittel samt ikon -->
+    <!-- Tittel -->
     <title>Tronrud</title>
+    <!-- Ikon -->
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
@@ -19,15 +20,15 @@ include('php/login.php'); // Inkluderer Login Script
     <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
   </head>
 
-  <body class="text-center">  
+  <body class="text-center">
+  <!-- Bakgrunnsbilde -->  
   <div id="bg">
     <img src="img/TronrudBackground.jpg">
   </div>
     <!-- Login form -->
-    <form class="form-signin mx-auto d-block" method="post" action="">
+    <form id="ajaxFormCaptcha" class="form-signin mx-auto d-block" method="post" action="php/login.php">
       <img class="mb-4" src="img/tronrud-engineering-logo-svart.svg" alt="" width="320" height="160">
-      <!-- Feilmelding -->
-      <?php echo $result; ?>
+      <!-- AJAX Output -->
       <div id="form-messages"></div>
       <!-- E-mail input -->
       <div class="input-group mb-3">
@@ -42,11 +43,14 @@ include('php/login.php'); // Inkluderer Login Script
             <span class="input-group-text"><i class="fas fa-lock"></i></span>
           </div>
           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        </div>
-        <a href="#" class="float-right text-black mb-3 mt-1" data-toggle="modal" data-target="#exampleModal">
-          Forgot password?
-        </a>
       </div>
+      <!-- reCAPTCHA -->
+      <div class="g-recaptcha mb-3" data-callback="onHuman" data-sitekey="6Le0nzsUAAAAAIuSj_4hjFI_a7Pxj2v8Coa4A7eR"></div>
+			<input type="hidden" id="captcha" name="captcha" value="">
+      <!-- Forgot password -->
+      <a href="#" class="float-left text-black mb-3" data-toggle="modal" data-target="#exampleModal">
+        Forgot password?
+      </a>
       <!-- Innloggingsknappen -->
       <button class="btn btn-lg btn-tronrud-primary text-black btn-block" type="submit" name="submit" id="login_button">Sign in</button>
       <!-- Copyright -->
@@ -66,7 +70,7 @@ include('php/login.php'); // Inkluderer Login Script
       <div class="modal-body">
         <form id="ajaxForm" method="post" action="php/forgotPassword.php">
           <div class="form-group">
-            <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="E-mail" required>
+            <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="E-mail" required>
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
       </div>
@@ -83,12 +87,21 @@ include('php/login.php'); // Inkluderer Login Script
   </div>
 </div>
 
-    <!-- Scripts -->
+    <!-- |Scripts| -->
+
+    <!-- jQuery -->
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Popper -->
     <script type="text/javascript" src="node_modules/popper.js/dist/popper.min.js"></script>
+    <!-- Bootstrap -->
     <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FontAwesome -->
     <script type="text/javascript" src="static/fontawesome/fontawesome-all.min.js"></script>
+
     <script type="text/javascript" src="js/ajaxForm.js"></script>
-    <!-- Scripts -->
+    <!--recaptcha -->
+			<script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <!-- |Scripts| -->
   </body>
 </html>

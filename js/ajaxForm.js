@@ -1,21 +1,21 @@
- // AJAX funksjon for å glemt passord
- $(function() {
+ // AJAX funksjon for å glemt og bytte passord
+ $(function ajaxForm() {
 
-	// Get the form.
+	// Henter form
 	var form = $('#ajaxForm');
 
-	// Get the messages div.
+	// Henter div
 	var formMessages = $('#form-messages');
 
-	// Set up an event listener for the contact form.
+	// Event listener for formen
 	$(form).submit(function(e) {
-		// Stop the browser from submitting the form.
+		// Hindrer submit av formen
 		e.preventDefault();
 
-		// Serialize the form data.
+		// Serializer form data
 		var formData = $(form).serialize();
 
-		// Submit the form using AJAX.
+		// Submitter formen med AJAX.
 		$.ajax({
 			type: 'POST',
 			url: $(form).attr('action'),
@@ -27,17 +27,17 @@
             $(formMessages).addClass('alert-success');
             
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
-            $('#formMessages').attr('role', 'alert');
+            $(formMessages).attr('role', 'alert');
 
             $('#exampleModal').modal('hide');
 
-			// Set the message text.
+			// Lager melding
 			$(formMessages).text(response);
 
-			// Clear the form.
-			//$('#name').val('');
+			// Nullstiler formen
 			$('#email').val('');
-			//$('#message').val('');
+			$('#newPassword').val('');
+			$('#repeatPassword').val('');
 		})
 		.fail(function(data) {
             // Lager Bootstrap alerts
@@ -45,11 +45,11 @@
             $(formMessages).addClass('alert-danger');
             
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
-            $('#formMessages').attr('role', 'alert');
+            $(formMessages).attr('role', 'alert');
 
-            $('#exampleModal').modal('hide');
+			$('#exampleModal').modal('hide');
 
-			// Set the message text.
+			// Lager melding
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
 			} else {
@@ -58,3 +58,66 @@
 		});
 	});
 });
+
+// AJAX funksjon for innlogging med reCaptcha
+ $(function ajaxFormCaptcha() {
+
+	// Henter form
+	var form = $('#ajaxFormCaptcha');
+
+	// Henter div
+	var formMessages = $('#form-messages');
+
+	// Event listener for formen
+	$(form).submit(function(e) {
+		// Hindrer submit av formen
+		e.preventDefault();
+
+		// Serializer form data
+		var formData = $(form).serialize();
+
+		// Submitter formen med AJAX
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+        })
+		.done(function(response) {
+            // Lager Bootstrap alerts
+            $(formMessages).removeClass('alert-danger');
+            $(formMessages).addClass('alert-success');
+            
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).attr('role', 'alert');
+
+			// Lager melding
+			$(formMessages).text(response);
+
+			// Nullstiller formen
+			$('#inputEmail').val('');
+			$('#inputPassword').val('');
+			grecaptcha.reset();
+		})
+		.fail(function(data) {
+            // Lager Bootstrap alerts
+            $(formMessages).removeClass('alert-success');
+            $(formMessages).addClass('alert-danger');
+            
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).attr('role', 'alert');
+
+			grecaptcha.reset();
+
+			// Lager melding
+			if (data.responseText !== '') {
+				$(formMessages).text(data.responseText);
+			} else {
+				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+			}
+		});
+	});
+});
+
+function onHuman(response) { 
+	document.getElementById('captcha').value = response; 
+} 

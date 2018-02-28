@@ -51,21 +51,23 @@ include("functions.php");
 
             // Build the email headers.
             $email_headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/plain; charset=UTF-8' . "\r\n";
+
+            //$salt = 'IT2_2017';
+        
+            //$encrypted_password = passwordEncrypter($password);
+            //$con->query("UPDATE bruker SET passord = $encrypted_password WHERE ePost='$email'");
+            
+            //Salter, krypterer og oppdaterer passordet til riktig bruker i databasen.
+            $sqlUpdate = $con->query("UPDATE brukere SET passord = '$password' WHERE ePost='$email'");
         }
         // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
-            // Set a 200 (okay) response code.
-            http_response_code(200);
+        if (mail($recipient, $subject, $email_content, $email_headers) && $sqlUpdate == true) {
             echo "Thank You! Your message has been sent.";
         } else {
-            // Set a 500 (internal server error) response code.
-            http_response_code(500);
             echo "Oops! Something went wrong and we couldn't send your message.";
         }
 
     } else {
-        // Not a POST request, set a 403 (forbidden) response code.
-        http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     }
 $con->close();

@@ -56,10 +56,10 @@
                                     <div class="modal-body">
                                         <form id="ajaxForm" method="post" action="php/changePassword.php">
                                         <div class="form-group">
-                                            <input type="password" name="newPassword" id="inputPassword" class="form-control" placeholder="New password" required>
+                                            <input type="password" name="newPassword" id="newPassword" class="form-control" placeholder="New password" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="repeatPassword" id="inputPassword" class="form-control" placeholder="Repeat password" required>
+                                            <input type="password" name="repeatPassword" id="repeatPassword" class="form-control" placeholder="Repeat password" required>
                                         </div>
                                     </div>
                                         <div class="modal-footer">
