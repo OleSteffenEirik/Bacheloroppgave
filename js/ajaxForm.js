@@ -1,5 +1,5 @@
- // AJAX funksjon for å glemt og bytte passord
- $(function ajaxForm() {
+// AJAX funksjon for å glemt og bytte passord
+$(function ajaxForm() {
 
 	// Henter form
 	var form = $('#ajaxForm');
@@ -60,7 +60,7 @@
 });
 
 // AJAX funksjon for innlogging med reCaptcha
- $(function ajaxFormCaptcha() {
+$(function ajaxFormCaptcha() {
 
 	// Henter form
 	var form = $('#ajaxFormCaptcha');
@@ -93,7 +93,7 @@
 			// Lager melding
 			$(formMessages).text(response);
 
-			window.location.href='profile.php';
+			window.location.href='php/profile.php';
 
 			grecaptcha.reset();
 		})

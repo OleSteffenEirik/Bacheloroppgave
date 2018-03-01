@@ -1,7 +1,7 @@
 <?php 
-    include("php/dbconn.php");
-    include("php/sessionExpire.php");
-    include("php/session.php");
+    include("dbconn.php");
+    include("sessionExpire.php");
+    include("session.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
