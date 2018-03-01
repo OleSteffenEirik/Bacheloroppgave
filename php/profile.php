@@ -12,13 +12,13 @@
     <meta name="author" content="">
     <!-- Tittel samt ikon -->
     <title>Tronrud</title>
-    <link rel="shortcut icon" href="img/tronrud-icon.png"/>
+    <link rel="shortcut icon" href="../img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Fontawesome 5 -->
-    <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/fontawesome/on-server/css/fontawesome-all.min.css"/>
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
+    <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
   </head>
     <body class="d-flex align-items-baseline">
         <div class="container">
@@ -26,7 +26,7 @@
                 <div class="col-md-12 mx-auto">
                     <div class="card card-body m-10">
                         <form id="search-form" class="d-flex justify-content-between align-items-center">
-                            <img class="" src="img/tronrud-engineering-logo-svart.svg" alt="logo" width="200px">
+                            <img class="" src="../img/tronrud-engineering-logo-svart.svg" alt="logo" width="200px">
                             <div class="row ml-auto mr-3 mt-3">
                               <div class="form-group">
                                 <input type="text" class="form-control input-sm" id="search-bar" placeholder="Search">
@@ -36,7 +36,7 @@
                               </div>                       
                             </div>
                             <!-- Logg ut -->
-                            <a class="mr-3" href="php/logout.php">
+                            <a class="mr-3" href="logout.php">
                                 <i class="fas fa-sign-out-alt fa-3x text-tronrud-secondary"></i>
                             </a>
                             <a class="text-tronrud-primary" href="#" data-toggle="modal" data-target="#exampleModal">
@@ -54,7 +54,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="ajaxForm" method="post" action="php/changePassword.php">
+                                        <form id="ajaxForm" method="post" action="changePassword.php">
                                         <div class="form-group">
                                             <input type="password" name="newPassword" id="newPassword" class="form-control" placeholder="New password" required>
                                         </div>
@@ -95,12 +95,12 @@
             </div>
           </div>  
     <!-- Scripts -->
-    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="static/fontawesome/fontawesome-all.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/ajaxForm.js"></script>
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../static/fontawesome/fontawesome-all.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/ajaxForm.js"></script>
     <!-- Scripts -->
     </body>
 </html>
