@@ -68,6 +68,10 @@ $(function ajaxFormCaptcha() {
 	// Henter div
 	var formMessages = $('#form-messages');
 
+	var formButton = $('#form-button');
+
+	var formX = $('#form-X');
+
 	// Event listener for formen
 	$(form).submit(function(e) {
 		// Hindrer submit av formen
@@ -90,20 +94,28 @@ $(function ajaxFormCaptcha() {
 			$(formMessages).addClass('alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
+			window.location.href = 'php/partfinder.php';
+
 			// Lager melding
 			$(formMessages).text(response);
-
-			window.location.href='php/profile.php';
 
 			grecaptcha.reset();
 		})
 		.fail(function(data) {
-            // Lager Bootstrap alerts
+			// Lager Bootstrap alerts
             $(formMessages).removeClass('alert-success');
             $(formMessages).addClass('alert-danger');
             
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
-            $(formMessages).attr('role', 'alert');
+			$(formMessages).attr('role', 'alert');
+			
+			$(formButton).removeAttr('hidden');
+			$(formButton).addClass('close');
+			$(formButton).attr('type', 'button');
+			$(formButton).attr('data-dismiss', 'alert');
+			$(formButton).attr('aria-label', 'Close');
+
+			$(formX).addClass('fas fa-times');
 
 			grecaptcha.reset();
 

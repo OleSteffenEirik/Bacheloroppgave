@@ -7,7 +7,7 @@ Beskrivelse:
 
 session_start();
 
-require_once "connect.php";
+require_once "../includes/connect.php";
 $con = new tronrudDB();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
@@ -44,11 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 while ($row = $sql->fetch_assoc()) {
                     $db_email = $row['ePost'];
                     $db_password = $row['passord'];
+                    $db_kundeNavn = $row['kundeNavn'];
                 }
                 if ($email==$db_email && $password==$db_password) {
                     $_SESSION['login_user']=$email; // Oppretter sesjon
                     http_response_code(200);
-                    echo "Logged in successfully! Redirecting...";
+                    echo 'Welcome, ' . $db_kundeNavn . '!';
                 }else {
                     http_response_code(500);
                     echo "E-mail and password doesn't match";

@@ -6,14 +6,14 @@ Beskrivelse:
 */
 ?>
 <!doctype html>
-<html lang="en">
+<html class="login" lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Tittel -->
-    <title>Tronrud</title>
+    <title>Tronrud Engineering</title>
     <!-- Ikon -->
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
@@ -24,16 +24,20 @@ Beskrivelse:
     <link rel="stylesheet" type="text/css" href="Sass/main.css"/>
   </head>
 
-  <body class="text-center">
+  <body class="text-center login">
   <!-- Bakgrunnsbilde -->  
   <div id="bg">
     <img src="img/TronrudBackground.jpg">
   </div>
     <!-- Login form -->
-    <form id="ajaxFormCaptcha" class="form-signin mx-auto d-block" method="post" action="php/login.php">
+    <form id="ajaxFormCaptcha" class="form-signin mx-auto d-block" method="post" action="includes/login.php">
       <img class="mb-4" src="img/tronrud-engineering-logo-svart.svg" alt="" width="320" height="160">
       <!-- AJAX Output -->
-      <div id="form-messages"></div>
+      <div id="form-messages">
+        <button id="form-button" hidden="hidden">
+          <i id="form-X"></i>
+        </button>
+      </div>
       <!-- E-mail input -->
       <div class="input-group mb-3">
         <div class="input-group-prepend">
@@ -68,23 +72,18 @@ Beskrivelse:
       <div class="modal-header">
         <h5 class="modal-title text-tronrud-primary" id="exampleModalLabel">Reset password</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true"><i class="fas fa-times"></i></span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="ajaxForm" method="post" action="php/forgotPassword.php">
+        <form id="ajaxForm" method="post" action="includes/forgotPassword.php">
           <div class="form-group">
             <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="E-mail" required>
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
       </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-tronrud-secondary" data-dismiss="modal">
-          <i class="fas fa-times fa-sm mr-2"></i>
-          Close</button>
-          <button id="addSubmit" type="submit" name="submit" class="btn btn-tronrud-primary">
-          Confirm
-          </button>
+          <button id="addSubmit" type="submit" name="submit" class="btn btn-tronrud-primary">Confirm</button>
         </form>
       </div>
     </div>

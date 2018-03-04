@@ -1,5 +1,5 @@
 <?php
-    include 'dbconn.php';
+    include '../includes/dbconn.php';
     $conn = getDatabaseConnection();
 
     $name = "%" . $_GET['name'] . "%";
@@ -13,7 +13,7 @@
     
     echo json_encode($records);
 
-    // require_once "connect.php";
+    // require_once "includes/connect.php";
     // $con = new tronrudDB();
 
     // $name = $con->real_escape_string("%".$_GET['name']."%");
