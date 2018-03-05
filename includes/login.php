@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($captcha_success->success==false) {
             http_response_code(500);
-            echo "This user was not verified by recaptcha";
+            echo 'This user was not verified by recaptcha';
         }
         else if ($captcha_success->success==true) {
             //This user is verified by recaptcha

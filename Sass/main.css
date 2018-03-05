@@ -145,7 +145,7 @@ body.login {
       background-color: #d62d20;
       border-color: #d62d20; }
   .form-signin button.close {
-    background-color: #fff3cd; }
+    background-color: transparent; }
   .form-signin input[type="name"] {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }

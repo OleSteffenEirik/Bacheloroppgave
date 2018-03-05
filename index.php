@@ -34,9 +34,7 @@ Beskrivelse:
       <img class="mb-4" src="img/tronrud-engineering-logo-svart.svg" alt="" width="320" height="160">
       <!-- AJAX Output -->
       <div id="form-messages">
-        <button id="form-button" hidden="hidden">
           <i id="form-X"></i>
-        </button>
       </div>
       <!-- E-mail input -->
       <div class="input-group mb-3">

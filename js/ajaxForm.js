@@ -68,10 +68,6 @@ $(function ajaxFormCaptcha() {
 	// Henter div
 	var formMessages = $('#form-messages');
 
-	var formButton = $('#form-button');
-
-	var formX = $('#form-X');
-
 	// Event listener for formen
 	$(form).submit(function(e) {
 		// Hindrer submit av formen
@@ -94,12 +90,14 @@ $(function ajaxFormCaptcha() {
 			$(formMessages).addClass('alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
-			window.location.href = 'php/partfinder.php';
-
 			// Lager melding
 			$(formMessages).text(response);
 
+			$('#form-messages').append('<i class="fa fa-spinner fa-spin float-right"></i>');
+
 			grecaptcha.reset();
+
+			window.location.href = 'php/partfinder.php';
 		})
 		.fail(function(data) {
 			// Lager Bootstrap alerts
@@ -108,23 +106,19 @@ $(function ajaxFormCaptcha() {
             
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
-			
-			$(formButton).removeAttr('hidden');
-			$(formButton).addClass('close');
-			$(formButton).attr('type', 'button');
-			$(formButton).attr('data-dismiss', 'alert');
-			$(formButton).attr('aria-label', 'Close');
 
-			$(formX).addClass('fas fa-times');
-
-			grecaptcha.reset();
+			$(formMessages).fadeTo(5000, 500).slideUp(500);
 
 			// Lager melding
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
+				$('#form-messages').append('<button id="formButton" type="button" class="close" data-dismiss="alert" aria-label="Close"></button>');
+				$('#formButton').append('<i class="fas fa-times"></i>');
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}
+
+			grecaptcha.reset();
 		});
 	});
 });
