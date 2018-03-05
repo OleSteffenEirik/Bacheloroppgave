@@ -1,6 +1,5 @@
 <?php
-include("connect.php");
-include("session.php");
+require_once "connect.php";
 
 $user_check = $_SESSION['login_user'];
 

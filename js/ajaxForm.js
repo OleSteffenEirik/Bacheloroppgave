@@ -87,13 +87,13 @@ $(function ajaxFormCaptcha() {
 			$(formMessages).removeClass('alert-danger');
 			$(formMessages).addClass('alert-success');
 			
-			$(formMessages).addClass('alert alert-dismissible fade show text-left');
+			$(formMessages).addClass('container alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
 			// Lager melding
 			$(formMessages).text(response);
 
-			$('#form-messages').append('<i class="fa fa-spinner fa-spin float-right"></i>');
+			//$('#form-messages').append('<i class="fa fa-spinner fa-spin float-right"></i>');
 
 			grecaptcha.reset();
 
@@ -104,7 +104,7 @@ $(function ajaxFormCaptcha() {
             $(formMessages).removeClass('alert-success');
             $(formMessages).addClass('alert-danger');
             
-            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).addClass('container alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
 			$(formMessages).fadeTo(5000, 500).slideUp(500);

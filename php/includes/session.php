@@ -4,7 +4,7 @@ Beskrivelse: Oppretter sessjon for og utfører sjekk om brukeren har en sessjon
     Utviklet av: Steffen
         Kontrollert av: 
 */
-require_once "../includes/connect.php";
+require_once "connect.php";
 $con = new tronrudDB();
 
 session_start();

@@ -1,7 +1,7 @@
 <?php 
-    include("../includes/dbconn.php");
-    include("../includes/sessionExpire.php");
-    include("../includes/session.php");
+    include("../php/includes/dbconn.php");
+    include("../php/includes/sessionExpire.php");
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@
                               </div>                       
                             </div>
                             <!-- Logg ut -->
-                            <a class="mr-3" href="../includes/logout.php">
+                            <a class="mr-3" href="../php/includes/logout.php">
                                 <i class="fas fa-sign-out-alt fa-3x text-tronrud-secondary"></i>
                             </a>
                             <a class="text-tronrud-primary" href="#" data-toggle="modal" data-target="#exampleModal">
@@ -54,7 +54,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="ajaxForm" method="post" action="../includes/changePassword.php">
+                                        <form id="ajaxForm" method="post" action="../php/includes/changePassword.php">
                                         <div class="form-group">
                                             <input type="password" name="newPassword" id="newPassword" class="form-control" placeholder="New password" required>
                                         </div>

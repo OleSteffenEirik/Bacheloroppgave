@@ -7,9 +7,9 @@
 
 */    
 
-require_once "../includes/connect.php";
+require_once "connect.php";
 $con = new tronrudDB();
-include "../includes/session.php";
+include "session.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Varibeler for bytt passord

@@ -1,11 +1,11 @@
 // Modules and Variables
 @import 'modules/customColors';
-@import 'modules/imageHover';
 
 // Partials
 @import 'partials/login';
-@import 'partials/profile';
+@import 'partials/partfinder';
 @import 'partials/home';
 
 // Vendor
 @import '../node_modules/bootstrap/scss/bootstrap';
+@import 'modules/imageHover';

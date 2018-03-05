@@ -7,7 +7,7 @@ Beskrivelse:
 
 session_start();
 
-require_once "../includes/connect.php";
+require_once "connect.php";
 $con = new tronrudDB();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 

@@ -42,24 +42,12 @@ html.login {
   .form-signin {
     width: 100% !important;
     max-width: 400px;
-    padding: 25px;
-    margin: 0 auto;
+    padding: 34px;
+    //margin: 0 auto; //Aktiveres denne så fungerer ikke sentrering i IE
     background-color: $secondary-color-transparent;
     border-radius: 20px;
     font-weight: 500;
-    color: $black;
     z-index: 1;
-    .h3 {
-      color: $black;
-    }
-    .p {
-      color: $black;
-      text-align: left;
-    }
-    .checkbox {
-      font-weight: 400;
-      color: $black;
-    }
   
     .form-control {
       position: relative;

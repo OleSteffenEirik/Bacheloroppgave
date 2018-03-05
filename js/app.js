@@ -20,7 +20,7 @@ function getItems() {
     clearTable();
     $.ajax({
       type: "GET",
-      url: "../includes/search.php",
+      url: "../php/includes/search.php",
       dataType: "json",
       data: { "name" : name },
       success: function(data, status) {

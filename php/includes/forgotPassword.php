@@ -7,7 +7,7 @@ Beskrivelse: Tar imot e-post fra bruker, lager tidfeldig passord og sender det t
 
 */
 
-require_once "../includes/connect.php";
+require_once "connect.php";
 $con = new tronrudDB();
 
     // Only process POST reqeusts.

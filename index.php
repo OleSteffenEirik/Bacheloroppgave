@@ -30,37 +30,45 @@ Beskrivelse:
     <img src="img/TronrudBackground.jpg">
   </div>
     <!-- Login form -->
-    <form id="ajaxFormCaptcha" class="form-signin mx-auto d-block" method="post" action="includes/login.php">
-      <img class="mb-4" src="img/tronrud-engineering-logo-svart.svg" alt="" width="320" height="160">
+    <form id="ajaxFormCaptcha" class="form-signin" method="post" action="php/includes/login.php">
+      <img class="mb-4" src="img/tronrud-engineering-logo.svg" alt="Tronrud logo" width="320" height="160">
       <!-- AJAX Output -->
-      <div id="form-messages">
-          <i id="form-X"></i>
-      </div>
+      <div id="form-messages"></div>
       <!-- E-mail input -->
-      <div class="input-group mb-3">
+      <div class="container input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text"><i class="fas fa-user"></i></span>
         </div>
           <input type="email" name="email" id="inputEmail" class="form-control" placeholder="E-mail" required autofocus>
       </div>
       <!-- Password input -->
-      <div class="input-group mb-3">
+      <div class="container input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-lock"></i></span>
           </div>
           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
       </div>
       <!-- reCAPTCHA -->
-      <div class="g-recaptcha mb-3" data-callback="onHuman" data-sitekey="6Le0nzsUAAAAAIuSj_4hjFI_a7Pxj2v8Coa4A7eR" data-size="normal"></div>
-			<input type="hidden" id="captcha" name="captcha" value="">
-      <!-- Forgot password -->
-      <a href="#" class="float-left text-black mb-3" data-toggle="modal" data-target="#exampleModal">
-        Forgot password?
-      </a>
-      <!-- Innloggingsknappen -->
-      <button class="btn btn-lg btn-tronrud-primary text-black btn-block" type="submit" name="submit" id="login_button">Sign in</button>
+      <div class="container text-center">
+        <div class="g-recaptcha mb-3 d-inline-block" data-callback="onHuman" data-sitekey="6Le0nzsUAAAAAIuSj_4hjFI_a7Pxj2v8Coa4A7eR" data-size="normal"></div>
+        <input type="hidden" id="captcha" name="captcha" value="">
+      </div>
+      <div class="container align-items-center d-flex justify-content-between">
+        <div class="">
+          <!-- Forgot password -->
+          <a href="#" class="float-left text-white font-italic" data-toggle="modal" data-target="#exampleModal">
+            Forgot password?
+          </a>
+        </div>
+        <div class="">
+          <!-- Innloggingsknappen -->
+          <button class="btn btn-lg btn-tronrud-primary text-white text-center btn-block" type="submit" name="submit" id="login_button">
+          <i class="fas fa-sign-in-alt fa-lg align-middle mr-1"></i>
+          Sign in</button>
+        </div>
+      </div>
       <!-- Copyright -->
-      <p class="mt-5 mb-0">&copy; 2018 Tronrud Engineering</p>
+      <p class="mt-5 mb-0 lead text-white">&copy; 2018 Tronrud Engineering</p>
     </form>
 
 <!-- Modal -->
@@ -74,7 +82,7 @@ Beskrivelse:
         </button>
       </div>
       <div class="modal-body">
-        <form id="ajaxForm" method="post" action="includes/forgotPassword.php">
+        <form id="ajaxForm" method="post" action="php/includes/forgotPassword.php">
           <div class="form-group">
             <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="E-mail" required>
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->

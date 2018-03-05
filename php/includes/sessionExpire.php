@@ -4,7 +4,7 @@
     $message = "You've been logged out.";
     session_unset();
     session_destroy();
-    echo"<script> window.location.href='../index.php';alert('$message'); </script>";
+    echo"<script> window.location.href='../../index.php';alert('$message'); </script>";
     die();
   }
   $_SESSION['LAST_ACTIVITY'] = time();
