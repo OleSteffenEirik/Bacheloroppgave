@@ -51,7 +51,7 @@ Beskrivelse:
           <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
       </div>
       <!-- reCAPTCHA -->
-      <div class="g-recaptcha mb-3" data-callback="onHuman" data-sitekey="6Le0nzsUAAAAAIuSj_4hjFI_a7Pxj2v8Coa4A7eR"></div>
+      <div class="g-recaptcha mb-3" data-callback="onHuman" data-sitekey="6Le0nzsUAAAAAIuSj_4hjFI_a7Pxj2v8Coa4A7eR" data-size="normal"></div>
 			<input type="hidden" id="captcha" name="captcha" value="">
       <!-- Forgot password -->
       <a href="#" class="float-left text-black mb-3" data-toggle="modal" data-target="#exampleModal">
@@ -101,7 +101,7 @@ Beskrivelse:
 
     <script type="text/javascript" src="js/ajaxForm.js"></script>
     <!--recaptcha -->
-		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
 
     <!-- |Scripts| -->
   </body>
