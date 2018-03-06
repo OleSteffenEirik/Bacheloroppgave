@@ -1,0 +1,25 @@
+
+
+/* Sticky footer */
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px; /* Fikser høyden på footeren. (krever margin -200px på content over footer, altså jumbotron fra _home.scss */
+
+    background-color: $secondary-color;
+    margin-top: -50px;
+    display: inline-block;
+  }
+  
+  
+ .footer{
+      color: $white;
+        
+      .copyright{
+    font-size: 10px;
+    }
+  }
+
+  
