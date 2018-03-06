@@ -128,6 +128,12 @@ include("includes/findProducts.php");
 </div>
 </div>
 
+
+
+
+
+<!-- Legger til footer fra filen 'footer.php' -->
+<?php include 'footer.php' ?>
     <!-- Scripts -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
@@ -136,6 +142,5 @@ include("includes/findProducts.php");
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
     <!-- Scripts -->
 
-<!-- Legger til footer fra filen 'footer.php' -->
-<?php include 'footer.php' ?>
-<!--end-tags på body og html ligger i footer.php -->
+    </body>
+</html>

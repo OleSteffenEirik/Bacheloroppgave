@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Custom styling for innlogging */
 html.login {
   height: 100%; }
@@ -77,8 +76,7 @@ body.login {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
-  background-color: #fff;
-  margin: 0 auto -200px; }
+  background-color: #fff; }
 
 @media (min-width: 768px) {
   .jumbotron {
@@ -105,16 +103,14 @@ footer p {
 
 /* Sticky footer */
 .footer {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   width: 100%;
-  height: 200px;
-  /* Fikser høyden på footeren. (krever margin -200px på content over footer, altså jumbotron fra _home.scss */
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: block;
+  min-height: 100%;
   background-color: #575a56;
-  margin-top: -50px;
-  display: inline-block; }
-
-.footer {
   color: #ffffff; }
   .footer .copyright {
     font-size: 10px; }

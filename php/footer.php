@@ -14,5 +14,3 @@
         <p class="copyright text-center">copyright &copy; <?php echo date("Y"); ?> Tronrud Engineering</p></div>
         </div>
     </footer>
-</body>
-</html>
