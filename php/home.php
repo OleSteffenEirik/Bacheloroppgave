@@ -138,3 +138,4 @@ include("includes/findProducts.php");
 
 <!-- Legger til footer fra filen 'footer.php' -->
 <?php include 'footer.php' ?>
+<!--end-tags på body og html ligger i footer.php -->
