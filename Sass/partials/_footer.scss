@@ -1,18 +1,23 @@
 
-
+html.home {
+  position: relative;
+  min-height: 100%;
+}
+body.home {
+  margin-bottom: 200px; /* Margin bottom by footer height */
+}
 /* Sticky footer */
 
   .footer {
  
-    position: relative;
+    position: absolute;
     width:100%;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    display: block;
-    min-height: 100%;
+    bottom: 0;
+    height: 200px; /* Set the fixed height of the footer here */
+    line-height: 10px; /* Vertically center the text there */
     background-color: $secondary-color;
     color: $white;
+    overflow: hidden;
         
     .copyright{
   font-size: 10px;
