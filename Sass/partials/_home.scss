@@ -7,6 +7,7 @@
     padding-bottom: var(--jumbotron-padding-y);
     margin-bottom: 0;
     background-color: #fff;
+    margin: 0 auto -200px;  //kreves for sticky footer.
   }
   @media (min-width: 768px) {
     .jumbotron {
@@ -14,9 +15,11 @@
       padding-bottom: calc(var(--jumbotron-padding-y) * 2);
     }
   }
+
+
   
   .jumbotron p:last-child {
-    margin-bottom: 0;
+    margin: 0 auto -200px;
   }
   
   .jumbotron-heading {

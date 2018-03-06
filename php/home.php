@@ -26,7 +26,7 @@ include("../includes/findProducts.php");
   </head>
 
   <body>
-
+<div class="wrapper">
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
@@ -118,6 +118,7 @@ include("../includes/findProducts.php");
     </div>
   </div>
 </div>
+</div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -126,5 +127,6 @@ include("../includes/findProducts.php");
     <script type="text/javascript" src="../static/fontawesome/fontawesome-all.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
     <!-- Scripts -->
-  </body>
-</html>
+
+<!-- Legger til footer fra filen 'footer.php' -->
+<?php include 'footer.php' ?>
