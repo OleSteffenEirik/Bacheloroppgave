@@ -8,14 +8,14 @@ include("includes/session.php");
 include("includes/findProducts.php");
 ?>
 <!doctype html>
-<html lang="en">
+<html class="home" lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Tittel samt ikon -->
-    <title>Tronrud</title>
+    <title>Tronrud Engineering</title>
     <link rel="shortcut icon" href="../img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
@@ -25,8 +25,7 @@ include("includes/findProducts.php");
     <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
   </head>
 
-  <body>
-<div class="wrapper">
+  <body class="home">
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
@@ -51,6 +50,32 @@ include("includes/findProducts.php");
       <div class="album py-5 bg-light">
         <div class="container">
 
+          <div class="row">
+            <div class="col-md-4">
+              <div class="md-4">
+              <a href="#" data-toggle="modal" data-target="#exampleModal">
+                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+              </a>
+              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="md-4">
+              <a href="#" data-toggle="modal" data-target="#exampleModal">
+                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+              </a>
+              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="md-4">
+              <a href="#" data-toggle="modal" data-target="#exampleModal">
+                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+              </a>
+              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-4">
               <div class="md-4">
@@ -127,10 +152,6 @@ include("includes/findProducts.php");
   </div>
 </div>
 </div>
-
-
-
-
 
 <!-- Legger til footer fra filen 'footer.php' -->
 <?php include 'footer.php' ?>
