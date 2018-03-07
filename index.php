@@ -68,7 +68,7 @@ Beskrivelse:
         </div>
       </div>
       <!-- Copyright -->
-      <p class="mt-5 mb-0 lead text-white">&copy; 2018 Tronrud Engineering</p>
+      <p class="mt-5 mb-0 lead text-white">&copy; <?php echo date('Y');?> Tronrud Engineering</p>
     </form>
 
 <!-- Modal -->
