@@ -14,7 +14,7 @@ Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av nett
 ### Prerequisites
 
 ## Database
-
+* mySql
 ## Acknowledgments
 
 ## Author
