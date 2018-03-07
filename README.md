@@ -1,10 +1,7 @@
 # Bacheloroppgave
 Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av nettdeler via email.
 
-## Author
-Ole Martin Helgesen,
-Steffen J Gundersen,
-Eirik J Aanstad
+## Geting started
 
 ## Developing
 ### Built with
@@ -13,3 +10,14 @@ Eirik J Aanstad
 * Font-Awesome 5
 * Sass 
 * jquery
+
+### Prerequisites
+
+## Database
+
+## Acknowledgments
+
+## Author
+Ole Martin Helgesen,
+Steffen J Gundersen,
+Eirik J Aanstad
