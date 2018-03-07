@@ -30,21 +30,21 @@ include("includes/findProducts.php");
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="display-4">Oversikt over maskiner</h1>
-          <p class="lead">Her får du oversikt over alle maskiner som er registrert på <b><?php echo $db_name; ?>.</b></p>
+          <h1 class="display-4">Machine overview</h1>
+          <p class="lead">Here you will find an overview of all machines registered at <b><?php echo $db_name; ?>.</b></p>
         </div>
       </section>
       
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
-          <h4 class="alert-heading">Viktig informasjon!</h4>
+          <h4 class="alert-heading">Important information!</h4>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true"><i class="fas fa-times"></i></span>
           </button>
-          <p>Denne nettsiden bruker 3D-modeller som er laget i filformatet VRML. Det vil si at du trenger et nettlesertillegg for visning av 3D-modellene, og i dag er det kun Internet Explorer som støtter dette. 
-            Hvorfor lurer du kanskje på? Mozilla, utvikleren av Firefox, forklarer det i denne <a href="https://support.mozilla.org/en-US/kb/npapi-plugins?as=u&utm_source=inproduct" class="alert-link">artikkelen</a>.  </p>
+          <p>This site uses 3D models created in the VRML file format. You will need a browser that supports display of VRML 3D models, and today, only Internet Explorer supports this. 
+          Why? Mozilla, developer of Firefox, explains it in this <a href="https://support.mozilla.org/en-US/kb/npapi-plugins?as=u&utm_source=inproduct" class="alert-link">article</a>.</p>
           <hr>
-          <p>Vi anbefaler å bruke Cortona3D Viewer, som du finner <a href="http://www.cortona3d.com/cortona3d-viewer-download" class="alert-link">her</a>, og trenger du hjelp til å aktivere nettlesertillegget finner du det <a href="http://support.cortona3d.com/allow-plugin" class="alert-link">her</a>.</p>
+          <p>We recommend using Cortona3D Viewer, as found <a href="http://www.cortona3d.com/cortona3d-viewer-download" class="alert-link">here</a>, and if you need help to enable the browser plugin you will find it <a href="http://support.cortona3d.com/allow-plugin" class="alert-link">here</a>.</p>
         </div>
       </div>
 
@@ -134,10 +134,10 @@ include("includes/findProducts.php");
       </div>
       <div class="modal-footer">
         <a href="../Cortona Part Catalog/start.htm" class="btn btn-info">
-          <i class="fas fa-info-circle fa-lg align-middle mr-1"></i><b>Detaljert visning</b>
+          <i class="fas fa-info-circle fa-lg align-middle mr-1"></i><b>Detailed view</b>
         </a>
         <a href="partfinder.php" class="btn btn-success">
-          <i class="fas fa-shopping-cart fa-lg align-middle mr-1"></i><b>Finn/Bestill del</b>
+          <i class="fas fa-shopping-cart fa-lg align-middle mr-1"></i><b>Find/Order parts</b>
         </a>
       </div>
     </div>
