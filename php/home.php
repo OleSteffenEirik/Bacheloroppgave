@@ -26,6 +26,7 @@ include("includes/findProducts.php");
   </head>
 
   <body class="home">
+    <?php include 'navbar.php' ?>
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">

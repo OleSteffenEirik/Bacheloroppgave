@@ -92,6 +92,17 @@ body.home {
   .footer .copyright {
     font-size: 10px; }
 
+.navbar {
+  background-color: #575a56; }
+
+a.button {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 5px;
+  text-decoration: none; }
+  a.button:hover {
+    text-decoration: none; }
+
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors

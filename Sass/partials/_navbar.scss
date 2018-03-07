@@ -1,8 +1,14 @@
 .navbar{
-    background-color: $white;
+    background-color: $secondary-color;
 
 }
 
-// .navLogout{
-//     color: $white;
-// }
+a.button{
+    background-color: $white;
+    border-radius: 20px;
+    padding: 5px;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
