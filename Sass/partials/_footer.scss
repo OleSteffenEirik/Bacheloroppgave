@@ -1,15 +1,16 @@
 
-html.home {
+html.pages {
   position: relative;
   min-height: 100%;
+
 }
-body.home {
+body.pages {
   margin-bottom: 200px; /* Margin bottom by footer height */
 }
 /* Sticky footer */
 
   .footer {
- 
+    
     position: absolute;
     width:100%;
     bottom: 0;
@@ -18,6 +19,7 @@ body.home {
     background-color: $secondary-color;
     color: $white;
     overflow: hidden;
+    display: block;
         
     .copyright{
   font-size: 10px;

@@ -8,7 +8,7 @@ include("includes/session.php");
 include("includes/findProducts.php");
 ?>
 <!doctype html>
-<html class="home" lang="en">
+<html class="pages" lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,7 +25,7 @@ include("includes/findProducts.php");
     <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
   </head>
 
-  <body class="home">
+  <body class="pages">
     <?php include 'navbar.php' ?>
     <main role="main">
       <section class="jumbotron text-center">
@@ -134,10 +134,10 @@ include("includes/findProducts.php");
       </div>
       <div class="modal-footer">
         <a href="../Cortona Part Catalog/start.htm" class="btn btn-info">
-          Detaljert visning
+          <i class="fas fa-info-circle fa-lg align-middle mr-1"></i><b>Detaljert visning</b>
         </a>
         <a href="partfinder.php" class="btn btn-success">
-          Finn/Bestill del
+          <i class="fas fa-shopping-cart fa-lg align-middle mr-1"></i><b>Finn/Bestill del</b>
         </a>
       </div>
     </div>

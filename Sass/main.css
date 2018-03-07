@@ -69,11 +69,11 @@ body.login {
   .form-signin .fa-user {
     color: #575a56; }
 
-html.home {
+html.pages {
   position: relative;
   min-height: 100%; }
 
-body.home {
+body.pages {
   margin-bottom: 200px;
   /* Margin bottom by footer height */ }
 
@@ -88,20 +88,10 @@ body.home {
   /* Vertically center the text there */
   background-color: #575a56;
   color: #ffffff;
-  overflow: hidden; }
+  overflow: hidden;
+  display: block; }
   .footer .copyright {
     font-size: 10px; }
-
-.navbar {
-  background-color: #575a56; }
-
-a.button {
-  background-color: #ffffff;
-  border-radius: 20px;
-  padding: 5px;
-  text-decoration: none; }
-  a.button:hover {
-    text-decoration: none; }
 
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)

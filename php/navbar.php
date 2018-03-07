@@ -1,9 +1,46 @@
-<nav class="navbar trondrud-primary">
-    <div class="container d-flex justify-content-between">
-        <img class="img-responsive" src="../img/tronrud-engineering-logo.svg" alt="logo" height="40px" width="200px">
-        <!--Logout--> 
-        <a class="btn btn-md btn-tronrud-primary" href="../php/includes/logout.php">
-            <i class="fas fa-sign-out-alt fa-lg align-middle mr-1"></i><b>Sign out</b>
-        </a>
+<nav class="navbar bg-tronrud-secondary">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="mr-auto">
+            <img class="img-responsive my-2" src="../img/tronrud-engineering-logo.svg" alt="logo" height="40px" width="200px">
+        </div>
+        <div class="ml-auto">
+            <!-- Change password -->
+            <a class="btn btn-md btn-tronrud-primary mr-1" href="#" data-toggle="modal" data-target="#ChangePWModal">
+                <i class="fas fa-key fa-lg align-middle mr-1"></i><b>Change password</b>
+            </a>
+            <!--Logout--> 
+            <a class="btn btn-md btn-tronrud-primary" href="../php/includes/logout.php">
+                <i class="fas fa-sign-out-alt fa-lg align-middle mr-1"></i><b>Sign out</b>
+            </a>
+        </div>
     </div>
 </nav>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-sm" id="ChangePWModal" tabindex="-1" role="dialog" aria-labelledby="ChangePWModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-tronrud-primary" id="ChangePWModalLabel">Change password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="ajaxForm" method="post" action="../php/includes/changePassword.php">
+                <div class="form-group">
+                    <input type="password" name="newPassword" id="newPassword" class="form-control" placeholder="New password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="repeatPassword" id="repeatPassword" class="form-control" placeholder="Repeat password" required>
+                </div>
+            </div>
+                <div class="modal-footer">
+                <button id="addSubmit" type="submit" name="submit" class="btn btn-tronrud-primary">
+                    <i class="fas fa-check fa-lg align-middle mr-1"></i>Confirm
+                </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
