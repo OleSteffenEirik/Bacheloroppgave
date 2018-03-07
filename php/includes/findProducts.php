@@ -1,5 +1,6 @@
 <?php
 require_once "connect.php";
+$con = new tronrudDB();
 
 $user_check = $_SESSION['login_user'];
 
@@ -29,12 +30,10 @@ if ($rows >= 1) {
             $db_productsupplier = $row1['Supplier_name'];
         }
     }else {
-        http_response_code(500);
         echo "E-mail and password doesn't match";
     }
 } 
 else {
-    http_response_code(500);
     echo "E-mail and password doesn't match";
 }
 ?>

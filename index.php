@@ -33,7 +33,9 @@ Beskrivelse:
     <form id="ajaxFormCaptcha" class="form-signin" method="post" action="php/includes/login.php">
       <img class="mb-4" src="img/tronrud-engineering-logo.svg" alt="Tronrud logo" width="320" height="160">
       <!-- AJAX Output -->
-      <div id="form-messages"></div>
+      <div class="container">
+        <div id="form-messages"></div>
+      </div>
       <!-- E-mail input -->
       <div class="container input-group mb-3">
         <div class="input-group-prepend">
@@ -63,7 +65,7 @@ Beskrivelse:
         <div class="">
           <!-- Innloggingsknappen -->
           <button class="btn btn-lg btn-tronrud-primary text-white text-center btn-block" type="submit" name="submit" id="login_button">
-          <i class="fas fa-sign-in-alt fa-lg align-middle mr-1"></i>
+          <i id="signin-icon" class="fas fa-sign-in-alt fa-lg align-middle mr-1"></i>
           Sign in</button>
         </div>
       </div>

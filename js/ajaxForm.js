@@ -84,27 +84,30 @@ $(function ajaxFormCaptcha() {
         })
 		.done(function(response) {
 			// Lager Bootstrap alerts
-			$(formMessages).removeClass('alert-danger');
-			$(formMessages).addClass('alert-success');
+			//$(formMessages).removeClass('alert-danger');
+			//$(formMessages).addClass('alert-success');
 			
-			$(formMessages).addClass('container alert alert-dismissible fade show text-left');
-			$(formMessages).attr('role', 'alert');
+			//$(formMessages).addClass('container alert alert-dismissible fade show text-left');
+			//$(formMessages).attr('role', 'alert');
 
 			// Lager melding
-			$(formMessages).text(response);
+			//$(formMessages).text(response);
 
 			//$('#form-messages').append('<i class="fa fa-spinner fa-spin float-right"></i>');
 
-			grecaptcha.reset();
+			$('#signin-icon').removeClass('fa-sign-in-alt');
+			$('#signin-icon').addClass('fa-spinner fa-spin');
 
-			window.location.href = 'php/partfinder.php';
+			window.location.href = 'php/home.php';
+
+			grecaptcha.reset();
 		})
 		.fail(function(data) {
 			// Lager Bootstrap alerts
             $(formMessages).removeClass('alert-success');
             $(formMessages).addClass('alert-danger');
             
-            $(formMessages).addClass('container alert alert-dismissible fade show text-left');
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
 			$(formMessages).fadeTo(5000, 500).slideUp(500);
@@ -112,8 +115,8 @@ $(function ajaxFormCaptcha() {
 			// Lager melding
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
-				$('#form-messages').append('<button id="formButton" type="button" class="close" data-dismiss="alert" aria-label="Close"></button>');
-				$('#formButton').append('<i class="fas fa-times"></i>');
+				//$('#form-messages').append('<button id="formButton" type="button" class="close" data-dismiss="alert" aria-label="Close"></button>');
+				//$('#formButton').append('<i class="fas fa-times"></i>');
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}

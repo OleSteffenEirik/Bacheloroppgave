@@ -52,55 +52,44 @@ include("includes/findProducts.php");
         <div class="container">
 
           <div class="row">
-            <div class="col-md-4">
-              <div class="md-4">
+            <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
                 <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
               </a>
               <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="md-4">
+            <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
                 <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
               </a>
               <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="md-4">
+            <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
                 <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
               </a>
               <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
-              </div>
             </div>
           </div>
+
           <div class="row">
-            <div class="col-md-4">
-              <div class="md-4">
+            <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
                 <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
               </a>
               <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="md-4">
+            <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
                 <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
               </a>
               <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
-              </div>
             </div>
-            <div class="col-md-4">
-              <div class="md-4">
+            <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
                 <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
               </a>
               <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
-              </div>
             </div>
           </div>
 
@@ -147,7 +136,9 @@ include("includes/findProducts.php");
         <a href="../Cortona Part Catalog/start.htm" class="btn btn-info">
           Detaljert visning
         </a>
-        <button type="button" class="btn btn-success">Finn del</button>
+        <a href="partfinder.php" class="btn btn-success">
+          Finn/Bestill del
+        </a>
       </div>
     </div>
   </div>

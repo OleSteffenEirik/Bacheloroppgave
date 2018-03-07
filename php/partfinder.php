@@ -1,7 +1,7 @@
 <?php 
     include("../php/includes/dbconn.php");
     include("../php/includes/sessionExpire.php");
-    session_start();
+    include("../php/includes/session.php")
 ?>
 <!DOCTYPE html>
 <html lang="en">
