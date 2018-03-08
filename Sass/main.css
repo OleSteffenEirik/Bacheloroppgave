@@ -93,6 +93,10 @@ body.pages {
   .footer .copyright {
     font-size: 10px; }
 
+@media (max-width: 768px) {
+  .btn-tronrud-primary {
+    width: 100%;
+    margin: 5px 0px; } }
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors

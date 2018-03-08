@@ -1,17 +1,24 @@
-<nav class="navbar bg-tronrud-secondary">
+<nav class="navbar navbar-expand-md bg-tronrud-secondary">
     <div class="container d-flex justify-content-between align-items-center">
-        <div class="mr-auto">
-            <img class="img-responsive my-2" src="../img/tronrud-engineering-logo.svg" alt="logo" height="40px" width="200px">
-        </div>
-        <div class="ml-auto">
-            <!-- Change password -->
-            <a class="btn btn-md btn-tronrud-primary mr-1" href="#" data-toggle="modal" data-target="#ChangePWModal">
-                <i class="fas fa-key fa-lg align-middle mr-1"></i><b>Change password</b>
-            </a>
-            <!--Logout--> 
-            <a class="btn btn-md btn-tronrud-primary" href="../php/includes/logout.php">
-                <i class="fas fa-sign-out-alt fa-lg align-middle mr-1"></i><b>Sign out</b>
-            </a>
+        <img class="img-responsive navbar-brand my-2" src="../img/tronrud-engineering-logo.svg" alt="logo" height="50px" width="200px">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""><i class="fas fa-bars fa-lg text-tronrud-primary"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <!-- Change password -->
+                    <a class="btn btn-md btn-tronrud-primary mr-1" href="#" data-toggle="modal" data-target="#ChangePWModal">
+                        <i class="fas fa-key fa-lg align-middle mr-1"></i><b>Change password</b>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <!--Logout--> 
+                    <a class="btn btn-md btn-tronrud-primary" href="../php/includes/logout.php">
+                        <i class="fas fa-sign-out-alt fa-lg align-middle mr-1"></i><b>Sign out</b>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
