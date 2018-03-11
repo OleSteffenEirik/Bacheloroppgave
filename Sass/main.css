@@ -69,6 +69,9 @@ body.login {
   .form-signin .fa-user {
     color: #575a56; }
 
+@media (max-width: 768px) {
+  #search-form {
+    display: block !important; } }
 html.pages {
   position: relative;
   min-height: 100%; }

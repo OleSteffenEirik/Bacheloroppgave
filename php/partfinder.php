@@ -26,18 +26,18 @@
             <div class="row">
                 <div class="col-md-12 mx-auto my-2">
                     <div class="card card-body m-10">
-                        <form id="search-form" class="d-flex justify-content-between align-items-center">
+                        <form id="search-form" class="container d-flex justify-content-between align-items-center">
                             <!--<img class="" src="../img/tronrud-engineering-logo-svart.svg" alt="logo" width="200px">-->
                             <a class="btn btn-md btn-tronrud-primary" href="../php/home.php">
                                 <i class="fas fa-arrow-alt-circle-left fa-lg align-middle mr-1"></i><b>Back</b>
                             </a>
                             <div class="row ml-auto mr-3 mt-3">
-                              <div class="form-group">
-                                <input type="text" class="form-control input-sm" id="search-bar" placeholder="Search">
-                              </div>
-                              <div class="form-group">
-                                <input type="submit" class="form-control btn btn-dark" value="Search" id="searchBtn">
-                              </div>                       
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-sm" id="search-bar" placeholder="Search">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="form-control btn btn-dark" value="Search" id="searchBtn">
+                                </div>                       
                             </div>
                         </form>
 

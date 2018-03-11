@@ -23,9 +23,9 @@ include("includes/findProducts.php");
     <link rel="stylesheet" type="text/css" href="../static/fontawesome/on-server/css/fontawesome-all.min.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
-  </head>
+</head>
 
-  <body class="pages">
+  <body class="pages bg-light">
     <?php include 'navbar.php' ?>
     <main role="main">
       <section class="jumbotron text-center">
@@ -48,7 +48,7 @@ include("includes/findProducts.php");
         </div>
       </div>
 
-      <div class="album py-5 bg-light">
+      <div class="album py-5">
         <div class="container">
 
           <div class="row">
