@@ -10,7 +10,7 @@ $con = new tronrudDB();
 session_start();
 
 // Lagrer session
-$user_check=$_SESSION['login_user'];
+$user_check=$_SESSION['login_user'][2];
 
 // SQL spørring som samler informasjon om bruker
 $ses_sql=$con->query("select ePost from brukere where ePost='$user_check'");

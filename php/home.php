@@ -5,6 +5,7 @@ Beskrivelse:
         Kontrollert av:
 */
 include("includes/session.php");
+include("includes/sessionExpire.php");
 include("includes/findProducts.php");
 ?>
 <!doctype html>
@@ -31,7 +32,7 @@ include("includes/findProducts.php");
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="display-4">Machine overview</h1>
-          <p class="lead">Here you will find an overview of all machines registered at <b><?php echo $db_name; ?>.</b></p>
+          <p class="lead">Here you will find an overview of all machines registered at <b><?php echo $_SESSION['login_user'][1]; ?>.</b></p>
         </div>
       </section>
       
@@ -97,6 +98,9 @@ include("includes/findProducts.php");
       </div>
     </main>
 
+<!-- Legger til footer fra filen 'footer.php' -->
+<?php include 'footer.php' ?>
+
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -143,10 +147,7 @@ include("includes/findProducts.php");
     </div>
   </div>
 </div>
-</div>
 
-<!-- Legger til footer fra filen 'footer.php' -->
-<?php include 'footer.php' ?>
     <!-- Scripts -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>

@@ -2,38 +2,28 @@
 require_once "connect.php";
 $con = new tronrudDB();
 
-$user_check = $_SESSION['login_user'];
+$user_check = $_SESSION['login_user'][2];
 
-// SQL spørring som henter data fra brukertabellen og sammenligner med inntastet data
-$sql = $con->query("SELECT * FROM brukere WHERE ePost='$user_check'");
-// Tar spørringen og lager en verdi som lagrer antall rader
+$sql = $con->query("SELECT Maskiner.Produktnavn, products.Item_Id, products.Name, products.Supplier_name 
+FROM brukereMaskin
+	INNER JOIN Maskiner
+		ON Maskiner.Maskin_Id = brukereMaskin.Maskin_Id
+			INNER JOIN brukere 
+				ON brukere.kundeNr = brukereMaskin.kundeNr 
+					LEFT JOIN products 
+						ON Maskiner.Item_Id = products.Item_Id 
+							WHERE brukere.ePost='$user_check';");
+
 $rows = $sql->num_rows;
 
 if ($rows >= 1) {
     while ($row = $sql->fetch_assoc()) {
-        $db_id = $row['kundeNr'];
-        $db_name = $row['kundeNavn'];
-        $db_email = $row['ePost'];
-        $db_access = $row['tilgangsNivå'];
+        $db_productname = $row['Produktnavn'];
+        $db_productid = $row['Item_Id'];
+        $db_partname = $row['Name'];
+        $db_productsupplier = $row['Supplier_name'];
     }
-
-    $sql1 = $con->query("SELECT Produktnavn, products.Item_Id, products.Name, products.Supplier_name, brukere.ePost FROM Maskiner 
-    JOIN products ON Maskiner.Item_Id = products.Item_Id JOIN brukere ON Maskiner.kundeNr = brukere.kundeNr WHERE brukere.ePost='$user_check'");
-
-    $rows1 = $sql1->num_rows;
-
-    if ($rows1 >= 1) {
-        while ($row1 = $sql1->fetch_assoc()) {
-            $db_productname = $row1['Produktnavn'];
-            $db_productid = $row1['Item_Id'];
-            $db_partname = $row1['Name'];
-            $db_productsupplier = $row1['Supplier_name'];
-        }
-    }else {
-        echo "E-mail and password doesn't match";
-    }
-} 
-else {
+}else {
     echo "E-mail and password doesn't match";
 }
 ?>

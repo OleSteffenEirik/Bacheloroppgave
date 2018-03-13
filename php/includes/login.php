@@ -42,14 +42,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($rows >= 1) {
                 while ($row = $sql->fetch_assoc()) {
-                    $db_email = $row['ePost'];
-                    $db_password = $row['passord'];
+                    $db_kundeNr = $row['kundeNr'];
                     $db_kundeNavn = $row['kundeNavn'];
+                    $db_password = $row['passord'];
+                    $db_email = $row['ePost'];
+                    $db_tilgangNivå = $row['tilgangsNivå'];
+                    $db_postAdresse = $row['postAdresse'];
+                    $db_postNr = $row['postNr'];
+                    $db_telefon = $row['telefon'];
                 }
                 if ($email==$db_email && $password==$db_password) {
-                    $_SESSION['login_user']=$email; // Oppretter sesjon
+                    $session_array = array($db_kundeNr, $db_kundeNavn, $db_email, $db_tilgangNivå, $db_postAdresse, $db_postNr, $db_telefon); // Oppretter sesjon
+                    $_SESSION['login_user'] = $session_array;
                     http_response_code(200);
-                    echo 'Welcome, ' . $db_kundeNavn . '!';
+                    //echo 'Welcome, ' . $db_kundeNavn . '!';
                 }else {
                     http_response_code(500);
                     echo "E-mail and password doesn't match";
