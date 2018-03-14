@@ -1,4 +1,6 @@
 # Bacheloroppgave
+:poop:
+
 Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av nettdeler via email.
 
 ## Geting started
