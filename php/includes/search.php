@@ -1,5 +1,5 @@
 <?php
-    include 'dbconn.php';
+    /*include 'dbconn.php';
     $conn = getDatabaseConnection();
 
     $name = "%" . $_GET['name'] . "%";
@@ -11,19 +11,39 @@
     $stmt->execute(array(":name"=>$name));
     $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    echo json_encode($records);
+    echo json_encode($records);*/
 
-    // require_once "php/includes/connect.php";
-    // $con = new tronrudDB();
+    /*$rows = $sql->num_rows;
 
-    // $name = $con->real_escape_string("%".$_GET['name']."%");
+    if ($rows >= 1) {
+        while ($row = $sql->fetch_assoc()) {
+            $db_productid = $row['Item_Id'];
+            $db_partname = $row['Name'];
+        }
+    }else {
+        echo "E-mail and password doesn't match";
+    }*/
 
-    // $sql = "SELECT name, Item_Id
-    //                     FROM products
-    //                     WHERE name LIKE '$name'";
+    require_once "connect.php";
+    $con = new tronrudDB();
 
-    // $stmt = $con->query($sql);
-    // $records = MYSQLI_FETCH_ALL($stmt, MYSQLI_ASSOC);
+    $name = "%" . $_GET['name'] . "%";
+    $name = $con->real_escape_string($name);
+
+    $myArray = array();
+    if ($sql = $con->query("SELECT name, Item_Id FROM products WHERE name LIKE '$name'")) {
     
-    // echo json_encode($records)
+        while($row = $sql->fetch_object()) {
+                $myArray[] = $row;
+        }
+        echo json_encode($myArray);
+        http_response_code(200);
+    }
+    else {
+        http_response_code(500);
+        echo "Sorry! Couldn't find the part!";
+    }
+    
+    $sql->close();
+    $con->close();
 ?>

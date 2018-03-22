@@ -8,15 +8,20 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
                     <!-- Change password -->
-                    <a class="btn btn-md btn-tronrud-primary mr-1" href="#" data-toggle="modal" data-target="#ChangePWModal">
+                    <a class="btn btn-md btn-tronrud-primary mr-2" href="#" data-toggle="modal" data-target="#ChangePWModal">
                         <i class="fas fa-key fa-lg align-middle mr-1"></i><b>Change password</b>
                     </a>
                 </li>
                 <li class="nav-item">
                     <!--Logout--> 
-                    <a class="btn btn-md btn-tronrud-primary" href="../php/includes/logout.php">
+                    <a class="btn btn-md btn-tronrud-primary mr-3" href="../php/includes/logout.php">
                         <i class="fas fa-sign-out-alt fa-lg align-middle mr-1"></i><b>Sign out</b>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <div style="cursor: pointer;">
+                        <span class="my-cart-icon"><i class="fas fa-shopping-cart fa-2x text-light"></i></span><span class="badge badge-pill badge-tronrud-primary my-cart-badge position-absolute"></span>
+                    </div>
                 </li>
             </ul>
         </div>
