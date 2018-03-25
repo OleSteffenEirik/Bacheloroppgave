@@ -4,8 +4,9 @@ Beskrivelse:
     Utviklet av:
         Kontrollert av:
 */
-include("includes/session.php");
 include("includes/sessionExpire.php");
+include("includes/session.php");
+
 include("includes/findProducts.php");
 ?>
 <!doctype html>
