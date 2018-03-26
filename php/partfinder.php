@@ -2,7 +2,7 @@
 
 require_once("includes/connect.php");
 require_once("includes/sessionExpire.php");
-require_once("includes/session.php")
+require_once("includes/session.php");
 
 ?>
 <!DOCTYPE html>

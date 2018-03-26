@@ -8,6 +8,8 @@ Beskrivelse:
 require_once("connect.php");
 $con = new tronrudDB();
 
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
     if (empty($_POST['email']) || empty($_POST['password'])) {
         http_response_code(400);
@@ -52,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if ($email==$db_email && $password==$db_password) {
                     $session_array = array($db_kundeNr, $db_kundeNavn, $db_email, $db_tilgangNivå, $db_postAdresse, $db_postNr, $db_telefon); // Oppretter sesjon
                     $_SESSION['login_user'] = $session_array;
+                    http_response_code(200);
                 }else {
                     http_response_code(500);
                     echo "E-mail and password doesn't match";
