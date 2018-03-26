@@ -4,11 +4,18 @@ Beskrivelse:
     Utviklet av:
         Kontrollert av:
 */
+<<<<<<< HEAD
 
 require_once("includes/sessionExpire.php");
 require_once("includes/session.php");
 require_once("includes/findProducts.php");
 
+=======
+include("includes/sessionExpire.php");
+include("includes/session.php");
+
+include("includes/findProducts.php");
+>>>>>>> 181ae0a2096f706ea87b4cd15fbaf5e464fa5955
 ?>
 <!doctype html>
 <html class="pages" lang="en">
