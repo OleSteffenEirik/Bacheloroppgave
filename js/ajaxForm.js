@@ -100,7 +100,9 @@ $(function ajaxFormCaptcha() {
 
 			window.location.href = 'php/home.php';
 
-			grecaptcha.reset();
+			window.setTimeout(function() {
+				grecaptcha.reset();
+			}, 5000);
 		})
 		.fail(function(data) {
 			// Lager Bootstrap alerts

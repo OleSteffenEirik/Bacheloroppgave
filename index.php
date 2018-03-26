@@ -17,7 +17,7 @@ Beskrivelse:
     <!-- Ikon -->
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Fontawesome 5 -->
     <link rel="stylesheet" type="text/css" href="static/fontawesome/on-server/css/fontawesome-all.min.css"/>
     <!-- Custom CSS -->
@@ -111,7 +111,7 @@ Beskrivelse:
 
     <script type="text/javascript" src="js/ajaxForm.js"></script>
     <!--recaptcha -->
-		<script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+		<script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
 
 
     <!-- |Scripts| -->

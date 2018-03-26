@@ -1,10 +1,10 @@
 <?php
-require_once "connect.php";
+require_once("connect.php");
 $con = new tronrudDB();
 
 $user_check = $_SESSION['login_user'][2];
 
-$sql = $con->query("SELECT Maskiner.Produktnavn, products.Item_Id, products.Name, products.Supplier_name 
+$sql = $con->query("SELECT Maskiner.Produktnavn, products.Item_Id, products.Name, products.Supplier_name, PDF.PDF_File
 FROM brukereMaskin
 	INNER JOIN Maskiner
 		ON Maskiner.Maskin_Id = brukereMaskin.Maskin_Id
@@ -12,7 +12,9 @@ FROM brukereMaskin
 				ON brukere.kundeNr = brukereMaskin.kundeNr 
 					LEFT JOIN products 
 						ON Maskiner.Item_Id = products.Item_Id 
-							WHERE brukere.ePost='$user_check';");
+                            LEFT JOIN PDF
+                                ON Maskiner.PDF_Id = PDF.PDF_Id
+							        WHERE brukere.ePost='$user_check';");
 
 $rows = $sql->num_rows;
 
@@ -22,6 +24,7 @@ if ($rows >= 1) {
         $db_productid = $row['Item_Id'];
         $db_partname = $row['Name'];
         $db_productsupplier = $row['Supplier_name'];
+        $db_PDFfile = $row['PDF_File'];
     }
 }else {
     echo "E-mail and password doesn't match";

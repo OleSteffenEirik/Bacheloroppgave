@@ -1,8 +1,8 @@
 <?php 
 
-include("includes/dbconn.php");
-include("includes/sessionExpire.php");
-include("includes/session.php")
+require_once("includes/connect.php");
+require_once("includes/sessionExpire.php");
+require_once("includes/session.php")
 
 ?>
 <!DOCTYPE html>
@@ -21,10 +21,10 @@ include("includes/session.php")
     <link rel="stylesheet" type="text/css" href="../static/fontawesome/on-server/css/fontawesome-all.min.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>-->
   </head>
     <body class="pages">
-    <?php include 'navbar.php' ?>
+    <?php require_once('navbar.php'); ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 mx-auto my-2">
@@ -74,7 +74,7 @@ include("includes/session.php")
           </div>
 
 <!-- Legger til footer fra filen 'footer.php' -->
-<?php include 'footer.php' ?>
+<?php require_once('footer.php'); ?>
 
 <!-- Modal -->
 <!--<div class="modal fade bd-example-modal-lg" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
@@ -159,6 +159,7 @@ include("includes/session.php")
 
     <!-- Scripts -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Komobilitet for handlekurv -->
     <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
     <script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

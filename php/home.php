@@ -4,9 +4,11 @@ Beskrivelse:
     Utviklet av:
         Kontrollert av:
 */
-include("includes/session.php");
-include("includes/sessionExpire.php");
-include("includes/findProducts.php");
+
+require_once("includes/sessionExpire.php");
+require_once("includes/session.php");
+require_once("includes/findProducts.php");
+
 ?>
 <!doctype html>
 <html class="pages" lang="en">
@@ -16,18 +18,19 @@ include("includes/findProducts.php");
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Tittel samt ikon -->
-    <title>Tronrud Engineering</title>
+    <title>Tronrud</title>
     <link rel="shortcut icon" href="../img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <!-- Fontawesome 5 -->
     <link rel="stylesheet" type="text/css" href="../static/fontawesome/on-server/css/fontawesome-all.min.css"/>
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../Sass/main.css"/>
-</head>
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>-->
+  </head>
 
   <body class="pages bg-light">
-    <?php include 'navbar.php' ?>
+    <?php require_once('navbar.php'); ?>
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
@@ -99,7 +102,7 @@ include("includes/findProducts.php");
     </main>
 
 <!-- Legger til footer fra filen 'footer.php' -->
-<?php include 'footer.php' ?>
+<?php require_once('footer.php'); ?>
 
 <!-- Modal -->
 <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -114,7 +117,7 @@ include("includes/findProducts.php");
       <div class="modal-body">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-5">
             <!-- Henter VRML 3D model og viser den i modalen -->
               <OBJECT CLASSID="CLSID:86A88967-7A20-11d2-8EDA-00600818EDB1" WIDTH="400" HEIGHT="300">
                 <PARAM NAME="SRC" VALUE="../Cortona Part Catalog/1130349.wrl">
@@ -128,10 +131,17 @@ include("includes/findProducts.php");
               </OBJECT>
             </div>
             <!-- Info om maskinen som hentes fra datamaskinen -->
-            <div class="col-md-4 ml-auto">
-              <p>Item ID: <?php echo $db_productid; ?></p>
-              <p>Name: <?php echo $db_partname; ?></p>
-              <p>Supplier name: <?php echo $db_productsupplier; ?></p>
+            <div class="col-md-4">
+              <h4 class="mb-4">Informasjon</h4>
+              <p><b>Item ID:</b> <?php echo $db_productid; ?></p>
+              <p><b>Name:</b> <?php echo $db_partname; ?></p>
+              <p><b>Supplier name: </b><?php echo $db_productsupplier; ?></p>
+            </div>
+            <div class="col-md-3">
+              <h4 class="mb-4">Dokumentasjon</h4>
+              <a href="../pdf/<?php echo $db_PDFfile; ?>">
+                <i class="far fa-file-pdf"></i> <?php echo $db_PDFfile; ?>
+              </a>
             </div>
           </div>
         </div>
@@ -141,7 +151,7 @@ include("includes/findProducts.php");
           <i class="fas fa-info-circle fa-lg align-middle mr-1"></i><b>Detailed view</b>
         </a>
         <a href="partfinder.php" class="btn btn-success">
-          <i class="fas fa-shopping-cart fa-lg align-middle mr-1"></i><b>Find/Order parts</b>
+          <i class="fas fa-search fa-lg align-middle mr-1"></i><b>Find parts</b>
         </a>
       </div>
     </div>
@@ -150,11 +160,23 @@ include("includes/findProducts.php");
 
     <!-- Scripts -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- Kompatibilitet for handlekurv -->
+    <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
+    <!-- -->
     <script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.mycart.js"></script>
+    <script type="text/javascript" src="../js/mycart-settings.js"></script>
     <script type="text/javascript" src="../static/fontawesome/fontawesome-all.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
-    <!-- Scripts -->
+
+    <script type="text/javascript">
+        let companySession="<?php echo $_SESSION['login_user'][1]; ?>";
+        let emailSession="<?php echo $_SESSION['login_user'][2]; ?>";
+        let phoneSession="<?php echo $_SESSION['login_user'][6]; ?>";
+        let adressSession="<?php echo $_SESSION['login_user'][4]; ?>";
+        let zipSession="<?php echo $_SESSION['login_user'][5]; ?>";
+    </script>
 
     </body>
 </html>
