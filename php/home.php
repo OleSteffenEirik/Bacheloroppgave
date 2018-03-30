@@ -139,7 +139,7 @@ require_once("includes/findProducts.php");
             </div>
             <div class="col-md-3">
               <h4 class="mb-4">Dokumentasjon</h4>
-              <a href="../pdf/<?php echo $db_PDFfile; ?>">
+              <a target="_blank" href="../pdf/<?php echo $db_PDFfile; ?>">
                 <i class="far fa-file-pdf"></i> <?php echo $db_PDFfile; ?>
               </a>
             </div>
