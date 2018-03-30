@@ -4,3 +4,14 @@
       margin: 5px 0px;
     }
   }
+
+.shopping-cart-icon {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .shopping-cart-icon {
+    text-align: center;
+    margin: 5px 0px;
+  }
+}

@@ -5,26 +5,24 @@ html.pages {
 
 }
 body.pages {
-  margin-bottom: 200px; /* Margin bottom by footer height */
+  margin-bottom: 140px; /* Margin bottom by footer height */
 }
 /* Sticky footer */
 
   .footer {
-    
     position: absolute;
     width:100%;
     bottom: 0;
-    height: 200px; /* Set the fixed height of the footer here */
+    height: 140px; /* Set the fixed height of the footer here */
     line-height: 10px; /* Vertically center the text there */
     background-color: $secondary-color;
     color: $white;
     overflow: hidden;
     display: block;
-        
-    .copyright{
-  font-size: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      height: 210px;
     }
   }
-  
-
-

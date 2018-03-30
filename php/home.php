@@ -34,7 +34,7 @@ require_once("includes/findProducts.php");
     <main role="main">
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="display-4">Machine overview</h1>
+          <h1 class="display-3">Machine overview</h1>
           <p class="lead">Here you will find an overview of all machines registered at <b><?php echo $_SESSION['login_user'][1]; ?>.</b></p>
         </div>
       </section>

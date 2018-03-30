@@ -25,7 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $secret="6Le0nzsUAAAAADyDcU-el9B9WpLYgkQ1TrTzreEa";
         $response=$_POST["captcha"];
 
-        $verify=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}");
+        $options=array(
+            'ssl'=>array(
+                'verify_peer'       => false,
+                'verify_peer_name'  => false,
+            ),
+        );
+        $context = stream_context_create( $options );
+
+        $verify=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}", false, $context);
         $captcha_success=json_decode($verify);
 
         if ($captcha_success->success==false) {

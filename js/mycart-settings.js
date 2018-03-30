@@ -14,11 +14,7 @@ $(function () {
       affixCartIcon: true,
       showCheckoutModal: true,
       numberOfDecimals: 2,
-      cartItems: [
-        /*{id: 1, name: 'product 1', summary: 'summary 1', quantity: 1},
-        {id: 2, name: 'product 2', summary: 'summary 2', quantity: 1},
-        {id: 3, name: 'product 3', summary: 'summary 3', quantity: 1}*/
-      ],
+      cartItems: [],
       clickOnAddToCart: function($addTocart){
         goToCartIcon($addTocart);
       },

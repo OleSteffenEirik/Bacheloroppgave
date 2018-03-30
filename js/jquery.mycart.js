@@ -208,7 +208,6 @@
                           '<span class="badge badge-pill badge-tronrud-secondary my-cart-badge"></span>' +
                       '</h4>' +
                       '<ul class="list-group mb-3">' +
-                        //'<li class="list-group-item d-flex justify-content-between lh-condensed" id="' + idCartTable + '"></li>' +
                           '<table class="table table-hover table-striped border" id="' + idCartTable + '"></table>' +
                       '</ul>' +
                     '</div>' +
@@ -268,23 +267,12 @@
           '<td class="col-1 align-middle" title="Quantity"><input id="numberQ" type="number" min="1" style="width:40px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
           '<td class="col-1 align-middle" title="Remove from Cart" class="text-center"><a href="javascript:void(0);" class="btn btn-xs btn-rounded my-0 btn-danger ' + classProductRemove + '"><i class="fas fa-times"></i></a></td>' +
           '</tr>'
-
-            /*'<div class="mr-auto">' +
-              '<tr title="' + this.summary + '" data-id="' + this.id + '">' +
-              '<h6 class="my-0"><td>' + this.name + '</td></h6>' +
-              '<small class="text-muted">Brief description</small>' +
-            '</div>' +
-            '<div class="form-group ml-auto">' +
-              '<h6 class="mb-2">Quantity</h6>' +
-              '<td title="Quantity"><input type="number" min="1" style="width: 70px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
-              '<td title="Remove from Cart" class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">X</a></td>' +
-            '</div>'*/
         );
       });
 
       $cartTable.append(products.length ?
         '<tr>' +
-        '</tr>' :
+        '/<tr>' :
         '<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Your cart is empty</div>'
       );
 

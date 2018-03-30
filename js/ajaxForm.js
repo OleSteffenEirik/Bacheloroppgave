@@ -112,7 +112,7 @@ $(function ajaxFormCaptcha() {
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
-			$(formMessages).fadeTo(5000, 500).slideUp(500);
+			//$(formMessages).fadeTo(5000, 500).slideUp(500);
 
 			// Lager melding
 			if (data.responseText !== '') {

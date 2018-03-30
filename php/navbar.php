@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <div style="cursor: pointer;">
+                    <div class="shopping-cart-icon">
                         <span class="my-cart-icon"><i class="fas fa-shopping-cart fa-2x text-light"></i></span><span class="badge badge-pill badge-tronrud-primary my-cart-badge position-absolute"></span>
                     </div>
                 </li>
