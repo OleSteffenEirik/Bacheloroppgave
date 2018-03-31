@@ -30,8 +30,9 @@ $(function () {
         $.each(products, function(){
           checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.quantity);
         });
-        alert(checkoutString)
+        alert(checkoutString);
         //her skal mail sendes(?) / funksjon for mail kjøres
+        
         console.log("checking out", products, totalQuantity);
       },
     });

@@ -17,18 +17,19 @@ try {
     $mail->Host = 'smtp.sendgrid.net';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     // ~ skiftes ut med egen SMTP-server brukernavn og passord
-    $mail->Username = 'ohelgesen39';                 // SMTP username   
-    $mail->Password = 'Eggmoen2011';                           // SMTP password
+    //sett brukernavn og passord til smtp-bruker.
+    $mail->Username = '';                            // SMTP username   
+    $mail->Password = '';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients    ~   kan legge til flere
-    $mail->setFrom('ohelgesen39@gmail.com', 'Trondrud Engineering');
-    $mail->addAddress('ohelgesen39@gmail.com', 'Ole Martin');     // Legg til mottaker ~ legg til parameter for $ePost og $kundeNavn.(settes til samme som innlogging)
+  //  $mail->setFrom('email@email.no', 'Trondrud Engineering');
+   // $mail->addAddress('email@gg.ez', 'Ole Martin');     // Legg til mottaker ~ legg til parameter for $ePost og $kundeNavn.(settes til samme som innlogging)
 
 
     // Informasjon om hva som har blitt lagt til bestilling legges ved under her.
-     // legg til informasjon fra database om bruker
+     // legg til informasjon fra database.
     $body = '<p><strong>Hello.</strong>
     <br> This is the orderlist from Tronrud Engineering: </p>';
     
