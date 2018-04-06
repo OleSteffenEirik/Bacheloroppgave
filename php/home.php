@@ -58,42 +58,42 @@ require_once("includes/findProducts.php");
           <div class="row">
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              <h3 class="my-3 text-center"> <?php echo $db_machinename; ?> </h3>
             </div>
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              <h3 class="my-3 text-center"> <?php echo $db_machinename; ?> </h3>
             </div>
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              <h3 class="my-3 text-center"> <?php echo $db_machinename; ?> </h3>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              <h3 class="my-3 text-center"> <?php echo $db_machinename; ?> </h3>
             </div>
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              <h3 class="my-3 text-center"> <?php echo $db_machinename; ?> </h3>
             </div>
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center"> <?php echo $db_productname; ?> </h3>
+              <h3 class="my-3 text-center"> <?php echo $db_machinename; ?> </h3>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ require_once("includes/findProducts.php");
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-tronrud-primary" id="exampleModalLabel"><?php echo $db_productname; ?></h5>
+        <h5 class="modal-title text-tronrud-primary" id="exampleModalLabel"><?php echo $db_machinename; ?></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true"><i class="fas fa-times"></i></span>
         </button>
@@ -126,16 +126,16 @@ require_once("includes/findProducts.php");
                 <PARAM NAME="VRML_SPLASHSCREEN" VALUE="false">
                 <PARAM NAME="CONTEXTMENU" VALUE="false">
                 <!--[if !IE]>-->
-                <img class="img-responsive" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="">
+                <img class="img-responsive" src="../img/tronrud-engineering-logo-svart.svg" width="200" height="100" alt="Card image cap">
                 <!--<![endif]-->
               </OBJECT>
             </div>
             <!-- Info om maskinen som hentes fra datamaskinen -->
             <div class="col-md-4">
               <h4 class="mb-4">Informasjon</h4>
-              <p><b>Item ID:</b> <?php echo $db_productid; ?></p>
-              <p><b>Name:</b> <?php echo $db_partname; ?></p>
-              <p><b>Supplier name: </b><?php echo $db_productsupplier; ?></p>
+              <p><b>Item ID:</b> <?php echo $db_ID; ?></p>
+              <p><b>Name:</b> <?php echo $db_machinename; ?></p>
+              <p><b>Date created: </b><?php echo date('Y-m-d', strtotime($db_date));; ?></p>
             </div>
             <div class="col-md-3">
               <h4 class="mb-4">Dokumentasjon</h4>
