@@ -29,7 +29,7 @@ require_once("includes/session.php");
             <div class="row">
                 <div class="col-md-12 mx-auto my-2">
                     <div class="card card-body m-10">
-                        <form id="search-form" class="container d-flex justify-content-between align-items-center">
+                        <form id="search-form" class="container d-flex justify-content-between align-items-center form-inline">
                             <a class="btn btn-md btn-tronrud-primary font-weight-bold" href="../php/home.php">
                                 <i class="fas fa-arrow-alt-circle-left fa-lg align-middle mr-1"></i>
                                 Back
@@ -39,9 +39,15 @@ require_once("includes/session.php");
                             </a>-->
                             <div class="row ml-auto mr-3 mt-3">
                                 <div class="form-group">
+                                <select id="searchOption" class="form-control">
+                                    <option = "name">Name</option>
+                                    <option = "Item_Id">Item Id</option>
+                                </select>
+                                </div>
+                                <div class="form-group ml-3">
                                     <input type="text" class="form-control input-sm" id="search-bar" placeholder="Search">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group ml-3">
                                     <button type="submit" class="form-control btn btn-tronrud-primary font-weight-bold" id="searchBtn">
                                         <i class="fas fa-search fa-lg align-middle mr-1"></i> 
                                         Search

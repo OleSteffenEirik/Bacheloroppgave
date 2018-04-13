@@ -27,11 +27,14 @@
     require_once "connect.php";
     $con = new tronrudDB();
 
-    $name = "%" . $_GET['name'] . "%";
-    $name = $con->real_escape_string($name);
+    $term = "%" . $_GET['searchterm'] . "%";
+    $term = $con->real_escape_string($term);
+    $option = $_GET['option'];
+    $option = $con->real_escape_string($option);
+
 
     $myArray = array();
-    if ($sql = $con->query("SELECT name, Item_Id FROM products WHERE name LIKE '$name'")) {
+    if ($sql = $con->query("SELECT name, Item_Id FROM products WHERE '$option' LIKE '$term'")) {
     
         while($row = $sql->fetch_object()) {
                 $myArray[] = $row;
