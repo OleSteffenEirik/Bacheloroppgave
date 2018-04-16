@@ -28,14 +28,14 @@
     $con = new tronrudDB();
 
     $term = "%" . $_GET['searchterm'] . "%";
+    // echo $term;
     $term = $con->real_escape_string($term);
-    $option = $_GET['option'];
+    $option = $_GET["option"];
+    // echo $option;
     $option = $con->real_escape_string($option);
-
-
+    $query = "SELECT name, Item_Id FROM products WHERE $option LIKE '$term'";
     $myArray = array();
-    if ($sql = $con->query("SELECT name, Item_Id FROM products WHERE '$option' LIKE '$term'")) {
-    
+    if ($sql = $con->query($query)) {
         while($row = $sql->fetch_object()) {
                 $myArray[] = $row;
         }

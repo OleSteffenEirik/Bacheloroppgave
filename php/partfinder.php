@@ -40,8 +40,8 @@ require_once("includes/session.php");
                             <div class="row ml-auto mr-3 mt-3">
                                 <div class="form-group">
                                 <select id="searchOption" class="form-control">
-                                    <option = "name">Name</option>
-                                    <option = "Item_Id">Item Id</option>
+                                    <option value = "name">Name</option>
+                                    <option value = "Item_Id">Item Id</option>
                                 </select>
                                 </div>
                                 <div class="form-group ml-3">
@@ -58,7 +58,7 @@ require_once("includes/session.php");
 
                         <!--<div id="form-messages"></div>-->
                         <div class="table-responsive-md">
-                            <table id="table_id" class="table table-hover mt-5">
+                            <table id="table" class="table table-hover mt-5">
                                 <thead class="bg-tronrud-secondary text-white font-weight-bold">
                                     <tr>
                                         <th scope="col-1">#</th>
