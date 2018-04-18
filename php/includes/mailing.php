@@ -1,12 +1,26 @@
 <?php
+if(isset($_POST["checkoutString"]))
+{
+    $navn = ' ';
+    $data = json_decode($_POST["checkoutString"]);
+    $myarray = $data->myarray;
+    foreach($myarray as $singular)
+    {
+        $navn .= $singular->name;
+    }
+    
+    echo json_encode($navn);
+
+}
+
+
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
+/*use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
 require '../vendor/autoload.php';
-
 
 // URL til SMTP-server: https://app.sendgrid.com/   -  kan også bruke andre typer SMTP-servere.
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
@@ -45,3 +59,6 @@ try {
 } catch (Exception $e) {
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
+*/
+
+?>
