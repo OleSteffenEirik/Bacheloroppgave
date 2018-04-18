@@ -4,12 +4,14 @@ if(isset($_POST["checkoutString"]))
     $navn = ' ';
     $data = json_decode($_POST["checkoutString"]);
     $myarray = $data->myarray;
+    print_r($myarray);
+    print_r($data);
     foreach($myarray as $singular)
     {
         $navn .= $singular->name;
     }
-    
-    echo json_encode($navn);
+    print($navn);
+    echo($navn);
 
 }
 
