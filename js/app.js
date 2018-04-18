@@ -32,7 +32,7 @@ function getItems() {
   });
 
   function callBack(response) {
-    console.log(response);
+    console.log(typeof response);
     console.log(response[0]);
     console.log(response[0].name);
     console.log(response.length);
