@@ -1,7 +1,8 @@
-const table = document.getElementById('item-table');
+const table = document.getElementById('table');
 const form = document.getElementById('search-form');
 const inputVal = document.getElementById('search-bar');
 const searchType = document.getElementById('searchOption');
+
 
 //let addToCartButton = '<button class="btn btn-success btn-rounded btn-sm my-0 my-cart-btn font-weight-bold" data-id="' + Item_id + '" data-name="' + name + '" data-summary="summary 2" data-quantity="1"><i class="fas fa-shopping-cart fa-lg align-middle mr-1"></i>Add to cart</button>'
 
@@ -10,7 +11,6 @@ form.addEventListener('submit', function (e) {
   console.log(inputVal.value);
 
   getItems();
-
   e.preventDefault();
 })
 
@@ -22,8 +22,6 @@ function getItems() {
   let option = searchType.value;
   console.log(searchterm);
   console.log(option);
-
-  clearTable();
   $.ajax({
     type: "GET",
     dataType: "json",
@@ -32,19 +30,17 @@ function getItems() {
   });
 
   function callBack(response) {
-    console.log(typeof response);
-    console.log(response[0]);
-    console.log(response[0].name);
-    console.log(response.length);
-    console.log(response.length);
-    let table = document.getElementById('table');
-    for (let i = 0; i < response.length; i++) {
 
+    if (response.length <= 0) {
+      alert("No result");
+      return;
+    }
+    clearTable();
+    for (let i = 0; i < response.length; i++) {
       let Item_Id = response[i].Item_Id;
       let name = response[i].name;
 
-
-      let row = table.insertRow(i + 1);
+      let row = table.insertRow(i);
       let cell1 = row.insertCell(0);
       let cell2 = row.insertCell(1);
       let cell3 = row.insertCell(2);
@@ -73,5 +69,5 @@ function getItems() {
 
 
 function clearTable() {
-  $("#item-table tr").remove();
+  $("#table tr").remove();
 }

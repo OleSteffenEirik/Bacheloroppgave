@@ -39,14 +39,13 @@
         while($row = $sql->fetch_object()) {
                 $myArray[] = $row;
         }
-        echo json_encode($myArray);
         http_response_code(200);
     }
     else {
         http_response_code(500);
-        echo "Sorry! Couldn't find the part!";
     }
-    
+
+    echo json_encode($myArray);
     $sql->close();
     $con->close();
 ?>
