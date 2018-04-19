@@ -34,6 +34,10 @@ Beskrivelse:
       <img class="mb-4" src="img/tronrud-engineering-logo.svg" alt="Tronrud logo" width="320" height="160">
       <!-- AJAX Output -->
       <div class="container">
+        <div id="formMessagesForgotPW"></div>
+      </div>
+      <!-- AJAX Output -->
+      <div class="container">
         <div id="form-messages"></div>
       </div>
       <!-- E-mail input -->
@@ -58,7 +62,7 @@ Beskrivelse:
       <div class="container align-items-center d-flex justify-content-between">
         <div class="">
           <!-- Forgot password -->
-          <a href="#" class="float-left text-white font-italic" data-toggle="modal" data-target="#exampleModal">
+          <a href="#" class="float-left text-white font-italic" data-toggle="modal" data-target="#ModalForgotPW">
             Forgot password?
           </a>
         </div>
@@ -73,8 +77,8 @@ Beskrivelse:
       <p class="mt-5 mb-0 lead text-white">&copy; <?php echo date('Y');?> Tronrud Engineering</p>
     </form>
 
-<!-- Modal -->
-<div class="modal fade bd-example-modal-sm" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal Forgot Password -->
+<div class="modal fade bd-example-modal-sm" id="ModalForgotPW" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -84,14 +88,14 @@ Beskrivelse:
         </button>
       </div>
       <div class="modal-body">
-        <form id="ajaxForm" method="post" action="php/includes/forgotPassword.php">
+        <form id="ajaxFormForgotPW" method="post" action="php/includes/forgotPassword.php">
           <div class="form-group">
             <input type="email" name="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="E-mail" required>
             <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
           </div>
       </div>
         <div class="modal-footer">
-          <button id="addSubmit" type="submit" name="submit" class="btn btn-tronrud-primary">Confirm</button>
+          <button type="submit" name="submit" class="btn btn-tronrud-primary">Confirm</button>
         </form>
       </div>
     </div>

@@ -24,7 +24,7 @@
         echo "E-mail and password doesn't match";
     }*/
 
-    require_once "connect.php";
+    require_once("connect.php");
     $con = new tronrudDB();
 
     $term = "%" . $_GET['searchterm'] . "%";

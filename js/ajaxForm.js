@@ -1,11 +1,11 @@
 // AJAX funksjon for å glemt og bytte passord
-$(function ajaxForm() {
+$(function ajaxFormNewUser() {
 
 	// Henter form
-	var form = $('#ajaxForm');
+	var form = $('#ajaxFormNewUser');
 
 	// Henter div
-	var formMessages = $('#form-messages');
+	var formMessages = $('#formMessagesNewUser');
 
 	// Event listener for formen
 	$(form).submit(function(e) {
@@ -29,13 +29,127 @@ $(function ajaxForm() {
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
             $(formMessages).attr('role', 'alert');
 
-            $('#exampleModal').modal('hide');
+            $('#AddUserModal').modal('hide');
+
+			// Lager melding
+			$(formMessages).text(response);
+		})
+		.fail(function(data) {
+            // Lager Bootstrap alerts
+            $(formMessages).removeClass('alert-success');
+            $(formMessages).addClass('alert-danger');
+            
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).attr('role', 'alert');
+
+			$('#AddUserModal').modal('hide');
+
+			// Lager melding
+			if (data.responseText !== '') {
+				$(formMessages).text(data.responseText);
+			} else {
+				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+			}
+		});
+	});
+});
+
+// AJAX funksjon for å glemt og bytte passord
+$(function ajaxFormForgotPW() {
+
+	// Henter form
+	var form = $('#ajaxFormForgotPW');
+
+	// Henter div
+	var formMessages = $('#formMessagesForgotPW');
+
+	// Event listener for formen
+	$(form).submit(function(e) {
+		// Hindrer submit av formen
+		e.preventDefault();
+
+		// Serializer form data
+		var formData = $(form).serialize();
+
+		// Submitter formen med AJAX.
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+        })
+		.done(function(response) {
+            // Lager Bootstrap alerts
+            $(formMessages).removeClass('alert-danger');
+            $(formMessages).addClass('alert-success');
+            
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).attr('role', 'alert');
+
+            $('#ModalForgotPW').modal('hide');
 
 			// Lager melding
 			$(formMessages).text(response);
 
 			// Nullstiler formen
 			$('#email').val('');
+		})
+		.fail(function(data) {
+            // Lager Bootstrap alerts
+            $(formMessages).removeClass('alert-success');
+            $(formMessages).addClass('alert-danger');
+            
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).attr('role', 'alert');
+
+			$('#ModalFrogotPW').modal('hide');
+
+			// Lager melding
+			if (data.responseText !== '') {
+				$(formMessages).text(data.responseText);
+			} else {
+				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+			}
+		});
+	});
+});
+
+// AJAX funksjon for å glemt og bytte passord
+$(function ajaxFormChangePassword() {
+
+	// Henter form
+	var form = $('#ajaxFormChangePW');
+
+	// Henter div
+	var formMessages = $('#formMessagesChangePW');
+
+	// Event listener for formen
+	$(form).submit(function(e) {
+		// Hindrer submit av formen
+		e.preventDefault();
+
+		// Serializer form data
+		var formData = $(form).serialize();
+
+		// Submitter formen med AJAX.
+		$.ajax({
+			type: 'POST',
+			url: $(form).attr('action'),
+			data: formData
+        })
+		.done(function(response) {
+            // Lager Bootstrap alerts
+            $(formMessages).removeClass('alert-danger');
+            $(formMessages).addClass('alert-success');
+            
+            $(formMessages).addClass('alert alert-dismissible fade show text-left');
+            $(formMessages).attr('role', 'alert');
+
+            $('#ChangePWModal').modal('hide');
+
+			// Lager melding
+			$(formMessages).text(response);
+
+			// Nullstiler formen
 			$('#newPassword').val('');
 			$('#repeatPassword').val('');
 		})
@@ -47,7 +161,7 @@ $(function ajaxForm() {
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
             $(formMessages).attr('role', 'alert');
 
-			$('#exampleModal').modal('hide');
+			$('#ChangePWModal').modal('hide');
 
 			// Lager melding
 			if (data.responseText !== '') {

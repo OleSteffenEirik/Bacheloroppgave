@@ -43,6 +43,16 @@ require_once("includes/findProducts.php");
         </div>
       </section>
 
+      <!-- AJAX Output -->
+      <div class="container">
+        <div id="formMessagesNewUser"></div>
+      </div>
+
+      <!-- AJAX Output -->
+      <div class="container">
+        <div id="formMessagesChangePW"></div>
+      </div>
+
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
           <h4 class="alert-heading">Important information!</h4>
@@ -257,13 +267,14 @@ require_once("includes/findProducts.php");
     <!-- Kompatibilitet for handlekurv -->
     <script type="text/javascript" src="../js/jquery-2.2.3.min.js"></script>
     <!-- -->
-    <script type="text/javascript" src="../js/app.js"></script>
     <script type="text/javascript" src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../js/jquery.mycart.js"></script>
     <script type="text/javascript" src="../js/mycart-settings.js"></script>
     <script type="text/javascript" src="../static/fontawesome/fontawesome-all.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+    <script type="text/javascript" src="../js/ajaxForm.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
 
     <script type="text/javascript">
       let companySession = "<?php echo $_SESSION['login_user'][1]; ?>";

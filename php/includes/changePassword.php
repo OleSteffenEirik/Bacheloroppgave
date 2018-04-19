@@ -7,13 +7,13 @@
 
 */    
 
+session_start();
 require_once("connect.php");
 $con = new tronrudDB();
-require_once("session.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Varibeler for bytt passord
-        $login_user = $_SESSION['login_user'];
+        $login_user = $_SESSION['login_user'][2];
         //$password = $con->real_escape_string($_POST['password1']);
         $new_password = $con->real_escape_string($_POST['newPassword']);
         $repeat_password = $con->real_escape_string($_POST['repeatPassword']);
@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Spørring mot database. Hente riktig bruker og passord.
         //$sql =("SELECT brukerNavn, passord FROM bruker WHERE brukerNavn='$login_user' AND passord='$encrypted_password'");
         //$res = $con->query($sql);
-
         $sql =("SELECT * FROM brukere WHERE ePost='$login_user'");
         $res = $con->query($sql);
         
@@ -50,19 +49,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "Thank You! Your message has been sent.";
                 }else{
                     http_response_code(500);
-                    echo "There was a problem with your submission, please try again.";
+                    echo "There was a problem with your submission, please try again. 1";
                 }   
             }else {
                 http_response_code(500);         
-                echo "Oops! Something went wrong and we couldn't send your message.";
+                echo "Oops! Something went wrong and we couldn't send your message. 2";
             }
         }else {
             http_response_code(500);
-            echo "There was a problem with your submission, please try again.";
+            echo "There was a problem with your submission, please try again. 3";
         }
     }else {
         http_response_code(403);
-        echo "There was a problem with your submission, please try again.";
+        echo "There was a problem with your submission, please try again. 4";
 }
     
 // Avslutte kontakt med databse.
