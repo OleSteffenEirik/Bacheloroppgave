@@ -1,8 +1,6 @@
 <?php
 /* 
-Beskrivelse: 
-    Utviklet av:
-        Kontrollert av:
+** Innloggingsside som kunder av Tronrud Engineering skal bruke for å sjekke maskiner de eier, samt kunne bestille og avrope.
 */
 ?>
 <!doctype html>
@@ -11,10 +9,8 @@ Beskrivelse:
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Tittel -->
+    <meta name="author" content="Steffen J Gundersen, Ole Martin Helgesen, Eirik J Aanstad">
     <title>Tronrud Engineering</title>
-    <!-- Ikon -->
     <link rel="shortcut icon" href="img/tronrud-icon.png"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>

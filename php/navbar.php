@@ -1,3 +1,5 @@
+<!-- Vi har laget kode for navbar her, slik vi bare kan gjøre include på .php-filen i 'home.php' -->
+
 <nav class="navbar navbar-expand-md bg-tronrud-secondary">
     <div class="container d-flex justify-content-between align-items-center">
         <img class="img-responsive navbar-brand my-2" src="../img/tronrud-engineering-logo.svg" alt="logo" height="50px" width="200px">
@@ -23,7 +25,7 @@
     </div>
 </nav>
 
-<!-- Modal -->
+<!-- Modal / popup vindu for 'change password' -->
 <div class="modal fade bd-example-modal-sm" id="ChangePWModal" tabindex="-1" role="dialog" aria-labelledby="ChangePWModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
         <div class="modal-content">

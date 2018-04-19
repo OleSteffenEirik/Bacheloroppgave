@@ -24,6 +24,10 @@
         echo "E-mail and password doesn't match";
     }*/
 
+
+    /**
+     * Kode for å søke etter parter.
+     */
     require_once "connect.php";
     $con = new tronrudDB();
 

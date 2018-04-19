@@ -1,4 +1,4 @@
-
+<!-- Vi har laget kode for footer her, slik vi bare kan gjøre include på .php-filen i 'home.php'  -->
     <footer class="footer">
         <div class="container mt-4 text-center">
           <div class="row">

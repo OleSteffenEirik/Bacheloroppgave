@@ -1,13 +1,9 @@
 <?php
-/* 
 
-    Beskrivelse: Funksjon for bytte av passord
-        Utviklet av: Steffen
-            Kontrollert av:
-
-*/    
-
-require_once("connect.php");
+/*
+  Funksjon for bytte av passord. brukes i 'navbar.php' 
+*/
+  require_once("connect.php");
 $con = new tronrudDB();
 require_once("session.php");
 
@@ -22,9 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $check_password = "";
 
         // Spørring mot database. Hente riktig bruker og passord.
-        //$sql =("SELECT brukerNavn, passord FROM bruker WHERE brukerNavn='$login_user' AND passord='$encrypted_password'");
-        //$res = $con->query($sql);
-
+        //$sql =("SELECT brukerNavn, passord FROM bruker WHERE brukerNavn='$login_user' AND passord='$encrypted_password'"); **gammel kode, ny ligger under**
         $sql =("SELECT * FROM brukere WHERE ePost='$login_user'");
         $res = $con->query($sql);
         
@@ -64,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         http_response_code(403);
         echo "There was a problem with your submission, please try again.";
 }
-    
-// Avslutte kontakt med databse.
+
 $con->close();
 ?>

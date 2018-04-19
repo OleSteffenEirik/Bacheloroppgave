@@ -1,10 +1,6 @@
 <?php
 /* 
-
-Beskrivelse: Diverse PHP funksjoner
-    Utviklet av: Steffen, Eirik og Ole Martin
-        Kontrollert av: 
-
+ Diverse PHP funksjoner
 */
 
 function passwordEncrypter($password) {

@@ -1,8 +1,6 @@
 <?php
 /* 
-Beskrivelse: 
-    Utviklet av:
-        Kontrollert av:
+Frontsiden man kommer til når man logger inn.
 */
 
 require_once("includes/sessionExpire.php");
@@ -17,9 +15,8 @@ require_once("includes/findProducts.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Tittel samt ikon -->
-    <title>Tronrud</title>
+    <meta name="author" content=" Ole Martin Helgesen, Steffen J Gundersen, Eirik J Aanstad">
+    <title>Tronrud Engineering</title>
     <link rel="shortcut icon" href="../img/tronrud-icon.png" />
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
@@ -27,7 +24,6 @@ require_once("includes/findProducts.php");
     <link rel="stylesheet" type="text/css" href="../static/fontawesome/on-server/css/fontawesome-all.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../Sass/main.css" />
-    <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css"/>-->
   </head>
 
   <body class="pages bg-light">
@@ -45,7 +41,7 @@ require_once("includes/findProducts.php");
 
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
-          <h4 class="alert-heading">Important information!</h4>
+          <h2 class="alert-heading">Important information!</h2>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">
               <i class="fas fa-times"></i>
@@ -263,7 +259,7 @@ require_once("includes/findProducts.php");
     <script type="text/javascript" src="../js/jquery.mycart.js"></script>
     <script type="text/javascript" src="../js/mycart-settings.js"></script>
     <script type="text/javascript" src="../static/fontawesome/fontawesome-all.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script> <!-- Slettes?-->
 
     <script type="text/javascript">
       let companySession = "<?php echo $_SESSION['login_user'][1]; ?>";

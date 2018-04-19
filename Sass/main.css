@@ -1,4 +1,7 @@
-/* Custom styling for innlogging */
+/* 
+** Stilark generert av main.scss til bruk i prosjektet.
+** Alle endringer gjøres i .scss-fil hvor det er mest intuitivt.
+*/
 html.login {
   height: 100%; }
 

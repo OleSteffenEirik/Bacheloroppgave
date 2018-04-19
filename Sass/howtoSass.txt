@@ -1,4 +1,6 @@
-http://thesassway.com/beginner/how-to-structure-a-sass-project
+cheatsheets for hvordan sette opp scss-filene
+
+source: http://thesassway.com/beginner/how-to-structure-a-sass-project
 
 stylesheets/
 |
@@ -26,4 +28,4 @@ stylesheets/
 
 - The vendor folder holds 3rd party code. 
 - The partials folder is for code you want to include and compile. 
-- The modules folder is for code you want to include, but don’t want to compile.
+- The modules folder is for code you want to include, but donï¿½t want to compile.

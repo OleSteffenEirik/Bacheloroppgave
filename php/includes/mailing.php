@@ -1,5 +1,11 @@
 <?php
+/*
+Denne filen setter opp template for mail, som sendes videre til Tronrud Enginering for deler kunden vil bestille.
 
+*** Foreløbig gått over til PHP sin mail()-funksjon isteden for PHPMailer for lettere testing.
+*** PHPMailer vil være best egnet for å forhindre at mail havner i spam-filter.
+***
+*/
 
 
 // Import PHPMailer classes into the global namespace
@@ -49,6 +55,8 @@ try {
 }
 */
 
+
+// PHP mail()
 // Set the recipient email address.
             // FIXME: Update this to your desired email address.
             $recipient = "hello@example.com";

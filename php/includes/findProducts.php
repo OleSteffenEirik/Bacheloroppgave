@@ -1,4 +1,7 @@
 <?php
+/*
+spørringer som henter frem maskiner som kunden eier.
+*/
 require_once("connect.php");
 $con = new tronrudDB();
 

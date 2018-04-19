@@ -51,9 +51,6 @@ $(function () {
           alert(status);
         }
       });
-
-      //her skal mail sendes(?) / funksjon for mail kjøres
-
     },
   });
 

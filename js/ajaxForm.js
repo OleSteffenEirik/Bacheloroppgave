@@ -1,12 +1,9 @@
-// AJAX funksjon for å glemt og bytte passord
+// JQuery-AJAX funksjon for å glemt og bytte passord
 $(function ajaxForm() {
-
 	// Henter form
 	var form = $('#ajaxForm');
-
 	// Henter div
 	var formMessages = $('#form-messages');
-
 	// Event listener for formen
 	$(form).submit(function(e) {
 		// Hindrer submit av formen
