@@ -268,13 +268,9 @@ require_once("includes/findProducts.php");
     <script type="text/javascript" src="../js/jquery.mycart.js"></script>
     <script type="text/javascript" src="../js/mycart-settings.js"></script>
     <script type="text/javascript" src="../static/fontawesome/fontawesome-all.js"></script>
-<<<<<<< HEAD
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
     <script type="text/javascript" src="../js/ajaxForm.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
-=======
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script> <!-- Slettes?-->
->>>>>>> 391ef5314f1d1a88a2d03d4055952ebc664829b9
 
     <script type="text/javascript">
       let companySession = "<?php echo $_SESSION['login_user'][1]; ?>";

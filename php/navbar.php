@@ -31,11 +31,7 @@
     </div>
 </nav>
 
-<<<<<<< HEAD
 <!-- Modal Change Password -->
-=======
-<!-- Modal / popup vindu for 'change password' -->
->>>>>>> 391ef5314f1d1a88a2d03d4055952ebc664829b9
 <div class="modal fade bd-example-modal-sm" id="ChangePWModal" tabindex="-1" role="dialog" aria-labelledby="ChangePWModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
