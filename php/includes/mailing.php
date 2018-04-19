@@ -1,9 +1,5 @@
 <?php
 
-if(isset($_POST["checkoutString"])) {
-    $ordre = json_decode($_POST["checkoutString"]);
-    $fritekst = $_POST['fritekst'];
-}
 
 
 // Import PHPMailer classes into the global namespace
@@ -54,11 +50,38 @@ try {
 */
 
 // Set the recipient email address.
-$to = "somebody@example.com";
-$subject = "My subject";
-$txt = "Hello world!";
-$headers = "From: webmaster@example.com" . "\r\n" .
-"CC: somebodyelse@example.com";
+            // FIXME: Update this to your desired email address.
+            $recipient = "hello@example.com";
 
-mail($to,$subject,$txt,$headers);
+            // Set the email subject.
+            $subject = "Tronrund Engineering billing information";
+
+            // Build the email content.
+            $email_content = '';
+
+            if(isset($_POST["checkoutString"])) {
+                $ordre = json_decode($_POST["checkoutString"]);
+                $fritekst = $_POST['fritekst'];        
+            }
+            // Build the email headers.
+            $email_content .= 'Name ';
+            $email_content .= 'Id ';
+            $email_content .= 'quantity ';
+            $email_content .= '<br>';
+
+            foreach($ordre as $order) {
+                $email_content .= $order->name . ' ';
+                $email_content .= $order->id . ' ';
+                $email_content .= $order->quantity . ' ';
+                $email_content .= '<br>';
+            }
+
+            $email_content .= $fritekst;
+
+            $headers =  'MIME-Version: 1.0' . "\r\n"; 
+            $headers .= 'From: Your name <info@address.com>' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+
+
+            mail($recipient, $subject, $email_content, $headers);
 ?>
