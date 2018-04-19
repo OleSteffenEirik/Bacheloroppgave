@@ -63,4 +63,20 @@ try {
 }
 */
 
+// Set the recipient email address.
+            // FIXME: Update this to your desired email address.
+            $recipient = "hello@example.com";
+
+            // Set the email subject.
+            $subject = "Tronrund Engineering billing information";
+
+            // Build the email content.
+            $email_content = "Name: TEST\n";
+            $email_content .= "Email: TEST\n\n";
+            $email_content .= "Your order: TEST\n\n";
+
+            // Build the email headers.
+            $email_headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/plain; charset=UTF-8' . "\r\n";
+
+            mail($recipient, $subject, $email_content, $email_headers);
 ?>
