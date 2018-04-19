@@ -1,18 +1,8 @@
 <?php
-if(isset($_POST["checkoutString"]))
-{
-    $navn = ' ';
-    $data = json_decode($_POST["checkoutString"]);
-    $myarray = $data->myarray;
-    print_r($myarray);
-    print_r($data);
-    foreach($myarray as $singular)
-    {
-        $navn .= $singular->name;
-    }
-    print($navn);
-    echo($navn);
 
+if(isset($_POST["checkoutString"])) {
+    $ordre = json_decode($_POST["checkoutString"]);
+    $fritekst = $_POST['fritekst'];
 }
 
 
@@ -64,19 +54,11 @@ try {
 */
 
 // Set the recipient email address.
-            // FIXME: Update this to your desired email address.
-            $recipient = "hello@example.com";
+$to = "somebody@example.com";
+$subject = "My subject";
+$txt = "Hello world!";
+$headers = "From: webmaster@example.com" . "\r\n" .
+"CC: somebodyelse@example.com";
 
-            // Set the email subject.
-            $subject = "Tronrund Engineering billing information";
-
-            // Build the email content.
-            $email_content = "Name: TEST\n";
-            $email_content .= "Email: TEST\n\n";
-            $email_content .= "Your order: TEST\n\n";
-
-            // Build the email headers.
-            $email_headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/plain; charset=UTF-8' . "\r\n";
-
-            mail($recipient, $subject, $email_content, $email_headers);
+mail($to,$subject,$txt,$headers);
 ?>

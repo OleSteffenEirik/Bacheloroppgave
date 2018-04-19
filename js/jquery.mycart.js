@@ -239,6 +239,11 @@
                               '<input type="text" class="form-control" id="zip" disabled="disabled" value="' + zipSession + '">' +
                           '</div>' +
                       '</div>' +
+                      
+                      '<div class="form-group">' +
+                        '<label for="fritekst">Fritekst</label>' +
+                        '<textarea class="form-control" id="fritekst" rows="3"></textarea>' +
+                      '</div>' +
                     '</div>' +
                   '</div>' +
                 '</div>' +
