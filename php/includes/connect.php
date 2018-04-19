@@ -1,11 +1,7 @@
 <?php 
-/* 
-Beskrivelse: Lister opp databaseinformasjon og kobler til databasen
-    Sist oppdatert:
-        Utviklet av: Steffen
-*/
 
-//Lister opp databaseinformasjon
+// Lister opp databaseinformasjon og kobler til databasen 
+
 class tronrudDB extends mysqli {
 function __construct(
 $host = 'sql129.main-hosting.eu',

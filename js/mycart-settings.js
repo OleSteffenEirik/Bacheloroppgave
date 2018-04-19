@@ -26,29 +26,31 @@ $(function () {
     },
     checkoutCart: function (products, totalQuantity) {
       var checkoutString = new Array();
-        $.each(products, function (index) {
-          checkoutString.push({
-            "id": this.id,
-            "name": this.name,
-            "quantity": this.quantity
-          });
+      var fritekst = document.getElementById('fritekst').value;
+      $.each(products, function (index) {
+        checkoutString.push({
+          "id": this.id,
+          "name": this.name,
+          "quantity": this.quantity
         });
-        console.log(checkoutString);
-        console.log(JSON.stringify(checkoutString));
-        alert("hei");
-        $.ajax({
-          url: "../php/includes/mailing.php",
-          type: "POST",
-          contentType: 'application/json',
-          data: JSON.stringify(checkoutString),
-          complete: function(data, status) {
-            alert(JSON.stringify(data));
-            alert(status);
-          }
-        });
-        
-      //her skal mail sendes(?) / funksjon for mail kjøres
+      });
 
+
+      console.log(fritekst);
+      console.log(checkoutString);
+      alert("hei");
+      $.ajax({
+        url: "../php/includes/mailing.php",
+        type: "POST",
+        data: {
+          "checkoutString": JSON.stringify(checkoutString),
+          "fritekst" : fritekst
+        },
+        complete: function (data, status) {
+          console.log(data);
+          alert(status);
+        }
+      });
     },
   });
 

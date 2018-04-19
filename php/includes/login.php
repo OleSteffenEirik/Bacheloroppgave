@@ -1,8 +1,6 @@
 <?php
 /* 
-Beskrivelse: 
-    Utviklet av: Steffen
-        Kontrollert av:
+Kode for å logge inn fra'index.php' med Email og Passord. 
 */
 
 require_once("connect.php");

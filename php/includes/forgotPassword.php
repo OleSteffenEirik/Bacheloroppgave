@@ -1,10 +1,6 @@
 <?php
 /* 
-
-Beskrivelse: Tar imot e-post fra bruker, lager tidfeldig passord og sender det til brukeren.
-    Utviklet av: Steffen
-        Kontrollert av: 
-
+Tar imot e-post fra bruker, lager tidfeldig passord og sender det til brukeren.
 */
 
 require_once("connect.php");

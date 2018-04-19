@@ -1,3 +1,6 @@
+/*
+** Hoved-fil for hvor alle Sass-filer er importert og kompilert over til 'main.css'
+*/
 /* Custom styling for innlogging */
 html.login {
   height: 100%; }

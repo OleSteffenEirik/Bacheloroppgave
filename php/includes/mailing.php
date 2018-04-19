@@ -1,19 +1,11 @@
 <?php
-if(isset($_POST["checkoutString"]))
-{
-    $navn = ' ';
-    $data = json_decode($_POST["checkoutString"]);
-    $myarray = $data->myarray;
-    print_r($myarray);
-    print_r($data);
-    foreach($myarray as $singular)
-    {
-        $navn .= $singular->name;
-    }
-    print($navn);
-    echo($navn);
+/*
+Denne filen setter opp template for mail, som sendes videre til Tronrud Enginering for deler kunden vil bestille.
 
-}
+*** Foreløbig gått over til PHP sin mail()-funksjon isteden for PHPMailer for lettere testing.
+*** PHPMailer vil være best egnet for å forhindre at mail havner i spam-filter.
+***
+*/
 
 
 // Import PHPMailer classes into the global namespace
@@ -63,6 +55,8 @@ try {
 }
 */
 
+
+// PHP mail()
 // Set the recipient email address.
             // FIXME: Update this to your desired email address.
             $recipient = "hello@example.com";
@@ -71,12 +65,31 @@ try {
             $subject = "Tronrund Engineering billing information";
 
             // Build the email content.
-            $email_content = "Name: TEST\n";
-            $email_content .= "Email: TEST\n\n";
-            $email_content .= "Your order: TEST\n\n";
+            $email_content = '';
 
+            if(isset($_POST["checkoutString"])) {
+                $ordre = json_decode($_POST["checkoutString"]);
+                $fritekst = $_POST['fritekst'];        
+            }
             // Build the email headers.
-            $email_headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/plain; charset=UTF-8' . "\r\n";
+            $email_content .= 'Name ';
+            $email_content .= 'Id ';
+            $email_content .= 'quantity ';
+            $email_content .= '<br>';
 
-            mail($recipient, $subject, $email_content, $email_headers);
+            foreach($ordre as $order) {
+                $email_content .= $order->name . ' ';
+                $email_content .= $order->id . ' ';
+                $email_content .= $order->quantity . ' ';
+                $email_content .= '<br>';
+            }
+
+            $email_content .= $fritekst;
+
+            $headers =  'MIME-Version: 1.0' . "\r\n"; 
+            $headers .= 'From: Your name <info@address.com>' . "\r\n";
+            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+
+
+            mail($recipient, $subject, $email_content, $headers);
 ?>

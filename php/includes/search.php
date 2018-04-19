@@ -24,7 +24,15 @@
         echo "E-mail and password doesn't match";
     }*/
 
+<<<<<<< HEAD
     require_once("connect.php");
+=======
+
+    /**
+     * Kode for å søke etter parter.
+     */
+    require_once "connect.php";
+>>>>>>> 391ef5314f1d1a88a2d03d4055952ebc664829b9
     $con = new tronrudDB();
 
     $term = "%" . $_GET['searchterm'] . "%";
