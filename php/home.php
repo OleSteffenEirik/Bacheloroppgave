@@ -32,10 +32,13 @@ require_once("includes/findProducts.php");
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="display-3">Machine overview</h1>
-          <p class="lead">Here you will find an overview of all machines registered at
-            <b>
-              <?php echo $_SESSION['login_user'][1]; ?>.</b>
-          </p>
+          <p class="lead">Here you will find an overview of all your machines.</p>
+          <span class="lead">User: 
+            <b><?php echo $_SESSION['login_user'][1]; ?></b>
+          </span>
+          <span class="lead ml-2">Membership: 
+            <b><?php echo $_SESSION['login_user'][3]; ?></b>
+          </span>
         </div>
       </section>
 
@@ -53,9 +56,7 @@ require_once("includes/findProducts.php");
         <div class="alert alert-info alert-dismissible fade show" role="alert">
           <h2 class="alert-heading">Important information!</h2>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">
               <i class="fas fa-times"></i>
-            </span>
           </button>
           <p>This site uses 3D models created in the VRML file format. You will need a browser that supports display of VRML
             3D models, and today, only Internet Explorer supports this. Why? Mozilla, developer of Firefox, explains it in
@@ -152,7 +153,7 @@ require_once("includes/findProducts.php");
               <div class="row">
                 <div class="col-md-5">
                   <!-- Henter VRML 3D model og viser den i modalen -->
-                  <OBJECT CLASSID="CLSID:86A88967-7A20-11d2-8EDA-00600818EDB1" WIDTH="400" HEIGHT="300">
+                  <OBJECT CLASSID="CLSID:86A88967-7A20-11d2-8EDA-00600818EDB1" WIDTH="300" HEIGHT="300">
                     <PARAM NAME="SRC" VALUE="../Cortona Part Catalog/1130349.wrl">
                     <PARAM NAME="VRML_BACKGROUND_COLOR" VALUE="#CDCDCD">
                     <PARAM NAME="VRML_DASHBOARD" VALUE="false">

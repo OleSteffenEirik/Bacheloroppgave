@@ -33,6 +33,7 @@ $(function ajaxFormNewUser() {
 
 			// Lager melding
 			$(formMessages).text(response);
+			$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
 		})
 		.fail(function(data) {
             // Lager Bootstrap alerts
@@ -47,6 +48,7 @@ $(function ajaxFormNewUser() {
 			// Lager melding
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
+				$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}
@@ -89,6 +91,7 @@ $(function ajaxFormForgotPW() {
 
 			// Lager melding
 			$(formMessages).text(response);
+			$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
 
 			// Nullstiler formen
 			$('#email').val('');
@@ -108,6 +111,8 @@ $(function ajaxFormForgotPW() {
 				$(formMessages).text(data.responseText);
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
+				$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
+
 			}
 		});
 	});
@@ -148,6 +153,7 @@ $(function ajaxFormChangePassword() {
 
 			// Lager melding
 			$(formMessages).text(response);
+			$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
 
 			// Nullstiler formen
 			$('#newPassword').val('');
@@ -166,6 +172,7 @@ $(function ajaxFormChangePassword() {
 			// Lager melding
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
+				$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}
@@ -197,18 +204,7 @@ $(function ajaxFormCaptcha() {
 			data: formData
         })
 		.done(function(response) {
-			// Lager Bootstrap alerts
-			//$(formMessages).removeClass('alert-danger');
-			//$(formMessages).addClass('alert-success');
-			
-			//$(formMessages).addClass('container alert alert-dismissible fade show text-left');
-			//$(formMessages).attr('role', 'alert');
-
-			// Lager melding
-			//$(formMessages).text(response);
-
-			//$('#form-messages').append('<i class="fa fa-spinner fa-spin float-right"></i>');
-
+			// Legger på spinner icon på logg inn knappen ved innlogging
 			$('#signin-icon').removeClass('fa-sign-in-alt');
 			$('#signin-icon').addClass('fa-spinner fa-spin');
 
@@ -226,13 +222,13 @@ $(function ajaxFormCaptcha() {
             $(formMessages).addClass('alert alert-dismissible fade show text-left');
 			$(formMessages).attr('role', 'alert');
 
+			//Auto hide animasjon
 			//$(formMessages).fadeTo(5000, 500).slideUp(500);
 
 			// Lager melding
 			if (data.responseText !== '') {
 				$(formMessages).text(data.responseText);
-				//$('#form-messages').append('<button id="formButton" type="button" class="close" data-dismiss="alert" aria-label="Close"></button>');
-				//$('#formButton').append('<i class="fas fa-times"></i>');
+				$(formMessages).prepend('<button type="button" class="close" data-dismiss="alert" aria-label="Close"><i class="fas fa-times"></i></button>');
 			} else {
 				$(formMessages).text('Oops! An error occured and your message could not be sent.');
 			}
