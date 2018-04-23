@@ -13,12 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         http_response_code(400);
         echo "E-mail or Password field are empty";
     }else {
-        // Variabeler for inntastet data
-        $email=$_POST['email'];
-        $password=$_POST['password'];
-        // MySQL Injection
-        $email = $con->real_escape_string($email);
-        $password = $con->real_escape_string($password);
+        // Variabler
+        $email = $con->real_escape_string($_POST['email']);
+        $password = $con->real_escape_string($_POST['password']);
         // reCAPTCHA
         $secret="6Le0nzsUAAAAADyDcU-el9B9WpLYgkQ1TrTzreEa";
         $response=$_POST["captcha"];
@@ -29,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'verify_peer_name'  => false,
             ),
         );
-        $context = stream_context_create( $options );
+        $context = stream_context_create($options);
 
         $verify=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secret}&response={$response}", false, $context);
         $captcha_success=json_decode($verify);
@@ -58,10 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $db_telefon = $row['telefon'];
                 }
                 if ($email==$db_email && $password==$db_password) {
+                    $sqlCount = $con->query("UPDATE brukere SET AntallInnlogging=AntallInnlogging+1 WHERE ePost='$db_email'");
+                    $sqlLastTime = $con->query("UPDATE brukere SET SisteInnlogging= now()");
                     $session_array = array($db_kundeNr, $db_kundeNavn, $db_email, $db_tilgangNivå, $db_postAdresse, $db_postNr, $db_telefon); // Oppretter sesjon
                     $_SESSION['login_user'] = $session_array;
-                    $sqlCount = $con->query("UPDATE brukere SET AntallInnlogging=AntallInnlogging+1 WHERE ePost='$db_email'");
-                    $sqlLastTime= $con->query("UPDATE brukere SET SisteInnlogging= now()");
                     http_response_code(200);
                 }else {
                     http_response_code(500);

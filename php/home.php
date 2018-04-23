@@ -52,6 +52,16 @@ require_once("includes/findProducts.php");
         <div id="formMessagesChangePW"></div>
       </div>
 
+      <!-- AJAX Output -->
+      <div class="container">
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+          <?php echo ((isset($machineError) && $machineError != '') ? $machineError : ''); ?>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
           <h2 class="alert-heading">Important information!</h2>
@@ -133,10 +143,10 @@ require_once("includes/findProducts.php");
     <!-- Legger til footer fra filen 'footer.php' -->
     <?php require_once('footer.php'); ?>
 
-    <!-- Modal -->
+    <!-- Machine Modal -->
     <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
-      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title text-tronrud-primary" id="exampleModalLabel">
@@ -214,9 +224,6 @@ require_once("includes/findProducts.php");
                 </span>
                 <span class="badge badge-pill badge-tronrud-primary my-cart-badge position-absolute"></span>
               </div>
-              <!--<a href="#" class="ml-5" data-toggle="modal" data-target="#orderModal">
-                                Test
-                            </a>-->
               <div class="row ml-auto mr-3 mt-3">
                 <div class="form-group">
                   <select id="searchOption" class="form-control">
@@ -236,7 +243,6 @@ require_once("includes/findProducts.php");
               </div>
             </form>
 
-            <!--<div id="form-messages"></div>-->
             <div class="table-responsive-md">
               <table id="table" class="table table-hover mt-5">
                 <thead class="bg-tronrud-secondary text-white font-weight-bold">

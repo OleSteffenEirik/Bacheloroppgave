@@ -190,7 +190,7 @@
     if (!$("#" + idCartModal).length) {
       $('body').append(
         '<div class="modal fade bd-example-modal-lg" id="' + idCartModal + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">' +
-          '<div class="modal-dialog modal-lg modal-dialog-centered" role="document">' +
+          '<div class="modal-dialog modal-lg role="document">' +
             '<div class="modal-content">' +
               '<div class="modal-header">' +
                 '<h5 class="modal-title text-tronrud-primary" id="orderModalLabel">Your order</h5>' +
@@ -208,7 +208,7 @@
                           '<span class="badge badge-pill badge-tronrud-secondary my-cart-badge"></span>' +
                       '</h4>' +
                       '<ul class="list-group mb-3">' +
-                          '<table class="table table-hover table-striped border" id="' + idCartTable + '"></table>' +
+                          '<table class="table table-hover table-striped" id="' + idCartTable + '"></table>' +
                       '</ul>' +
                     '</div>' +
               

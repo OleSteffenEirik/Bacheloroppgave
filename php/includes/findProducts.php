@@ -27,6 +27,6 @@ if ($rows >= 1) {
         $db_PDFfile = $row['PDF_File'];
     }
 }else {
-    echo "E-mail and password doesn't match";
+    $machineError = "Couldn't find any machines...";
 }
 ?>

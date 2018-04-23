@@ -76,7 +76,7 @@
             </div>
             <div class="modal-footer">
                 <button type="submit" name="submit" class="btn btn-tronrud-primary">
-                    <i class="fas fa-check fa-lg align-middle mr-1"></i>Confirm
+                    <i class="fas fa-check fa-lg align-middle mr-1"></i><b>Confirm</b>
                 </button>
                 </form>
             </div>
@@ -177,7 +177,7 @@
             </div>
                             <div class="modal-footer">
                                 <button type="submit" name="submit" class="btn btn-tronrud-primary">
-                                    <i class="fas fa-check fa-lg align-middle mr-1"></i>Confirm
+                                    <i class="fas fa-check fa-lg align-middle mr-1"></i><b>Confirm</b>
                                 </button>
                             </form>
                             </div>

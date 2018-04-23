@@ -35,7 +35,6 @@ $(function () {
         });
       });
 
-
       console.log(fritekst);
       console.log(checkoutString);
       alert("hei");
@@ -53,5 +52,4 @@ $(function () {
       });
     },
   });
-
 });
