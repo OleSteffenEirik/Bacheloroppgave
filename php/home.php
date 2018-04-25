@@ -53,14 +53,14 @@ require_once("includes/findProducts.php");
       </div>
 
       <!-- AJAX Output -->
-      <div class="container">
+      <!--<div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
           <?php echo ((isset($machineError) && $machineError != '') ? $machineError : ''); ?>
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <i class="fas fa-times"></i>
           </button>
         </div>
-      </div>
+      </div>-->
 
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
