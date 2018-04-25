@@ -1,12 +1,12 @@
 # Bacheloroppgave
 :poop:
 
-Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av nettdeler via email.
+Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av parter via email. Kunder skal kunne få en oversikt over maskiner de selv eier, så skal de kunne gå inn å lese dokumentasjon, samt se 3D-modell av maskinene. Videre skal de kunne søke på ID for de partene de trenger til den angitte maskinen, for så å legge det i handlekurv å sende ordre til selger.
 
 ## Geting started
 
 ## Developing
-### Built with
+### :wrench: Built with
 * php
 * html
 * css / Sass
@@ -17,12 +17,14 @@ Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av nett
 *  & more
 
 ### Prerequisites
+Cortona3D
 
-## Database
+### Database
 * mySql
+
 ## Acknowledgments
 
-## Authors
+## :bust_in_silhouette: Authors
 Ole Martin Helgesen,
 Steffen J Gundersen,
 Eirik J Aanstad
