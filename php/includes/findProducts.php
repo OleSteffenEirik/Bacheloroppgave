@@ -20,9 +20,10 @@ FROM brukereMaskin
 $rows = $sql->num_rows;
 
 $machineError ='';
-$divHtml ='';
+$divHtml = '';
+$divHtml .= '<div class="album py-5">';
+$divHtml .= '<div class="container">';
 $i=0;
-$j=0;
 
 if ($rows >= 1) {
     while ($row = $sql->fetch_assoc()) {
@@ -57,15 +58,15 @@ if ($rows >= 1) {
         }
     }
 }else {
-    $machineError .= '<div class="container">';
-    $machineError .=    '<div class="alert alert-info alert-dismissible fade show" role="alert">';
-    $machineError .=        'No machines here, sorry!';
-    $machineError .=        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
-    $machineError .=            '<i class="fas fa-times"></i>';
-    $machineError .=        '</button';
-    $machineError .=    '</div>';
-    $machineError .= '</div>';
+    $divHtml .=    '<div class="alert alert-info alert-dismissible fade show" role="alert">';
+    $divHtml .=        'No machines here, sorry!';
+    $divHtml .=        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+    $divHtml .=            '<i class="fas fa-times"></i>';
+    $divHtml .=        '</button';
+    $divHtml .=    '</div>';
 }
-$divHtml .= '</div>';
+
+$divHtml .='</div>';
+$divHtml .='</div>';
 
 ?>

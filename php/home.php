@@ -71,64 +71,7 @@ require_once("includes/findProducts.php");
             <a href="http://support.cortona3d.com/allow-plugin" class="alert-link">here</a>.</p>
         </div>
       </div>
-
-      <div class="album py-5">
-        <div class="container">
           <?php echo $divHtml; ?>
-          <!--<div class="row">
-            <div class="col-md-4 mb-5">
-              <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
-              </a>
-              <h3 class="my-3 text-center"><?php echo $db_machinename; ?></h3>
-            </div>
-            <div class="col-md-4 mb-5">
-              <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50"
-                  alt="Card image cap">
-              </a>
-              <h3 class="my-3 text-center">
-                <?php echo $db_machinename; ?> </h3>
-            </div>
-            <div class="col-md-4 mb-5">
-              <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50"
-                  alt="Card image cap">
-              </a>
-              <h3 class="my-3 text-center">
-                <?php echo $db_machinename; ?> </h3>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 mb-5">
-              <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50"
-                  alt="Card image cap">
-              </a>
-              <h3 class="my-3 text-center">
-                <?php echo $db_machinename; ?> </h3>
-            </div>
-            <div class="col-md-4 mb-5">
-              <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50"
-                  alt="Card image cap">
-              </a>
-              <h3 class="my-3 text-center">
-                <?php echo $db_machinename; ?> </h3>
-            </div>
-            <div class="col-md-4 mb-5">
-              <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50"
-                  alt="Card image cap">
-              </a>
-              <h3 class="my-3 text-center">
-                <?php echo $db_machinename; ?> </h3>
-            </div>
-          </div>-->
-
-        </div>
-      </div>
     </main>
 
     <!-- Legger til footer fra filen 'footer.php' -->
