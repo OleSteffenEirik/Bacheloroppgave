@@ -19,14 +19,53 @@ FROM brukereMaskin
 
 $rows = $sql->num_rows;
 
+$machineError ='';
+$divHtml ='';
+$i=0;
+$j=0;
+
 if ($rows >= 1) {
     while ($row = $sql->fetch_assoc()) {
         $db_ID = $row['ID'];
         $db_machinename = $row['Name'];
         $db_date = $row['Date_Created'];
         $db_PDFfile = $row['PDF_File'];
+
+        $i++;
+
+        if ($i == 1) {
+            $divHtml .='<div class="row">';
+        }
+
+        if ($i % 4 == 0) {
+            $divHtml .='<div class="row">';
+        }
+
+        $divHtml .='<div class="col-md-4 mb-5">';
+        $divHtml .='    <a href="#" data-toggle="modal" data-target="#exampleModal">';
+        $divHtml .='        <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">';
+        $divHtml .='    </a>';
+        $divHtml .='    <h3 class="my-3 text-center">' . $db_machinename . '</h3>';
+        $divHtml .='</div>';
+
+        if ($i == 3) {
+            $divHtml .='</div>';
+        }
+
+        if ($i % 7 == 0) {
+            $divHtml .='</div>';
+        }
     }
 }else {
-    $machineError = "Couldn't find any machines...";
+    $machineError .= '<div class="container">';
+    $machineError .=    '<div class="alert alert-info alert-dismissible fade show" role="alert">';
+    $machineError .=        'No machines here, sorry!';
+    $machineError .=        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+    $machineError .=            '<i class="fas fa-times"></i>';
+    $machineError .=        '</button';
+    $machineError .=    '</div>';
+    $machineError .= '</div>';
 }
+$divHtml .= '</div>';
+
 ?>
