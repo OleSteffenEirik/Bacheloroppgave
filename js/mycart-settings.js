@@ -27,22 +27,15 @@ $(function () {
     checkoutCart: function (products, totalQuantity) {
       var checkoutString = new Array();
       var fritekst = document.getElementById('fritekst').value;
-      $.each(products, function (index) {
-        checkoutString.push({
-          "id": this.id,
-          "name": this.name,
-          "quantity": this.quantity
-        });
-      });
-
+     
       console.log(fritekst);
-      console.log(checkoutString);
+      console.log(products);
       alert("hei");
       $.ajax({
         url: "../php/includes/mailing.php",
         type: "POST",
         data: {
-          "checkoutString": JSON.stringify(checkoutString),
+          "checkoutString": JSON.stringify(products),
           "fritekst" : fritekst
         },
         complete: function (data, status) {

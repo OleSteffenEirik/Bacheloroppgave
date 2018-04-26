@@ -71,20 +71,25 @@ try {
                 $ordre = json_decode($_POST["checkoutString"]);
                 $fritekst = $_POST['fritekst'];        
             }
+
+            $email_content .= '<h1>Billing information </h1> <br>';
+
+            $email_content .= $_SESSION['login_user'][1];
+
+            
             // Build the email headers.
-            $email_content .= 'Name ';
-            $email_content .= 'Id ';
-            $email_content .= 'quantity ';
+            $email_content .= 'Order information: ';
             $email_content .= '<br>';
 
             foreach($ordre as $order) {
-                $email_content .= $order->name . ' ';
-                $email_content .= $order->id . ' ';
-                $email_content .= $order->quantity . ' ';
-                $email_content .= '<br>';
+                $email_content .= '<b>Name: </b>'.$order->name . '    ';
+                $email_content .= '<b>Id: </b>'.$order->id . '    ';
+                $email_content .= '<b>quantity: </b>'.$order->quantity . '    ';
+                $email_content .= '<br><hr>';
             }
-
+            $email_content .= '<br> <p>Additional message: </p> <br>';
             $email_content .= $fritekst;
+            $email_content .= '<hr> <img src="../../img/tronrud-icon.png"> ';
 
             $headers =  'MIME-Version: 1.0' . "\r\n"; 
             $headers .= 'From: Your name <info@address.com>' . "\r\n";
