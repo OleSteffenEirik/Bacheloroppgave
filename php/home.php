@@ -53,14 +53,7 @@ require_once("includes/findProducts.php");
       </div>
 
       <!-- AJAX Output -->
-      <!--<div class="container">
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-          <?php echo ((isset($machineError) && $machineError != '') ? $machineError : ''); ?>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>-->
+      <?php echo $machineError; ?>
 
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -81,15 +74,13 @@ require_once("includes/findProducts.php");
 
       <div class="album py-5">
         <div class="container">
-
-          <div class="row">
+          <?php echo $divHtml; ?>
+          <!--<div class="row">
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
-                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50"
-                  alt="Card image cap">
+                <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">
               </a>
-              <h3 class="my-3 text-center">
-                <?php echo $db_machinename; ?> </h3>
+              <h3 class="my-3 text-center"><?php echo $db_machinename; ?></h3>
             </div>
             <div class="col-md-4 mb-5">
               <a href="#" data-toggle="modal" data-target="#exampleModal">
@@ -134,7 +125,7 @@ require_once("includes/findProducts.php");
               <h3 class="my-3 text-center">
                 <?php echo $db_machinename; ?> </h3>
             </div>
-          </div>
+          </div>-->
 
         </div>
       </div>
