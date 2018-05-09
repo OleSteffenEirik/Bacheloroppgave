@@ -269,7 +269,7 @@
         $cartTable.append(
           '<tr title="' + this.summary + '" data-id="' + this.id + '">' +
           '<td class="col-10 align-middle">' + this.name + '</td>' +
-          '<td class="col-1 align-middle" title="Quantity"><input id="numberQ" type="number" min="1" style="width:40px;" class="' 
+          '<td class="col-1 align-middle" title="Quantity"><input id="numberQ" type="text" min="1" style="width:40px;" class="' 
           + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
           '<td class="col-1 align-middle" title="Remove from Cart" class="text-center"><a href="javascript:void(0);" class="btn btn-xs btn-rounded my-0 btn-danger ' + classProductRemove + '"><i class="fas fa-times"></i></a></td>' +
           '</tr>'
