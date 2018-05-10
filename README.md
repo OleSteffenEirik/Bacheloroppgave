@@ -1,7 +1,8 @@
-# Bacheloroppgave
+# Bachelorthesis
 :poop:
 
-Denne bacheloroppgaven går ut på å bygge en nettportal for bestilling av parter via email. Kunder skal kunne få en oversikt over maskiner de selv eier, så skal de kunne gå inn å lese dokumentasjon, samt se 3D-modell av maskinene. Videre skal de kunne søke på ID for de partene de trenger til den angitte maskinen, for så å legge det i handlekurv å sende ordre til selger.
+This bachelorthesis outline a web portal for ordering parts via email. Customers will get a overview of their own machines, so they can read PDF-documentation that are connected to it and also se a 3D model of each machine. Further the customers can search for the specific ID on the parts that are attached to the specified machine, so they can add it to the shopping cart. From the shopping cart the customers can check out. This will generate a formated email with the needed information, that both the customer and the seller will recieve. After that the business is agreed on email between each part. 
+
 
 ## Geting started
 
