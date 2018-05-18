@@ -75,12 +75,15 @@ body.login {
 @media (max-width: 768px) {
   #search-form {
     display: block !important; } }
+.nounderline {
+  text-decoration: none !important; }
+
 html.pages {
   position: relative;
   min-height: 100%; }
 
 body.pages {
-  margin-bottom: 140px;
+  margin-bottom: 160px;
   /* Margin bottom by footer height */ }
 
 /* Sticky footer */

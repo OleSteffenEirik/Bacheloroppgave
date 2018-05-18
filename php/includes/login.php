@@ -4,6 +4,7 @@ Kode for å logge inn fra'index.php' med Email og Passord.
 */
 
 require_once("connect.php");
+require_once("functions.php");
 $con = new tronrudDB();
 
 session_start();
@@ -16,6 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Variabler
         $email = $con->real_escape_string($_POST['email']);
         $password = $con->real_escape_string($_POST['password']);
+        //$password = $_POST['password'];
+
         // reCAPTCHA
         $secret="6Le0nzsUAAAAADyDcU-el9B9WpLYgkQ1TrTzreEa";
         $response=$_POST["captcha"];
@@ -54,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $db_postNr = $row['postNr'];
                     $db_telefon = $row['telefon'];
                 }
+                //if ( $email==$db_email && password_verify($password, $db_password)) {
                 if ($email==$db_email && $password==$db_password) {
                     $sqlCount = $con->query("UPDATE brukere SET AntallInnlogging=AntallInnlogging+1 WHERE ePost='$db_email'");
                     $sqlLastTime = $con->query("UPDATE brukere SET SisteInnlogging= now()");

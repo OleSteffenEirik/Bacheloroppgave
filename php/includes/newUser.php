@@ -27,9 +27,10 @@ $rows = $con->affected_rows;
         echo 'Passordene matchet ikke!';   
         }
     else {
-        // $encrypted_password = passwordEncrypter($password);
+        // Password hashing
+        $hashedPassword = passwordEncrypter($password);
         $newUser = "INSERT INTO brukere (kundeNavn, passord, ePost, tilgangsNivå, postAdresse, postNr, telefon) 
-        VALUES ('$company', '$password', '$email', '$radio', '$postalAdress', '$postalCode', '$phoneNumber');";
+        VALUES ('$company', '$hashedPassword', '$email', '$radio', '$postalAdress', '$postalCode', '$phoneNumber');";
         $res = $con->query($newUser);
         http_response_code(200);
         echo 'Registering av ny bruker er velykket!';

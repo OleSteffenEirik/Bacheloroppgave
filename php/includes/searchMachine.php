@@ -1,12 +1,12 @@
 <?php
-    // Kode for å søke etter parter.
+// Kode for å søke etter maskiner.
     require_once("connect.php");
     $con = new tronrudDB();
 
-    $term = "%" . $_GET['searchterm'] . "%";
+    $term = "%" . $_GET['searchtermMachine'] . "%";
     // echo $term;
     $term = $con->real_escape_string($term);
-    $query = "SELECT name, Item_Id FROM products WHERE Item_Id LIKE '$term'";
+    $query = "SELECT ID, Name FROM Maskin WHERE ID LIKE '$term'";
     $myArray = array();
     if ($sql = $con->query($query)) {
         while($row = $sql->fetch_object()) {
@@ -21,4 +21,5 @@
     echo json_encode($myArray);
     $sql->close();
     $con->close();
+
 ?>

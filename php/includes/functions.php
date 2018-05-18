@@ -4,17 +4,14 @@
 */
 
 function passwordEncrypter($password) {
-    $salt = 'IT2_2017';
-    if (!empty($_POST['send'])) {
-    $encrypted_password = sha1($salt.$password);
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $hash = password_hash($password, PASSWORD_DEFAULT);
     }
     else {
-    echo" 
-        <script>
-         window.alert('Passordkrypering feilet!')           
-        </script>
-        ";
+    http_response_code(500);
+        echo "Password hashing failed!";
     }
-    return $encrypted_password;
+    return $hash;
 }
+
 ?>

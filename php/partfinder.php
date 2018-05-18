@@ -180,23 +180,6 @@ require_once("includes/session.php");
         let adressSession="<?php echo $_SESSION['login_user'][4]; ?>";
         let zipSession="<?php echo $_SESSION['login_user'][5]; ?>";
     </script>
-<!--
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#table_id').DataTable( {
-                "processing": true,
-                "serverSide": true,
-                "ajax": "includes/search.php",
-                "columns": [
-                    { "data": "name" },
-                    { "data": "Item_Id" },
-                ]
-            } );
-        } );
-    </script>
--->
     <!-- Scripts -->
     </body>
 </html>

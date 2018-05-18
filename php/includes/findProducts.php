@@ -19,7 +19,6 @@ FROM brukereMaskin
 
 $rows = $sql->num_rows;
 
-$machineError ='';
 $divHtml = '';
 $divHtml .= '<div class="album py-5">';
 $divHtml .= '<div class="container">';
@@ -43,10 +42,10 @@ if ($rows >= 1) {
         }
 
         $divHtml .='<div class="col-md-4 mb-5">';
-        $divHtml .='    <a href="#" data-toggle="modal" data-target="#exampleModal">';
-        $divHtml .='        <img class="card-img-top img-responsive hvr-grow" src="../img/tronrud-engineering-logo-svart.svg" width="100" height="50" alt="Card image cap">';
+        $divHtml .='    <a href="#" class="nounderline" data-toggle="modal" data-target="#exampleModal">';
+        $divHtml .='        <img class="card-img-top img-responsive hvr-grow my-4" src="../img/tronrud-engineering-logo-svart.svg" width="120" height="60" alt="Card image cap">';
+        $divHtml .='    <h3 class="my-3 text-center text-black">' . $db_machinename . '</h3>';
         $divHtml .='    </a>';
-        $divHtml .='    <h3 class="my-3 text-center">' . $db_machinename . '</h3>';
         $divHtml .='</div>';
 
         if ($i == 3) {

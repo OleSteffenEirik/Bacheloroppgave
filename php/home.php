@@ -52,9 +52,6 @@ require_once("includes/findProducts.php");
         <div id="formMessagesChangePW"></div>
       </div>
 
-      <!-- AJAX Output -->
-      <?php echo $machineError; ?>
-
       <div class="container">
         <div class="alert alert-info alert-dismissible fade show" role="alert">
           <h2 class="alert-heading">Important information!</h2>
@@ -139,65 +136,51 @@ require_once("includes/findProducts.php");
               <i class="fas fa-info-circle fa-lg align-middle mr-1"></i>
               <b>Detailed view</b>
             </a>
-            <a href="partfinder.php" class="btn btn-success">
-              <i class="fas fa-search fa-lg align-middle mr-1"></i>
-              <b>Find parts</b>
-            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 mx-auto mb-4 my-2">
-          <div class="card card-body m-10">
-            <form id="search-form" class="container d-flex justify-content-between align-items-center form-inline">
-              <div class="shopping-cart-icon">
-                <span class="my-cart-icon">
-                  <i class="fas fa-shopping-cart fa-2x text-dark"></i>
-                </span>
-                <span class="badge badge-pill badge-tronrud-primary my-cart-badge position-absolute"></span>
-              </div>
-              <div class="row ml-auto mr-3 mt-3">
-                <div class="form-group">
-                  <select id="searchOption" class="form-control">
-                    <option value="name">Name</option>
-                    <option value="Item_Id">Item Id</option>
-                  </select>
+    <!-- Modal END -->
+
+    <!-- Part Search -->
+    <div class="container border rounded">
+      <h1 class="display-4 my-4 text-center">Part search</h1>
+        <div class="col-md-12">
+          <form id="search-form">
+            <div class="row mx-5">
+              <div class="input-group input-group-lg inputBig">
+                <div class="input-group-prepend prependBig">
+                    <span class="input-group-text textBig" id="inputGroup-sizing-lg"><i class="fas fa-search fa-lg align-middle"></i></span>
                 </div>
-                <div class="form-group ml-3">
-                  <input type="text" class="form-control input-sm" id="search-bar" placeholder="Search">
-                </div>
-                <div class="form-group ml-3">
-                  <button type="submit" class="form-control btn btn-tronrud-primary font-weight-bold" id="searchBtn">
-                    <i class="fas fa-search fa-lg align-middle mr-1"></i>
+                <input id="search-bar" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-lg" placeholder="Search for parts using item id..."> 
+                <div class="input-group-append">
+                  <button type="submit" class="form-control btn btn-tronrud-secondary font-weight-bold">
+                  <!--<i class="fas fa-search fa-lg align-middle mr-1"></i>-->
                     Search
                   </button>
                 </div>
               </div>
-            </form>
+            </div>
+          </form>
 
             <div class="table-responsive-md">
-              <table id="table" class="table table-hover mt-5">
-                <thead class="bg-tronrud-secondary text-white font-weight-bold">
+              <table id="table" class="table table-hover table-striped table-bordered my-5">
+                <thead class="bg-tronrud-secondary text-white font-weight-bold lead text-uppercase">
                   <tr>
-                    <th scope="col-1">#</th>
+                    <!--<th scope="col-1">#</th>-->
                     <th scope="col-8">Product</th>
                     <th scope="col-2">Item Id</th>
-                    <th scope="col-1"></th>
+                    <th class="text-center" scope="col-1"><i class="fas fa-lg fa-cart-arrow-down"></i></th>
                   </tr>
                 </thead>
-                <tbody id="item-table">
-
+                <tbody class="text-uppercase" id="item-table">
+                  
                 </tbody>
               </table>
             </div>
 
-
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
 
     <!-- Scripts -->
     <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
@@ -212,6 +195,7 @@ require_once("includes/findProducts.php");
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
     <script type="text/javascript" src="../js/ajaxForm.js"></script>
     <script type="text/javascript" src="../js/app.js"></script>
+    <script type="text/javascript" src="../js/machineSearch.js"></script>
 
     <script type="text/javascript">
       let companySession = "<?php echo $_SESSION['login_user'][1]; ?>";

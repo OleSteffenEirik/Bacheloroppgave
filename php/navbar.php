@@ -96,6 +96,44 @@
             </div>
             <div class="modal-body">
                 <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-12 order-md-1">
+                        <form id="searchFormMachine">
+                            <div class="row mx-5">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing"><i class="fas fa-search fa-lg align-middle"></i></span>
+                                    </div>
+                                    <input id="searchBarMachine" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-default" placeholder="Search for machines using id..."> 
+                                    <div class="input-group-append">
+                                    <button type="submit" class="form-control btn btn-tronrud-secondary font-weight-bold" formnovalidate nosubmit>
+                                    <!--<i class="fas fa-search fa-lg align-middle mr-1"></i>-->
+                                        Search
+                                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+
+
+                    <div class="table-responsive-md table-sm">
+                        <table id="tableMachine" class="table table-hover table-striped table-bordered mt-4 mb-5">
+                            <thead class="bg-tronrud-secondary text-white text-uppercase">
+                            <tr>
+                                <th scope="col-1">ID</th>
+                                <th scope="col-10">Machine</th>
+                                <th scope="col-1"></th>
+                            </tr>
+                            </thead>
+                            <tbody class="text-uppercase" id="item-table-machine">
+                            
+                            </tbody>
+                        </table>
+                    </div>
+
                     <div class="row">
                         <div class="col-md-5 order-md-1">
                             <form id="ajaxFormNewUser" method="post" action="../php/includes/newUser.php">
@@ -123,11 +161,11 @@
                                     <input type="password" name="repeatPassword" class="form-control" placeholder="Repeat password" required>
                                 </div>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
+                            <div class="custom-control custom-radio custom-control-inline mb-3">
                                 <input type="radio" id="customRadioInline1" name="radio" class="custom-control-input" value="Basic" checked>
                                 <label class="custom-control-label" for="customRadioInline1">Basic</label>
                             </div>
-                            <div class="custom-control custom-radio custom-control-inline">
+                            <div class="custom-control custom-radio custom-control-inline mb-3">
                                 <input type="radio" id="customRadioInline2" name="radio" class="custom-control-input" value="Premium">
                                 <label class="custom-control-label" for="customRadioInline2">Premium</label>
                             </div>
@@ -173,6 +211,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
                             <div class="modal-footer">
