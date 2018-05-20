@@ -6,6 +6,7 @@ Frontsiden man kommer til når man logger inn.
 require_once("includes/sessionExpire.php");
 require_once("includes/session.php");
 require_once("includes/findProducts.php");
+require_once("includes/adminBruker.php");
 
 ?>
   <!doctype html>
@@ -29,18 +30,6 @@ require_once("includes/findProducts.php");
   <body class="pages bg-light">
     <?php require_once('navbar.php'); ?>
     <main role="main">
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="display-3">Machine overview</h1>
-          <p class="lead">Here you will find an overview of all your machines.</p>
-          <span class="lead">User: 
-            <b><?php echo $_SESSION['login_user'][1]; ?></b>
-          </span>
-          <span class="lead ml-2">Membership: 
-            <b><?php echo $_SESSION['login_user'][3]; ?></b>
-          </span>
-        </div>
-      </section>
 
       <!-- AJAX Output -->
       <div class="container">
@@ -52,23 +41,14 @@ require_once("includes/findProducts.php");
         <div id="formMessagesChangePW"></div>
       </div>
 
-      <div class="container">
-        <div class="alert alert-info alert-dismissible fade show" role="alert">
-          <h2 class="alert-heading">Important information!</h2>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <i class="fas fa-times"></i>
-          </button>
-          <p>This site uses 3D models created in the VRML file format. You will need a browser that supports display of VRML
-            3D models, and today, only Internet Explorer supports this. Why? Mozilla, developer of Firefox, explains it in
-            this
-            <a href="https://support.mozilla.org/en-US/kb/npapi-plugins?as=u&utm_source=inproduct" class="alert-link">article</a>.</p>
-          <hr>
-          <p>We recommend using Cortona3D Viewer, as found
-            <a href="http://www.cortona3d.com/cortona3d-viewer-download" class="alert-link">here</a>, and if you need help to enable the browser plugin you will find it
-            <a href="http://support.cortona3d.com/allow-plugin" class="alert-link">here</a>.</p>
-        </div>
-      </div>
-          <?php echo $divHtml; ?>
+      <?php 
+        if($_SESSION['login_user'][1] == 'Admin'){
+          echo $userTable;
+        }
+        else {
+          echo $divHtml;
+        }
+      ?>
     </main>
 
     <!-- Legger til footer fra filen 'footer.php' -->

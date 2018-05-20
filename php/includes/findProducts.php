@@ -20,6 +20,37 @@ FROM brukereMaskin
 $rows = $sql->num_rows;
 
 $divHtml = '';
+
+$divHtml .= '<section class="jumbotron text-center">';
+$divHtml .= '<div class="container">';
+$divHtml .= '<h1 class="display-3">Machine overview</h1>';
+$divHtml .= '<p class="lead">Here you will find an overview of all your machines.</p>';
+$divHtml .=  '<span class="lead">User: ';
+$divHtml .=  '<b>' . $_SESSION['login_user'][1] . '</b>';
+$divHtml .= '</span>';
+$divHtml .= '<span class="lead ml-2">Membership: ';
+$divHtml .= '<b>'. $_SESSION['login_user'][3] .'</b>';
+$divHtml .= '</span>';
+$divHtml .=  '</div>';
+$divHtml .=  '</section>';
+
+$divHtml .= '<div class="container">';
+$divHtml .= '<div class="alert alert-info alert-dismissible fade show" role="alert">';
+$divHtml .= '<h2 class="alert-heading">Important information!</h2>';
+$divHtml .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';
+$divHtml .= '<i class="fas fa-times"></i>';
+$divHtml .= '</button>';
+$divHtml .= '<p>This site uses 3D models created in the VRML file format. You will need a browser that supports display of VRML
+    3D models, and today, only Internet Explorer supports this. Why? Mozilla, developer of Firefox, explains it in
+    this
+    <a href="https://support.mozilla.org/en-US/kb/npapi-plugins?as=u&utm_source=inproduct" class="alert-link">article</a>.</p>';
+$divHtml .= '<hr>';
+$divHtml .= '<p>We recommend using Cortona3D Viewer, as found
+    <a href="http://www.cortona3d.com/cortona3d-viewer-download" class="alert-link">here</a>, and if you need help to enable the browser plugin you will find it
+    <a href="http://support.cortona3d.com/allow-plugin" class="alert-link">here</a>.</p>';
+$divHtml .= '</div>';
+$divHtml .= '</div>';
+
 $divHtml .= '<div class="album py-5">';
 $divHtml .= '<div class="container">';
 $i=0;
