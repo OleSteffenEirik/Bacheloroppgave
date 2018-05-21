@@ -4,6 +4,7 @@ Tar imot e-post fra bruker, lager tidfeldig passord og sender det til brukeren.
 */
 
 require_once("connect.php");
+require_once("functions.php");
 $con = new tronrudDB();
 
     // Only process POST reqeusts.
@@ -27,36 +28,29 @@ $con = new tronrudDB();
             $str = substr($str, 0, 10);
             
             // Lager nytt passord til bruker. De tre første tegnene er faste for å garantere passordkravene. De ti siste er tilfeldige for å sikkerhetens skyld.
-            //$password = 'Vi0'.$str;
-            $password = $str;
+            $password = 'Tr0'.$str;
+
     
             $url = "http://tronrud.steffenjg.com";
 
-            // Set the recipient email address.
-            // FIXME: Update this to your desired email address.
-            $recipient = "hello@example.com";
+            $to = 'bob@example.com';
 
-            // Set the email subject.
-            $subject = "New contact from webportalen";
+            $subject = 'Forgot password Tronrud';
 
-            // Build the email content.
-            $email_content = "Name: Reset Password\n";
-            $email_content .= "Email: $email\n\n";
-            $email_content .= "Your new password is: $password\nTo change your password, please visit this: $url\n\nRegards\n\nTronrud Engineering";
+            $headers = "From: " . $email . "\r\n";
+            $headers .= "CC: susan@example.com\r\n";
+            $headers .= "MIME-Version: 1.0\r\n";
+            $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-            // Build the email headers.
-            $email_headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/plain; charset=UTF-8' . "\r\n";
-
-            //$salt = 'IT2_2017';
+            $email_content = "Your new password is: $password\nTo change your password, please visit this: $url\n\nRegards\n\nTronrud Engineering";
         
-            //$encrypted_password = passwordEncrypter($password);
-            //$con->query("UPDATE bruker SET passord = $encrypted_password WHERE ePost='$email'");
+            $hashedPassword = passwordEncrypter($password);
             
             //Salter, krypterer og oppdaterer passordet til riktig bruker i databasen.
-            $sqlUpdate = $con->query("UPDATE brukere SET passord = '$password' WHERE ePost='$email'");
+            $sqlUpdate = $con->query("UPDATE brukere SET passord='$hashedPassword' WHERE ePost='$email'");
         }
         // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers) && $sqlUpdate == true) {
+        if (mail($to, $subject, $email_content, $headers) && $sqlUpdate == true) {
             http_response_code(200);
             echo "Thank You! Your message has been sent.";
         } else {

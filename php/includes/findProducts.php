@@ -35,6 +35,14 @@ $divHtml .=  '</div>';
 $divHtml .=  '</section>';
 
 $divHtml .= '<div class="container">';
+$divHtml .= '<div id="formMessagesNewUser"></div>';
+$divHtml .= '</div>';
+
+$divHtml .= '<div class="container">';
+$divHtml .= '<div id="formMessagesChangePW"></div>';
+$divHtml .= '</div>';
+
+$divHtml .= '<div class="container">';
 $divHtml .= '<div class="alert alert-info alert-dismissible fade show" role="alert">';
 $divHtml .= '<h2 class="alert-heading">Important information!</h2>';
 $divHtml .= '<button type="button" class="close" data-dismiss="alert" aria-label="Close">';

@@ -11,8 +11,18 @@ $sql = $con->query("SELECT * FROM brukere;");
 
 $rows = $sql->num_rows;
 
-$userTable =  '<div class="container border rounded mt-4">';
+$userTable = '<div class="container">';
+$userTable .= '<div id="formMessagesNewUser"></div>';
+$userTable .= '</div>';
+
+$userTable .= '<div class="container">';
+$userTable .= '<div id="formMessagesChangePW"></div>';
+$userTable .= '</div>';
+
+$userTable .=  '<div class="container border rounded mt-4">';
+
 $userTable .= '<h1 class="display-4 my-4 text-center">User overview</h1>';
+
 $userTable .= '<form method="POST" action="includes/slettBruker.php">';
 $userTable .= '<table id="table" class="table table-hover table-striped table-bordered my-5">';
 $userTable .=   '<thead class="bg-tronrud-secondary text-white font-weight-bold lead text-uppercase">';

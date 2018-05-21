@@ -31,16 +31,6 @@ require_once("includes/adminBruker.php");
     <?php require_once('navbar.php'); ?>
     <main role="main">
 
-      <!-- AJAX Output -->
-      <div class="container mt-4">
-        <div id="formMessagesNewUser"></div>
-      </div>
-
-      <!-- AJAX Output -->
-      <div class="container mt-4">
-        <div id="formMessagesChangePW"></div>
-      </div>
-
       <?php 
         if($_SESSION['login_user'][1] == 'Admin'){
           echo $userTable;

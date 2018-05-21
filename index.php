@@ -48,7 +48,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-lock"></i></span>
           </div>
-          <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="inputPassword" class="form-control" placeholder="Password" required>
+          <input type="password" name="password"  id="inputPassword" class="form-control" placeholder="Password" required>
       </div>
       <!-- reCAPTCHA -->
       <div class="container text-center">
