@@ -32,12 +32,12 @@ require_once("includes/adminBruker.php");
     <main role="main">
 
       <!-- AJAX Output -->
-      <div class="container">
+      <div class="container mt-4">
         <div id="formMessagesNewUser"></div>
       </div>
 
       <!-- AJAX Output -->
-      <div class="container">
+      <div class="container mt-4">
         <div id="formMessagesChangePW"></div>
       </div>
 
@@ -123,7 +123,7 @@ require_once("includes/adminBruker.php");
     <!-- Modal END -->
 
     <!-- Part Search -->
-    <div class="container border rounded">
+    <div class="container border rounded mt-4">
       <h1 class="display-4 my-4 text-center">Part search</h1>
         <div class="col-md-12">
           <form id="search-form">

@@ -78,6 +78,10 @@ body.login {
 .nounderline {
   text-decoration: none !important; }
 
+body.pages {
+  margin-bottom: 160px;
+  /* Margin bottom by footer height */ }
+
 html.pages {
   position: relative;
   min-height: 100%; }

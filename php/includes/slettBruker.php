@@ -1,5 +1,8 @@
 <?php
 
+require_once("connect.php");
+$con = new tronrudDB();
+
     if (isset($_POST['slett'])){
         $sql1 = "SELECT * FROM brukere WHERE kundeNr=".$_POST['slett'];
         $res = $con->query($sql1);

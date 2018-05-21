@@ -62,7 +62,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" name="newPassword" id="newPassword" class="form-control" placeholder="New password" required>
+                        <input type="password" name="newPassword" id="newPassword" class="form-control" placeholder="New password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -70,7 +70,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-redo"></i></span>
                         </div>
-                        <input type="password" name="repeatPassword" id="repeatPassword" class="form-control" placeholder="Repeat password" required>
+                        <input type="password" name="repeatPassword" id="repeatPassword" class="form-control" placeholder="Repeat password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                     </div>
                 </div>
             </div>
@@ -150,7 +150,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-key"></i></span>
                                     </div>
-                                    <input type="password" name="password" class="form-control" placeholder="Password" required>
+                                    <input type="password" name="password" class="form-control" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -158,7 +158,7 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-redo"></i></span>
                                     </div>
-                                    <input type="password" name="repeatPassword" class="form-control" placeholder="Repeat password" required>
+                                    <input type="password" name="repeatPassword" class="form-control" placeholder="Repeat password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </div>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline mb-3">
