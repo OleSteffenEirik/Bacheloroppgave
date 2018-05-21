@@ -33,7 +33,8 @@ $con = new tronrudDB();
     
             $url = "http://tronrud.steffenjg.com";
 
-            $to = 'bob@example.com';
+            // Steffen sin e-post ligger her foreløbig 
+            $to = 'steffenjg94@gmail.com';
 
             $subject = 'Forgot password Tronrud';
 

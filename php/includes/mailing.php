@@ -59,7 +59,7 @@ try {
 // PHP mail()
 // Set the recipient email address.
             // FIXME: Update this to your desired email address.
-            $recipient = "hello@example.com";
+            $recipient = "steffenjg94@gmail.com";
 
             // Set the email subject.
             $subject = "Tronrund Engineering billing information";
