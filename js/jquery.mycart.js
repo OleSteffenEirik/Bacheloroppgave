@@ -241,7 +241,7 @@
                       '</div>' +
                       
                       '<div class="form-group">' +
-                        '<label for="fritekst">Fritekst</label>' +
+                        '<label for="fritekst">Comment</label>' +
                         '<textarea class="form-control" id="fritekst" rows="3"></textarea>' +
                       '</div>' +
                     '</div>' +
