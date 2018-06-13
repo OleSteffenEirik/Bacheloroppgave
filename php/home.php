@@ -77,7 +77,7 @@ require_once("includes/adminBruker.php");
                 </div>
                 <!-- Info om maskinen som hentes fra datamaskinen -->
                 <div class="col-md-4">
-                  <h4 class="mb-4">Informasjon</h4>
+                  <h4 class="mb-4">Information</h4>
                   <p>
                     <b>Item ID:</b>
                     <?php echo $db_ID; ?>
@@ -92,7 +92,7 @@ require_once("includes/adminBruker.php");
                   </p>
                 </div>
                 <div class="col-md-3">
-                  <h4 class="mb-4">Dokumentasjon</h4>
+                  <h4 class="mb-4">Documentation</h4>
                   <a target="_blank" href="../pdf/<?php echo $db_PDFfile; ?>">
                     <i class="far fa-file-pdf"></i>
                     <?php echo $db_PDFfile; ?>

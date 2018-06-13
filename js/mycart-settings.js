@@ -30,7 +30,6 @@ $(function () {
      
       console.log(fritekst);
       console.log(products);
-      alert("hei");
       $.ajax({
         url: "../php/includes/mailing.php",
         type: "POST",
@@ -40,7 +39,6 @@ $(function () {
         },
         complete: function (data, status) {
           console.log(data);
-          alert(status);
         }
       });
     },
